@@ -4,4 +4,5 @@ yarn-error.log
 modules/*
 Decompile/*
 Material
-templet
+_templet
+_oldfile
