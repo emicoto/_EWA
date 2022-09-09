@@ -1,0 +1,6 @@
+sugarcube-2:
+  macros:
+    CMGender:
+      name: CMGender
+    cmint:
+      name: cmint

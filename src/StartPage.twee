@@ -1,0 +1,49 @@
+:: StoryData
+{
+"ifid": "B0C16C95-EDFE-48A2-9746-BEADC30CE67C",
+"format": "SugarCube",
+"format-version": "2.35.0"
+}
+
+:: StoryTitle
+EWA
+
+:: StoryDisplayTitle
+EWA
+
+:: StoryInit
+<<run 
+    A.InitAvatarDatas();
+    F.InitPlayerTemplet();
+    F.InitNPC();
+>>
+
+
+:: Start [nosave]
+<div id='stage'></div>
+<<set F.setV('test','just a test')>>
+<<print G.racelist>><br>
+<<print lang>><br>
+
+<<=lan('中文模式','English Mode')>><br>
+<br>
+
+<<link "物品工具" "Avatar Items Tools">><</link>><br>
+<<link "创建角色" "CharaMaker">><</link>><br>
+<<link 'Test' 'next'>><</link>><br>
+
+<<if lang == 'CN'>>
+    <<link 'Set English' $passage >><<set lang = 'EN'>><</link>>
+<<else>>
+    <<link '切换到中文' $passage >><<set lang = 'CN'>><</link>>
+<</if>>
+<br>
+
+
+:: next
+<<=lan('只是个测试', 'juset a test')>>
+<br>
+<<link '返回' 'Start'>><</link>>
+
+:: PassageHeader
+<<set $passage to passage()>><<set $tags to tags($passage)>>

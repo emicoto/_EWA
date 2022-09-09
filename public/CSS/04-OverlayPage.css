@@ -1,0 +1,334 @@
+﻿.customOverlay {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 80%;
+    width: 680px;
+    max-height: 800px;
+    border-radius: 20px 5px 5px 20px;
+    border: 3px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: -2px -2px 1px rgba(255, 255, 255, 0.75), 2px 2px 1px rgba(120, 120, 120, 0.3), -5px 20px 20px rgba(40, 40, 40, 0.3);
+    text-align: left;
+    padding: 5px;
+    overflow-y: scroll;
+    z-index: 1000;
+    user-select: none;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px); 
+}
+
+.customOverlay[data-overlay="canvasLayers"],
+.customOverlay[data-overlay="canvasColours"],
+.customOverlay[data-overlay="canvasModel"] {
+    max-width: unset;
+}
+
+@media screen and (max-width: 840px) {
+  .customOverlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 540px;
+  }
+}
+
+.overlayMenu ul {
+	text-align: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.overlayMenu ul li {
+	float: left;
+	height: 35px;
+	margin-right: 1px;
+}
+
+.debugOverlay {
+	display: block;
+	position: fixed;
+	top: 20px;
+	bottom: 20px;
+	right: 20px;
+	height: 80%;
+	width: auto;
+	max-width: 700px;
+	z-index: 1001;
+	padding: 3px;
+	border: 2px #fff solid;
+	background-color: #333;
+	overflow-y: scroll;
+}
+
+.debugOverlay ul li input {
+	width: 80px;
+	margin: 0;
+}
+
+.overlayItem {
+	border-top: 2px #fff solid;
+	clear: both;
+}
+
+#statsHelp {
+	overflow-y: scroll;
+	height: auto;
+	max-height: 200px;
+}
+
+@media only screen and (min-width: 720px) {
+      .customOverlay {
+          left: 300px;
+      }
+}
+
+#overlaytitle {
+    width: 98%;
+    height: 50px;
+    font-size: 24px;
+    font-style: border;
+    position: absolute;
+    top:5px;
+    left:5px;
+    float: left;
+}
+
+#customOverlayTitle {
+    height: 40px;
+}
+
+#overlaytitle li {
+    list-style:none;
+    list-style-position: inside;
+    font-family: 筑紫古典;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    color: rgb(151, 141, 1);
+}
+#overlaytitle #handle li ::before {
+    content: "♢";
+    font-size: 24px;
+    margin: 2px;
+}
+#overlaytitle #handle li ::after {
+    content: "♢";
+    font-size: 24px;
+    margin: 2px;
+}
+#overlaytitle button{
+    float: right;
+    top:5px;
+    right:5px;
+    margin-right: 2px;
+    font-size: 10px;
+    width: fit-content;
+    min-width: 24px;
+    height: 24px;
+    background: transparent;
+}
+
+#overlaytitle button:hover, #overlaytitle button:focus{
+    background-color:rgba(255, 255, 255, 0.25);
+}
+
+#customOverlay {
+    font-family: 'Times New Roman', 渔阳体M;
+}
+
+#customOverlay button {
+    background: transparent;
+    width: fit-content;
+    font-size: 12px;
+    height: 24px;
+    padding-bottom: 2px;
+}
+  
+#customOverlay button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#customOverlayContent {
+    line-height: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#customOverlayContent li {
+    height: 22px;
+    margin-left:10px;
+    font-size: 14px;
+    list-style:"・ ";
+    list-style-position: inside;
+}
+
+#profile {
+    padding:0px 10px;
+    font-size: 14px;
+    float: left;
+}
+
+#profile a{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#profile li {
+    list-style: none;
+    font-family:"Times New Roman", 珍珠体 ;
+    margin-left: -3px;
+    font-weight: 600;
+    color: rgb(165, 154, 0);
+    letter-spacing: 5px;
+}
+
+#profile li::before {
+    content: "♢";
+}
+
+#profile li::after {
+    content: "♢";
+}
+
+#profile .dashline {
+    margin-left: -5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(56, 54, 49, 0.1);
+}
+
+#profile .metername{
+    margin-left: 10px;
+}
+
+.selfinfo {
+    margin-left: 15px;
+    font-size: 13px;
+    color: rgb(152, 153, 85);
+}
+
+.photoinfo {
+    width: 95%;
+    margin-left: 15px;
+    line-height:20px;
+}
+
+#sensationbar .metername{
+    font-family: Georgia, Verdana, 渔阳体M;
+}
+
+#sensationbar .metercon {
+    max-width:100px;
+}
+
+#sensationbar .bar {
+    max-width:100px;
+}
+
+@media screen and (max-width: 840px) {
+  .metercon{
+    max-width:100px;
+  }
+  .bar{
+    max-width: 100px;
+  }
+}
+
+#skilldata {
+    width: 100%;
+    align-items: center;
+}
+
+.classdata {
+    float:left;
+    width: 100px;
+    height: 30px;
+    
+    line-height: 15px;
+    border:1px solid rgb(214, 213, 211);
+    margin: 4px;
+    z-index: 0;
+}
+
+.classdata:hover{
+    background-color: rgba(245, 245, 245, 0.75);
+}
+
+#skilldata .metercon {
+    max-width: 100px;
+    max-height: 2px;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+}
+
+#skilldata .bar {
+    max-width: 100px;
+    max-height: 2px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#skilldata .metername {
+    float: left;
+    height: 14px;
+    text-align: center;
+    z-index: 0;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.metername {
+    font-size: 12px;
+}
+
+#skilldata .skillrank {
+    float: right;
+    height: 14px;
+    text-align: center;
+    z-index: 0;
+    margin-right: 20px;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+#explist {
+    height:max-content;
+    width: 100%;
+    position: relative;
+    float:left;
+    display: block;
+}
+
+.listblock {
+    height: 20px;
+    font-size: 12px;
+
+    float: left;
+    align-content: left;
+    border-right: 1px dashed #ccc;
+    margin-left: 8px;
+    position: relative;
+}
+
+.listname {
+    float:left;
+    width: 64px;
+    text-align: left;
+    margin-right: 4px;
+}
+
+.listnum {
+    float: left;
+    width: 64px;
+    text-align: left;
+}
+
+#rpgstatus {
+    margin-left: 10px;
+    font-size: 12px;
+    font-family:新综艺;
+    width: 90%;
+}

@@ -1,0 +1,129 @@
+:: CharaMakeWidget [widget]
+
+<<widget "cmtxt">>
+<<print `<input type='text' id='${V.args[0]}' oninput='F.CMApply(this.id, this.value)' value='${V.args[1]}' >`>>
+<</widget>>
+
+<<widget "cmint">>
+<<print `<input type='number' id='${V.args[0]}' oninput='F.CMApply(this.id, this.value)' value='${V.args[1]}' >`>>
+<</widget>>
+
+<<widget "CMGender">>
+<li><label>
+性别：
+<<=F.Listbox({id:'gender', opt:T.cm.genderlist, names:T.cm.gendername, on:'F.CMApply(this.id, this.value)', def:'m'})>>
+</label></li>
+<</widget>>
+
+<<widget "CMSkin">>
+<li><label>
+肤色：
+<<=F.Listbox({id:'skincolor', opt:T.cm.skinlist, names:T.cm.skinname, on:'F.CMApply(this.id, this.value)'})>>
+</label></li>
+<</widget>>
+
+<<widget "CMSkinb">>
+<<if T.cm.r.alter.subcolor isnot undefined >>
+<li><label>
+肤色(副)：
+<<=F.Listbox({ id:'subcolor', opt:T.cm.skinlistb, names:T.cm.skinnameb, on:'F.CMApply(this.id, this.value)'})>>
+</label></li>
+<</if>>
+<</widget>>
+
+:: CharaMaker
+<<run
+    T.cm = new G.CharaMaker('npc')
+>>
+
+<div id="startpage">
+<li><label>
+名字： <<textbox "_cm.name" _cm.name>>
+</label></li>
+
+<li><label>种族：
+<<=F.Listbox({id:'race', opt:T.cm.racelist, names:T.cm.racename, on:'F.CMApply(this.id,this.value)', def:'human'})>>
+
+</label></li>
+
+<div id='CMGender'>
+    <<CMGender>>
+</div>
+
+<li><label>
+生日：
+<span id='CMBirth'>3012</span>年　<<cmint 'birthmonth' 1>> 月
+<<cmint 'birthday' 1>> 日 <input id='age' type='number' value='21' oninput='F.CMApply(this.id, this.value)' min='14' max='60' >岁
+
+</label></li>
+
+<li><label>
+发色：
+<<=F.Listbox({id:'haircolor', opt:T.cm.haircolorlist, names:T.cm.haircolorname, on:'F.CMApply(this.id, this.value)'})>>
+</label></li>
+
+<li><label>
+瞳色：
+<<=F.Listbox({id:'eyecolor', opt:T.cm.eyecolorlist, names:T.cm.eyecolorname, on:'F.CMApply(this.id, this.value)'})>>
+</label></li>
+
+<div id='CMSkin'>
+<<CMSkin>>
+</div>
+
+
+<div id='CMSkinb'>
+<<CMSkinb>>
+</div>
+
+
+<li><label>
+发型：
+</label></li>
+
+<li><label>
+发长：
+</label></li>
+
+<li><label>
+专业：
+</label></li>
+
+<li><label>
+素质：
+</label></li>
+
+<li><label>
+基础数值：　　可分配点 <span id='CMPoint1'>63</span>
+</label></li>
+
+<li><label>
+基础技能：　　可分配点 <span id='CMPoint2'>42</span>
+</label></li>
+
+<li><label>
+特殊技能：
+</label></li>
+
+<li><label>
+性癖程度：
+</label></li>
+
+<li><label>
+住址：
+</label></li>
+
+<li><label>
+睡眠时间：
+</label></li>
+
+<li><label>
+个人简介：
+</label></li>
+
+<li><label>
+行程表：
+</label></li>
+
+</div>
+

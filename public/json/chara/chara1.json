@@ -1,0 +1,525 @@
+{
+	"cid": "Chara0",
+	"name": "娜娜莉·爱索斯",
+	"birth": [3016, 7, 12],
+	"gender": "i",
+	"race": "dracons",
+	"powertype": "elements",
+	"elements": ["ions"],
+	"diet": "ore",
+	"major": 2,
+	"emote": "普通",
+	"money": 0,
+	"trait": {
+		"聪明": 1
+	},
+	"base": {
+		"lv": [1, 0],
+		"exp": [0, 0],
+		"ATK": [10, 10],
+		"DEF": [10, 10],
+		"MTK": [10, 10],
+		"MDF": [10, 10],
+		"SPD": [10, 10],
+		"力量": [8, 8],
+		"体质": [10, 10],
+		"敏捷": [12, 12],
+		"意志": [14, 14],
+		"智力": [17, 17],
+		"灵感": [13, 13],
+		"魅力": [14, 14],
+		"幸运": [10, 10],
+		"hot": [30, 30],
+		"cold": [16, 16]
+	},
+	"palam": {
+		"魔力": [1000, 1000],
+		"体力": [1000, 1000],
+		"理智": [1000, 1000],
+		"清洁": [1000, 1000],
+		"情绪": [0, 1000],
+		"欲望": [0, 1000],
+		"快感": [0, 1000],
+		"愤怒": [0, 1000],
+		"射精": [0, 1000],
+		"满意": [0, 1000],
+		"快M": [0, 2400],
+		"快B": [0, 2400],
+		"快C": [0, 2400],
+		"快V": [0, 2400],
+		"快U": [0, 2400],
+		"快A": [0, 2400]
+	},
+	"source": {
+		"魔力": 0,
+		"体力": 0,
+		"理智": 0,
+		"清洁": 0,
+		"情绪": 0,
+		"欲望": 0,
+		"快感": 0,
+		"愤怒": 0,
+		"射精": 0,
+		"满意": 0,
+		"快M": 0,
+		"快B": 0,
+		"快C": 0,
+		"快V": 0,
+		"快U": 0,
+		"快A": 0
+	},
+	"flag": {
+		"favo": 0,
+		"trust": 0,
+		"dom": 0,
+		"sub": 0,
+		"eager": 0,
+		"faith": 0,
+		"intro": 0
+	},
+	"exp": {
+		"打工": 0,
+		"下厨": 0,
+		"清扫": 0,
+		"唱歌": 0,
+		"演戏": 0,
+		"舞台": 0,
+		"直播": 0,
+		"交涉": 0,
+		"销售": 0,
+		"探索": 0,
+		"狩猎": 0,
+		"钓鱼": 0,
+		"战斗": 0,
+		"战败": 0,
+		"诱惑": 0,
+		"被诱惑": 0,
+		"被猥琐": 0,
+		"射精": 0,
+		"高潮": 0,
+		"M高潮": 0,
+		"B高潮": 0,
+		"C高潮": 0,
+		"U高潮": 0,
+		"V高潮": 0,
+		"A高潮": 0,
+		"多重高潮": 0,
+		"自慰": 0,
+		"口交": 0,
+		"性交": 0,
+		"肛交": 0,
+		"喷乳": 0,
+		"被眠奸": 0,
+		"被迷奸": 0,
+		"被强奸": 0,
+		"被轮奸": 0,
+		"被兽奸": 0,
+		"被触手奸": 0,
+		"兽交": 0,
+		"触手": 0,
+		"史莱姆": 0,
+		"怀孕": 0,
+		"A怀孕": 0,
+		"分娩": 0,
+		"尿道开发": 0,
+		"阴道扩张": 0,
+		"肛门扩张": 0,
+		"产卵": 0,
+		"寄生": 0,
+		"监禁": 0,
+		"SM": 0
+	},
+	"info": {
+		"eyes": 1,
+		"eyecolor": "pink",
+		"haircolor": "blond",
+		"hairstyle": ["natrual", "straight"],
+		"hairlength": [300, 500],
+		"breast": 1,
+		"hips": 1,
+		"bodysize": 2,
+		"skin": "pale",
+		"body": "human",
+		"head": "round",
+		"ears": "human",
+		"tail": "dracon",
+		"horn": "crystal"
+	},
+	"body": {
+		"eye": "natural",
+		"nose": "natural",
+		"mouth": "natural",
+		"body": "natural",
+		"ears": "natural",
+		"hands": "natural",
+		"wings": "none",
+		"horn": "natural",
+		"fur": "none",
+		"tail": "natural",
+		"organ": "natural",
+		"penis": "canhide",
+		"teste": "hidden",
+		"vagina": "canhide",
+		"critoris": "none"
+	},
+	"mark": {
+		"快乐": {
+			"level": 0,
+			"maxlv": 0,
+			"hypo": 0,
+			"history": []
+		},
+		"恐惧": {
+			"level": 0,
+			"maxlv": 0,
+			"hypo": 0,
+			"history": []
+		},
+		"痛苦": {
+			"level": 0,
+			"maxlv": 0,
+			"hypo": 0,
+			"history": []
+		},
+		"耻辱": {
+			"level": 0,
+			"maxlv": 0,
+			"hypo": 0,
+			"history": []
+		}
+	},
+	"abl": {
+		"格斗": {
+			"lv": 7,
+			"exp": 0
+		},
+		"健身": {
+			"lv": 5,
+			"exp": 0
+		},
+		"跑步": {
+			"lv": 7,
+			"exp": 0
+		},
+		"科学": {
+			"lv": 15,
+			"exp": 0
+		},
+		"冥想": {
+			"lv": 5,
+			"exp": 0
+		},
+		"创作": {
+			"lv": 11,
+			"exp": 0
+		},
+		"表演": {
+			"lv": 5,
+			"exp": 0
+		},
+		"异能": {
+			"lv": 1,
+			"exp": 0
+		},
+		"奥术": {
+			"lv": 3,
+			"exp": 0
+		},
+		"秘术": {
+			"lv": 1,
+			"exp": 0
+		},
+		"学识": {
+			"lv": 1,
+			"exp": 0
+		}
+	},
+	"sbl": {
+		"性技巧": {
+			"lv": 8,
+			"exp": 0
+		},
+		"性抵抗": {
+			"lv": 2,
+			"exp": 0
+		},
+		"口技": {
+			"lv": 6,
+			"exp": 0
+		},
+		"手技": {
+			"lv": 6,
+			"exp": 0
+		},
+		"脚技": {
+			"lv": 4,
+			"exp": 0
+		},
+		"腰技": {
+			"lv": 1,
+			"exp": 0
+		}
+	},
+	"skl": {
+		"开锁": {
+			"lv": 1,
+			"exp": 0
+		},
+		"黑客": {
+			"lv": 1,
+			"exp": 0
+		},
+		"潜行": {
+			"lv": 1,
+			"exp": 0
+		},
+		"搜索": {
+			"lv": 1,
+			"exp": 0
+		}
+	},
+	"lewd": {
+		"纯洁": 300,
+		"露出": 0,
+		"滥交": 500,
+		"受虐": 500,
+		"施虐": 0,
+		"顺从": 500,
+		"兽交": 0,
+		"药隐": 0,
+		"性瘾": 0
+	},
+	"wear": {
+		"hat": null,
+		"cover": null,
+		"outfit_up": {
+			"id": "A3o3",
+			"imgname": "bwopice",
+			"name": "BW连衣裙",
+			"des": "一件设计简单的连衣裙。修身的设计显得你身材更苗条。毕竟是易淘上的便宜货，不能指望不了的防御效果。",
+			"gender": "n",
+			"uid": 0,
+			"name_en": "BW onepiece",
+			"des_en": "The slim fit design looks slimmer on your body. The cheap goods on Ebay, can not expect the fabric defense effect.",
+			"tags": ["日常"],
+			"hasImg": true,
+			"cost": 240,
+			"durable": 15,
+			"maxdurable": 15,
+			"fixcolor": true,
+			"color": "white",
+			"colorname": "white",
+			"colorplate": ["white", "black"],
+			"category": "上衣",
+			"layer": "outfit_up",
+			"shop": "all",
+			"slot": ["top", "bottom"],
+			"hasBreastDif": true,
+			"hasPregnantDif": true,
+			"hot": -0.5,
+			"cold": -0.5,
+			"beauty": 0.05
+		},
+		"outfit_bt": null,
+		"inner_up": {
+			"id": "A5o2",
+			"imgname": "",
+			"name": "胸罩",
+			"des": "一件设计朴素的胸罩。",
+			"gender": "f",
+			"uid": 0,
+			"name_en": "bra",
+			"des_en": "A simple designed bra.",
+			"tags": ["日常"],
+			"hasImg": false,
+			"cost": 60,
+			"durable": 12,
+			"maxdurable": 12,
+			"fixcolor": true,
+			"color": null,
+			"colorname": null,
+			"colorplate": [],
+			"category": "内衣",
+			"layer": "inner_up",
+			"shop": "all",
+			"slot": ["chest"]
+		},
+		"inner_bt": {
+			"id": "A6o2",
+			"imgname": "pantie",
+			"name": "内裤",
+			"des": "一款简单朴素的内裤。",
+			"gender": "f",
+			"uid": 0,
+			"name_en": "pantie",
+			"des_en": "A simple pantie.",
+			"tags": ["日常"],
+			"hasImg": true,
+			"cost": 15,
+			"durable": 12,
+			"maxdurable": 12,
+			"fixcolor": true,
+			"color": null,
+			"colorname": null,
+			"colorplate": [],
+			"category": "内裤",
+			"layer": "inner_bt",
+			"shop": "all",
+			"slot": ["hips"]
+		},
+		"legs": null,
+		"shoes": {
+			"id": "A15o2",
+			"imgname": "highheel",
+			"name": "高跟鞋",
+			"des": "一双简单设计的高跟鞋。",
+			"gender": "f",
+			"uid": 0,
+			"name_en": "high heel",
+			"des_en": "A simple design high heel.",
+			"tags": ["日常", "商务", "高跟"],
+			"hasImg": true,
+			"cost": 80,
+			"durable": 20,
+			"maxdurable": 20,
+			"fixcolor": false,
+			"color": "#FDFFFF",
+			"colorname": "白",
+			"colorplate": [],
+			"category": "鞋子",
+			"layer": "shoes",
+			"shop": "all",
+			"slot": ["feet"],
+			"require": ["elf", "furry", "human"],
+			"beauty": 0.02
+		},
+		"neck": null,
+		"facial": null,
+		"hands": null,
+		"back": null,
+		"onskin_up": null,
+		"onskin_bt": null
+	},
+	"slots": {
+		"reveal": 9,
+		"total": 10,
+		"tops": 7,
+		"bottoms": 6,
+		"slots": ["shoulder", "breast", "waist", "arms", "back", "crotch", "butts", "thign", "legs", "feet"]
+	},
+	"equip": {
+		"weapon": null,
+		"shield": null,
+		"acce1": null,
+		"acce2": null,
+		"acce3": null,
+		"penis": null,
+		"ureth": null,
+		"vagina": null,
+		"anal": null
+	},
+	"tattoos": {
+		"face": null,
+		"chest": null,
+		"belly": null,
+		"armsL": null,
+		"legsL": null,
+		"back": null,
+		"neck": null,
+		"fossa": null,
+		"buttsR": null,
+		"buttsL": null,
+		"armsR": null,
+		"legsR": null
+	},
+	"sexparts": {
+		"penis": {
+			"sens": 2,
+			"shape": "dracon",
+			"size": [160, 40],
+			"produce": [48, 48]
+		},
+		"vagina": {
+			"sens": 2,
+			"shape": "suji",
+			"size": [120, 24]
+		},
+		"ureth": {
+			"sens": 1.2,
+			"size": [2, 3],
+			"produce": [0, 3000]
+		},
+		"anal": {
+			"sens": 1.2,
+			"size": [11, 16]
+		},
+		"mouth": {
+			"sens": 1.2
+		},
+		"breast": {
+			"sens": 1.2,
+			"produce": [100, 100]
+		}
+	},
+	"liquid": {
+		"face": [0, 0, 0, 0],
+		"hair": [0, 0, 0, 0],
+		"hands": [0, 0, 0, 0],
+		"legs": [0, 0, 0, 0],
+		"chest": [0, 0, 0, 0],
+		"back": [0, 0, 0, 0],
+		"butts": [0, 0, 0, 0],
+		"vagina": [0, 0, 0, 0],
+		"anal": [0, 0, 0, 0]
+	},
+	"virginity": {},
+	"pregnant": {
+		"cycle": {
+			"type": "heat",
+			"circle": [84, 84],
+			"days": 3,
+			"rng": [-2, 2],
+			"current": 0,
+			"state": 0,
+			"phase": "none"
+		},
+		"fatherID": [],
+		"seedCount": [],
+		"inside": []
+	},
+	"schedule": {
+		"workday": [1, 3, 5, 2, 4],
+		"works": [
+			{
+				"workday": [1, 3, 5],
+				"workplace": "景南大学",
+				"worktype": "学习",
+				"startTime": 9,
+				"endTime": 11
+			},
+			{
+				"workday": [2, 4],
+				"workplace": "景南大学",
+				"worktype": "学习",
+				"startTime": 14,
+				"endTime": 17
+			}
+		],
+		"sleepTime": [22, 8],
+		"homeLocation": "凤兴苑",
+		"Tracks": {
+			"大学城": {
+				"chance": 25,
+				"stayHours": 1,
+				"entryTime": 9,
+				"exitTime": 18
+			},
+			"海洋馆": {
+				"chance": 20,
+				"stayHours": 3,
+				"entryTime": 14,
+				"exitTime": 17
+			}
+		}
+	}
+}

@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "筑紫古典";
+  src: url("./Font/FZFWZhuZGDSMCJW.otf");
+}
+
+@font-face {
+  font-family: "珍珠体";
+  src: url("./Font/FZFWZZTJW.otf");
+}
+
+@font-face {
+  font-family: "新综艺";
+  src: url("./Font/FZXinZYHJW_M.otf");
+}
+
+@font-face {
+  font-family: "源流明体B";
+  src: url("./Font/GenWanMinTW-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "羽墨";
+  src: url("./Font/CangErYuMoW02-2.ttf");
+}
+
+@font-face {
+  font-family: "渔阳A";
+  src: url("./Font/CangErYuYangTiW03-2.ttf");
+}
+
+@font-face {
+  font-family: "渔阳B";
+  src: url("./Font/CangErYuYangTiW04-2.ttf");
+}
+
+@font-face {
+  font-family: "粗金陵";
+  src: url("./Font/FZCuJinLJW.otf");
+}
+
+@font-face {
+  font-family: "NotoSansL";
+  src: url("./Font/NotoSansSC-Light.otf");
+}
+
+@font-face {
+  font-family: "NotoSansR";
+  src: url("./Font/NotoSansSC-Regular.otf");
+}
+
+@font-face {
+  font-family: "NotoSerifB";
+  src: url("./Font/NotoSerifSC-Bold.otf");
+}
+
+@font-face {
+  font-family: "NotoSerifM";
+  src: url("./Font/NotoSerifSC-Medium.otf");
+}
+
+@font-face {
+  font-family: "问藏";
+  src: url("./Font/WenCangShuFang-2.ttf");
+}
+
+@font-face {
+  font-family: "喵呜";
+  src: url("./Font/FZMWFONT.ttf");
+}
+
+@font-face {
+  font-family: "巨蟹";
+  src: url("./Font/FZSJ-XINRMGJXZ.ttf");
+}
+
+@font-face {
+  font-family: 'Chivo';
+  src: url("./Font/Chivo-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("./Font/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("./Font/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Sawarabi';
+  src: url("./Font/SawarabiMincho-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Aboreto';
+  src: url("./Font/Aboreto-Regular.ttf");
+}

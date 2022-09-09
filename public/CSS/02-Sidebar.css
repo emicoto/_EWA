@@ -1,0 +1,387 @@
+﻿
+#ui-bar {
+    background-color: #eee;
+    border-color: #ccc;
+    letter-spacing: 1px;
+    font-family: "Times New Roman", Noto Sans SC;
+    box-shadow: 0px 2px 10px rgba(99, 95, 41, 0.3);
+}
+
+#ui-bar hr {
+    border-color: #ccc;
+}
+
+#ui-bar button {
+    font-family: "Times New Roman", Noto Sans SC;
+    font-size: 15px;
+    letter-spacing: 4px;
+    max-width: 245px;
+    margin: 2px 0px;
+}
+
+#ui-bar-toggle{
+    color: rgb(59, 58, 49);
+    border-color: rgb(219, 219, 211);
+    width: 30px;
+    height: 30px;
+}
+
+#ui-bar-history {
+    width: 40px;
+    height: 100px;
+    z-index: auto;
+    position: absolute;
+    top:40px;
+    right:0px;
+}
+
+#ui-bar-history [id|="history"] {
+    color: #111;
+    border-color: #ccc;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    margin: 0px 30px 0px 30px;
+    text-align: center;
+}
+
+#ui-bar-toggle:hover{
+    background-color: #eee;
+    border-color: rgb(59, 58, 49);
+}
+
+#history-backward{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:30px;
+    right: -28px;
+}
+
+#history-forward {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:0px;
+    right:-28px;
+}
+
+#ui-bar-history [id|="history"]:hover {
+    background-color: #eee;
+    border-color: #111;
+}
+
+#ui-bar-history [id|="history"]:disabled {
+    color: rgb(219, 218, 200);
+    background-color: transparent;
+    border-color: rgb(204, 203, 190);
+}
+
+
+#versioninfo ,#story-title {
+    position:relative;
+    z-index: 2;
+}
+
+#ui-bar #title {
+    display: none;
+}
+  
+#story-title {
+    font-size: 40px;
+    line-height: 45px;
+    font-family: "Kaisei HarunoUmi";
+    color:#7F6E00;
+    font-style: normal;
+}
+
+#story-subtitle {
+    font-size: 12px;
+    font-family: Georgia;
+    font-style: italic;
+    color:#B4B07F;
+    letter-spacing: 2px;
+    margin-top: -4px;
+}
+
+#showtitle{
+    width: 280px;
+    height: fit-content;
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: -1;
+}
+
+#gameVersionDisplay {
+    position: fixed;
+    left: 2px;
+    bottom: 2px;
+    font-size: 8px;
+    color: rgb(177, 179, 160);
+    z-index: 1000;
+}
+
+body #story-caption #storyCaptionDiv {
+	/* 232 px: img size, 1.32 em: stats line height, 4px: stats borders */
+	position: fixed;
+	top: 145px;
+	left: 10px;
+	height: calc(100% - 150px);
+	width: 268px;
+	padding-right: 2px;
+	padding-bottom: 12px;
+	overflow: scroll;
+	overflow-y: scroll;
+	overflow-wrap: anywhere;
+	scrollbar-color: #ddd #ccc;
+    scrollbar-width: thin;
+}
+
+#ui-bar header {
+    position: absolute;
+    top:5px;
+    z-index:-100;
+}
+
+#story-caption {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+#story-caption .error-reporter-btn {
+	position: absolute;
+	right: 16px;
+	top: 48px;
+	z-index: 999;
+}
+
+#showtimes {
+    border-top: 2px solid #716617;
+    border-bottom: 2px solid #716617;
+    position: fixed;
+    top:145px;
+    left:0px;
+    overflow: hidden;
+    width: 280px;
+    height: 22px;
+    z-index: 99;
+}
+
+.InGameDate {
+    border-top: 1px solid rgb(223, 220, 198,0.5);
+    border-bottom: 1px solid rgb(223, 220, 198,0.5);
+    background-color: #57522e;
+    position: absolute;
+    top:0px;
+    left:0px;
+    overflow: hidden;
+    width: 280px;
+    height: 20px;
+    z-index: 100;
+    font-family: "羽墨",'Times New Roman';
+    letter-spacing: 3px;
+    align-items: center;
+    line-height: 18px;  
+}
+
+.showtime {
+    font-size: 12px; 
+    color:rgb(240, 239, 231);
+}
+
+#show_money {
+    font-size: 14px;
+    line-height: 18px;   
+    vertical-align:middle;
+    font-family: "羽墨",'Times New Roman';
+    font-weight: 600;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    height: 24px;
+}
+#show_money .points {
+    text-align: right;
+    width: fit-content;
+    width: 45%;
+    float: left;
+    color: rgb(86, 187, 255);
+}
+
+#show_money .slice {
+    color:#ccc;
+    width: 20px;
+}
+
+#show_money .money{
+    width: fit-content;
+    width: 45%;
+    float: right;
+    color:rgb(172, 169, 2);
+    text-align: left;
+}
+
+#notice {
+    width: 100%;
+    height:fit-content;
+    font-size: 13px;
+    color:#8b8b7e;
+    padding: 5px;
+}
+
+#playerstats {
+    width: 170px;
+    align-content: center;
+    z-index: 0;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    line-height: 20px;
+}
+
+#menu_container {
+    width: 320px;
+    min-height: 50px;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #FFF;
+    position: fixed;
+    border-radius: 0px 100px 100px 0px;
+    bottom:5%;
+    transition: all 0.75s ease-in-out;
+    overflow: hidden;
+    display: inline-block;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px); 
+
+}
+
+@media screen and (max-height: 1200px) {
+    #menu_container{
+        bottom:30%;
+    }
+}
+
+@media screen and (max-height: 960px) {
+    #menu_container{
+        bottom:18%;
+    }
+}
+
+@media screen and (max-height: 820px) {
+    #menu_container{
+        bottom:10%;
+    }
+}
+
+@media screen and (max-height: 680px) {
+    #menu_container{
+        bottom:10px;
+    }
+}
+.menu_hide {
+    left:-300px;
+    height: 80px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 1% 30px 1% 0px;
+    box-shadow: 1px 1px 5px rgba(113, 116, 138, 0.1);
+}
+
+.menu_active {
+    left: -10px;
+    line-height: 20px;
+    font-size: 16px;
+    padding:10px 30px 10px 0px;
+    height: fit-content;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); 
+    box-shadow: 2px 2px 10px rgba(113, 116, 138, 0.2);
+}
+
+#menu_container:hover,
+#menu_container:focus,
+#menu_container:focus-visible{
+    left: -10px;
+    line-height: 20px;
+    font-size: 16px;
+    padding:10px 30px 10px 0px;
+    height: fit-content;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); 
+    box-shadow: 2px 2px 10px rgba(113, 116, 138, 0.2);
+}
+
+#menu_container:hover .menu,
+#menu_container:focus .menu,
+#menu_container:focus-visible .menu,
+.menu_active .menu{
+ color:#c0be33;
+}
+
+#menu_container .menu {
+    width: 20px;
+    height: 100%;
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    font-family: 渔阳体M;
+    text-align: center;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+    cursor: pointer;
+}
+
+#menu_container .menu a:hover{
+    color:#c4c267;
+    border: none;
+}
+
+#menu_container .bottonarea{
+    width: calc(100% - 50px);
+    float: left;
+}
+
+#menu_container button{
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  border: #eee 1px;
+  float: right;
+  margin: 2px;
+  font-size: 14px;
+  font-family: 新综艺;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+#menu_container button:hover, #menu_container button:focus{
+    color:#bfc212;
+    border: #eee 1px;
+    box-shadow:inset 2px 2px 1px 0px rgba(73, 50, 0, 0.1), 1px 1px 2px 0px rgba(255, 248, 186, 0.2);
+}
+
+#sidebar_stats button{
+    min-width: 75px;
+    max-width: 75px;
+    max-height: 12px;
+    border: #ddd 1px solid;
+    color: #9A9242;
+    font-size: 10px;
+    line-height: 4px;
+    text-align: center;
+    vertical-align:top;
+    margin: 0px;
+}
+
+#showgametime {
+    position: fixed;
+    right: 2px;
+    top: 2px;
+    font-size: 8px;
+    color: rgb(177, 179, 160);
+    z-index: 1000;
+}

@@ -1,0 +1,439 @@
+　　分类：食物-general
+　　
+　　name:汉堡
+　　
+　　pirce:6
+　　
+　　fresh:1440
+　　
+　　text:只要是快餐店就一定会有卖的汉堡包。毕竟是最便宜的汉堡，份量不怎么的，味道也很一般。
+　　
+　　分类：食物-ingredients
+　　
+　　name:马铃薯
+　　
+　　price:1
+　　
+　　fresh:43200
+　　
+　　text:一个马铃薯。不能直接生吃
+　　
+　　分类：食物-ingredients
+　　
+　　name: 番茄
+　　
+　　price: 1
+　　
+　　fresh: 1440
+　　
+　　text: 一个普通的番茄，即是水果也是蔬菜。
+　　
+　　分类：食物-ingredients
+　　
+　　name: 胡萝卜
+　　
+　　price: 2
+　　
+　　fresh: 4320
+　　
+　　text: 补充维生素的最好伙伴。
+　　
+　　分类：食物-ingredients
+　　
+　　name: 鸡蛋
+　　
+　　price: 3
+　　
+　　fresh: 14400
+　　
+　　text: 蛋白质必不可少
+　　
+　　分类：食物-ingredients
+　　
+　　name: 豌豆
+　　
+　　price: 2
+　　
+　　fresh: 2880
+　　
+　　text: 是豌豆射手哒！！！
+　　
+　　分类：食物-ingredients
+　　
+　　name: 猪肉
+　　
+　　price: 8
+　　
+　　fresh: 1440
+　　
+　　text: 美味的肉类，猪猪有点可怜？
+　　
+　　分类：食物-ingredients
+　　
+　　name: 牛肉
+　　
+　　price: 12
+　　
+　　fresh: 2880
+　　
+　　text: 浪费的话牛牛会生气的！
+　　
+　　分类：食物-ingredients
+　　
+　　name: 羊肉
+　　
+　　price: 12
+　　
+　　fresh: 2880
+　　
+　　text: 喜羊羊懒羊羊美羊羊沸羊羊……喔，原来其是村长啊。
+　　
+　　分类：食物-ingredients
+　　
+　　name: 兔子
+　　
+　　price: 20
+　　
+　　fresh: 2880
+　　
+　　text: 吃兔子什么的太奇怪了吧。
+　　
+　　分类：食物-ingredients
+　　
+　　name: 烤脑花
+　　
+　　price: 30
+　　
+　　fresh: 200
+　　
+　　text: 虽然但是……真的很美味。
+　　
+　　分类：食物-ingredients
+　　
+　　name: 清酒
+　　
+　　price: 10
+　　
+　　fresh: 28800
+　　
+　　text: 未成年禁止！！！
+　　
+　　分类：食物-ingredients
+　　
+　　name: 螃蟹
+　　
+　　price: 30
+　　
+　　fresh: 2880
+　　
+　　text: 有点少，但是真的很好吃！！！
+　　
+　　分类：衣服-ingredients
+　　
+　　name: 水手服
+　　
+　　price: 200
+　　
+　　fresh: 1440000
+　　
+　　text: 死库水！欧拉欧拉！建议和龟甲缚一起使用！
+　　
+　　分类：药品-ingredients
+　　
+　　name: 变性药
+　　
+　　price: 2000
+　　
+　　fresh: 100
+　　
+　　text: 犹豫就会败北，果断就会白给。
+　　
+　　分类：道具-ingredients
+　　
+　　name: 玫瑰
+　　
+　　price: 100
+　　
+　　fresh: 1440
+　　
+　　text: 赠人玫瑰，手留余香……嗯？被赠人的体香？
+　　
+　　分类：道具-ingredients
+　　
+　　name: 茶具（全套）
+　　
+　　price: 10000
+　　
+　　fresh: 1000000000
+　　
+　　text: 贵族的优雅之礼（其一）
+　　
+　　分类：道具-ingredients
+　　
+　　name: 剑
+　　
+　　price: 10000
+　　
+　　fresh: 1000000
+　　
+　　text: 贵族的优雅之礼（其二）
+　　
+　　分类：纪念-ingredients
+　　
+　　name: 群老萝莉（正太啦）
+　　
+　　price: 1
+　　
+　　fresh: 1000000000000000000000000000
+　　
+　　text: 免费附赠的纪念品！（这是我写的哦。）
+　　
+　　分类：食物-ingredients
+　　
+　　name: 坚果
+　　
+　　price: 3
+　　
+　　fresh: 14400
+　　
+　　text: 美味的坚果。
+　　
+　　分类：食物-ingredients
+　　
+　　name: 水
+　　
+　　price: 1
+　　
+　　fresh: 4320
+　　
+　　text：白开水什么的最棒了！
+　　
+　　分类：食物-ingredients
+　　
+　　name: 饼干
+　　
+　　price: 5
+　　
+　　fresh: 1440
+　　
+　　text: 是不需要撕开包装就可以吃的喔。
+　　
+　　分类：食物-ingredients
+　　
+　　name: 蛋糕
+　　
+　　price: 30
+　　
+　　fresh: 1440
+　　
+　　text: 也许……应该分类为道具？
+　　
+　　分类：道具-ingredients
+　　
+　　name:项圈
+　　
+　　price:100
+　　
+　　fresh:432000000000
+　　
+　　text:据说戴上它的孩子就会对着自己的主人汪汪的叫。
+　　
+　　分类：道具-ingredients
+　　
+　　name:龟甲缚
+　　
+　　price:100
+　　
+　　fresh:24400
+　　
+　　text:我知道你可能不会捆，所以……？我帮你做好了！如果想要报答的话，就请让我为你戴上吧。
+　　
+　　分类：衣服-ingredients
+　　
+　　name:袜子
+　　
+　　price:10
+　　
+　　fresh:144000
+　　
+　　text:虽然按理说应该在细分一下，但谁让我懒呢！不管是什么袜子，丝袜还是棉袜，条纹还是网状，都是这个喔。啊，颜色也是都行的！
+　　
+　　分类：衣服-ingredients
+　　
+　　name:教士服
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:是教士不是教师！教师那么多，教士很少吧？
+　　
+　　分类：衣服-ingredients
+　　
+　　name:警服
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:游戏不规范，亲人两行泪。
+　　
+　　分类：衣服-ingredients
+　　
+　　name:教师服
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:喔这次是老师了！喂笨蛋！给我好好学习啊可恶！不然用鞭子抽打你喔。
+　　
+　　分类：衣服-ingredients
+　　
+　　name:兔女郎
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:按理说我不应该懂这么多的，但……哎嘛，反正你拿我没办法！
+　　
+　　分类：食物-ingredients
+　　
+　　name:米饭
+　　
+　　price:1
+　　
+　　fresh:1440
+　　
+　　text:我的厨艺技能满级，虽然就算是米饭也非常好吃！可不许浪费喔。
+　　
+　　分类：道具-ingredients
+　　
+　　name:跳蛋
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:别问为什么一百天，勤换洗宝。要照顾好彼此啊。
+　　
+　　分类：道具-ingredients
+　　
+　　name:乳夹
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:其实我不想写这种东西的，因为我是纯洁的好孩子，可是……好奇怪喔。
+　　
+　　分类：道具-ingredients
+　　
+　　name:针
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:非SM请慎重。
+　　
+　　分类：道具-ingredients
+　　
+　　name:乳环
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:都能带上这个了，你给我走纯爱路线啊魂淡！诶，纯欲路线似乎也不错诶……？
+　　
+　　分类：道具-ingredients
+　　
+　　name:鞭子
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:会哭的吧？但是身上的印子真的好好看……
+　　
+　　分类：道具-ingredients
+　　
+　　name:笔墨纸砚
+　　
+　　price:100000
+　　
+　　fresh:1440000
+　　
+　　text:贵族的优雅之礼（其三）
+　　
+　　分类：道具-ingredients
+　　
+　　name:幼化药
+　　
+　　price:2000
+　　
+　　fresh:1440
+　　
+　　text:萝莉正太什么的果然是人世界的瑰宝！请务必温柔以待啊。（粗暴也行的说）
+　　
+　　分类：道具-ingredients
+　　
+　　name:巨化药
+　　
+　　price:2000
+　　
+　　fresh:1440
+　　
+　　text：被抱在怀里的感觉真的太好了！
+　　
+　　分类：道具-ingredients
+　　
+　　name:缩胸药
+　　
+　　price:2000
+　　
+　　fresh:1440
+　　
+　　text:行了，我知道你是贫乳控了，变态。
+　　
+　　分类：道具-ingredients
+　　
+　　name:丰胸药
+　　
+　　price:2000
+　　
+　　fresh:1440
+　　
+　　text:行了，我知道你喜欢丰满了，变态。
+　　
+　　分类：道具-ingredients
+　　
+　　name:马
+　　
+　　price:10000
+　　
+　　fresh:14400000
+　　
+　　text:贵族的优雅之礼（其四）……等一下，话说不会有什么奇怪的用处吧？
+　　
+　　分类：道具-ingredients
+　　
+　　name:笼子
+　　
+　　price:100
+　　
+　　fresh:144000
+　　
+　　text:和项圈鞭子很配呢……我是说养宠物。
+　　
+　　分类：食物-ingredients
+　　
+　　name:奇怪的液体
+　　
+　　price:1
+　　
+　　fresh:1440
+　　
+　　text:根据运气，你可能会喝到透明，黄色，白色，乳白色，以及红色五种液体，不过效果差别不大喔。

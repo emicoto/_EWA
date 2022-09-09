@@ -1,0 +1,88 @@
+﻿/* HoverTxt code - Start */
+.hoverTxt {
+	position: relative;
+	top: 5px;
+	vertical-align: text-bottom;
+	height: 30px;
+}
+.hoverTxt:hover span {
+	visibility: visible;
+}
+.hoverTxt span {
+	position: absolute;
+	background-color: #f3f3ed;
+	padding: 3px;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	visibility: hidden;
+	color: black;
+	text-decoration: none;
+}
+.hoverBox {
+	top: -100px;
+	text-align: left;
+	box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.5);
+	z-index: 100;
+}
+/* HoverTxt code - End */
+
+/* hovertip v2.0 - Start */
+.hoverTip {
+	display: inline-block;
+	top: 0px;
+	border-width: 0px;
+}
+.hoverTipTxt {
+	position: absolute;
+	vertical-align: text-bottom;
+	line-height: initial;
+}
+.hoverTipTxt .hoverBox {
+	position: absolute;
+	visibility: hidden;
+}
+.hoverTipTxt:hover .hoverBox, .hoverTipTxt:focus .hoverBox {
+	visibility: visible;
+}
+.hoverBox {
+	padding: 3px 10px;
+	width: intrinsic;  /* Safari/WebKit uses a non-standard name */
+	width: -webkit-max-content;  /* Chrome */
+	width: -moz-max-content;  /* Firefox/Gecko */
+	width: max-content;
+	max-width: 250px;
+	line-height: initial;
+	text-align: left;
+	color: #fff;
+	background-color: #555;
+	border: #444 solid 1px;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+	-webkit-box-shadow:rgba(85, 85, 85, 0.3) 0px 2px 2px;
+	box-shadow: rgba(85, 85, 85, 0.3) 0px 2px 2px;
+	font-family: 渔阳体M;
+	font-size: 14px;
+	z-index: 100;
+}
+.hoverTail::after {
+	content: "";
+	position: absolute;
+	top: 100%;  /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 8px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+	z-index: 100;
+}
+.hoverBox a {
+	-webkit-transition-duration: unset;
+	   -moz-transition-duration: unset;
+	     -o-transition-duration: unset;
+	        transition-duration: unset;
+}
+#ui-bar .hoverBox {
+	max-width: 230px;
+}
+/* hovertip v2.0 - End */

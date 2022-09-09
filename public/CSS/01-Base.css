@@ -1,0 +1,234 @@
+﻿html {
+  /* Vertical colour gradient */
+  background-image: linear-gradient(to bottom,
+      rgb(240, 240, 240) 30%,
+      rgb(190, 190, 190));
+  background-image: -webkit-linear-gradient(top,
+      rgb(240, 240, 240) 30%,
+      rgb(190, 190, 190));
+  background-attachment: fixed;
+
+  /* Fallback colour */
+  background-color: #eee;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  /* Remove default styles */
+  background-color: transparent;
+  margin: -1% 0 0 0;
+  font-family: "Raleway", Georgia, "NotoSerifM";
+  /* Used to center the box */
+  text-align: left;
+  color: #707556;
+  width: 100%;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+canvas {
+  overflow: hidden;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  border: rgba(255, 255, 255, 0) 1px solid;
+  background-image: url('../image/pattern.png');
+  background-repeat: repeat;
+  background-color: transparent;
+  z-index: -1;
+}
+
+#passages {
+  float: left;
+  width: 80%;
+  height: 100%;
+  display: block;
+}
+
+.passage {
+  margin: 0px;
+  /* Inner margin within the box */
+  padding: 24px;
+  /* Text formatting */
+  color: rgb(65, 58, 3);
+  font-size: 90%;
+  line-height: 180%;
+  text-align: justify;
+}
+
+/* Shrink the page when viewed on devices with a low screen width */
+@media screen and (max-width: 1920px) {
+  .passage {
+    font-size: 100%;
+  }
+
+  #passages {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .passage {
+    font-size: 90%;
+  }
+
+  #passages {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .passage {
+    font-size: 90%;
+  }
+
+  #passages {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .passage {
+    font-size: 87.5%;
+  }
+
+  #passages {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .passage {
+    font-size: 75%;
+  }
+
+  #passages {
+    width: 100%;
+  }
+}
+
+#passages button {
+  background-color: #eee;
+  border-color: #ccc;
+  width: fit-content;
+}
+
+#passages button:hover {
+  background-color: #ddd;
+  border-color: #111;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  border: 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+#volume {
+  font-size: 10px;
+  font-family: 'Times New Roman', "MS PGothic";
+  position: fixed;
+  top: 0px;
+  left: 55px;
+}
+
+.VolumeSlider,
+.VolumeSlider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 120px;
+  height: 5px;
+  max-height: 5px;
+  background: #fff;
+  outline: none;
+  opacity: 0.6;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border: 1px solid #bbb;
+}
+
+.VolumeSlider:hover {
+  opacity: 1;
+}
+
+.slider,
+.slider::-webkit-slider-runnable-track{
+  -webkit-appearance: none;
+  width: 300px;
+  height: 5px;
+  max-height: 5px;
+  background: #fff;
+  outline: none;
+  opacity: 0.6;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border: 1px solid #bbb;
+}
+
+.slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 15px;
+  background: #535a63;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+.slider::-moz-range-thumb{
+  width: 5px;
+  height: 15px;
+  background: #535a63;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+.VolumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 15px;
+  background: #bfc22f;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+
+.VolumeSlider::-moz-range-thumb {
+  width: 5px;
+  height: 15px;
+  background: #bfc22f;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #d1d1d1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(220, 220, 220);
+}
+
+*::-webkit-scrollbar {
+  background-color: #eee;
+  width: 3px;
+  height: 3px;
+}

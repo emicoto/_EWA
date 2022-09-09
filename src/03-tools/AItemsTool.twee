@@ -1,0 +1,74 @@
+:: Avatar Items Tools
+
+<<set $temp = {} >>
+<<set $temp.item = {}>>
+<<set _itemlist = A.data.outfit_up>>
+
+<li>物品名称：<<textbox '$temp.item.name' '名称' >></li>
+<li>英文名称：<<textbox '$temp.item.name_en' 'name'>></li>
+
+<li>物品描述：<<textbox '$temp.item.des' '描述'>></li>
+<li>英文描述：<<textbox '$temp.item.des_en' 'description'>></li>
+
+<li>分类：
+<<run
+    T.optionlist = clone(A.list.categories)
+    T.optionlist.splice(0,1)
+>>
+<<listbox '$temp.item.category' autoselect>>
+    <<optionsfrom _optionlist>>
+<</listbox>>
+</li>
+
+<li>性别限制：
+<<listbox '$temp.item.gender' autoselect>>
+    <<option '无' 'n'>>
+    <<option '男' 'm'>>
+    <<option '女' 'f'>>
+<</listbox>>
+</li>
+
+<li>物品标签：
+<<set _optionlist to A.list.tags>>
+<<listbox '$temp.item.tag1' autoselect>>
+    <<optionsfrom _optionlist>>
+<</listbox>>
+<<linkreplace "追加1">>
+<<set _optionlist to A.list.tags>>
+<<listbox '$temp.item.tag2' autoselect>>
+    <<optionsfrom _optionlist>>
+<</listbox>>
+<</linkreplace>>
+<<linkreplace "追加2">>
+<<set _optionlist to A.list.tags>>
+<<listbox '$temp.item.tag3' autoselect>>
+    <<optionsfrom _optionlist>>
+<</listbox>>
+<</linkreplace>>
+</li>
+
+<li>贩售商店：
+<<set _optionlist to A.list.shops>>
+<<listbox '$temp.item.shop' autoselect>>
+    <<optionsfrom _optionlist>>
+<</listbox>>
+</li>
+
+<li>商品系列：
+<<set _optionlist to A.list.shoplines>>
+<<listbox "$temp.item.shop" autoselect>>
+    <<optionsfrom _optionlist>>
+<</listbox>>
+</li>
+
+<li>价格：<<numberbox '$temp.item.cost' 10 >></li>
+<li>美貌加值：<<numberbox '$temp.item.beauty' 0>></li>
+<li>防御加值：<<numberbox "$temp.item.defence" 0>></li>
+<li>温度适应：<<numberbox "$temp.item.warmth" 0>></li>
+<li>耐久度：<<numberbox "$temp.item.durable" 10>></li>
+
+<<link '保存'>>
+    <<run
+        A.saveCustomItem(V.temp.item)
+    >>
+<</link>>
