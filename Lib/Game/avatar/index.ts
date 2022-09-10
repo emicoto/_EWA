@@ -1,6 +1,4 @@
 export * from "./AvatarItems";
-export * from "./Avatars";
+export * as A from "./Avatars";
 export * from "./SetAvatar";
 export * from "./AvatarCanvas";
-
-export const A: any = {};

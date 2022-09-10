@@ -90,12 +90,4 @@ Macro.add('volume', {
 	}
 });
 
-window.lan = function(CN, EN) {
-	if(Array.isArray(CN)){
-		EN = CN[1]
-		CN = CN[0]
-	}
-	if (G.config.language == "CN") return CN;
-	if (G.config.language == "EN") return EN;
-}
-DefineMacroS("lang", lan)
+DefineMacroS("lang", window.lan)

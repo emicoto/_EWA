@@ -1,0 +1,15 @@
+{
+	"straight": ["顺直", "straight"],
+	"natural": ["自然", "natural"],
+	"curly": ["微卷", "curly"],
+	"himecut": ["齐整", "himecut"],
+	"bigwave": ["大波浪卷", "bigwave"],
+	"pony": ["马尾", "pony"],
+	"twintail": ["双马尾", "twin-tail"],
+	"twosider": ["披肩双马尾", "two-sider"],
+	"sidetail": ["侧马尾", "side-tail"],
+	"bob": ["波波头", "bob"],
+	"manjyu": ["包子头", "manjyu"],
+	"drill": ["螺旋卷发", "drill"],
+	"drilltail": ["螺旋双马尾", "drill-tail"]
+}

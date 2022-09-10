@@ -4,3 +4,7 @@ sugarcube-2:
       name: CMGender
     cmint:
       name: cmint
+    CMSkin:
+      name: CMSkin
+    CMSkinb:
+      name: CMSkinb

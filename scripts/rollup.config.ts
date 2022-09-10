@@ -54,11 +54,11 @@ export const configs: RollupOptions[] = [
 
 	{
 		input: ["Lib/Module/**/*.ts"],
-		plugins: [multiInput({ relative: "Lib/Module/" }), ...plugins, del({ targets: "modules/Lib/" })],
+		plugins: [multiInput({ relative: "Lib/Module/" }), ...plugins],
 		output: {
 			format: "commonjs",
 			dir: "modules/Lib",
-			sourcemap: "inline",
+			//sourcemap: "inline",
 		},
 	},
 ];

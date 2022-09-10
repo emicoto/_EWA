@@ -40,8 +40,3 @@ window.defineGlobalNamespaces = (namespaces) => {
 }
 defineGlobalNamespaces(EWA);
 
-window.Functions = {}
-
-window.EWA.data = {}
-window.EWA.config = {}
-window.EWA.functions = Functions

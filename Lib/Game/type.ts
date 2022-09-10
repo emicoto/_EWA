@@ -1,6 +1,4 @@
-import { AvItems } from "../avatar/Avatars";
-
-export declare function lan(cn: string, en: string);
+import { AvItems } from "./avatar/Avatars";
 
 //阻挡、占用判定用
 export type slots =
@@ -130,46 +128,26 @@ export type shopline =
 	| "none";
 
 export type category =
-	| "帽子"
-	| "外套"
-	| "套装"
-	| "上衣"
-	| "裤裙"
-	| "内衣"
-	| "内裤"
-	| "袜子"
-	| "鞋子"
-	| "装饰"
-	| "道具"
-	| "背包"
-	| "头饰"
-	| "脸饰"
-	| "耳饰"
-	| "围巾"
-	| "首饰"
-	| "手套"
-	| "无";
-
-export type category_en =
+	| "hat"
 	| "coat"
-	| "suit"
+	| "suits"
 	| "upper"
-	| "bottoms"
-	| "bras"
-	| "underwear"
+	| "bottom"
+	| "underup"
+	| "underbt"
 	| "socks"
 	| "shoes"
-	| "body accessory"
-	| "gears"
+	| "accessory"
+	| "gear"
 	| "backpack"
-	| "hat"
-	| "hair accesory"
-	| "glasses"
+	| "hairs"
+	| "facial"
+	| "earing"
 	| "scarf"
-	| "gloves"
-	| "earrings"
-	| "necklaces"
-	| "none";
+	| "necklace"
+	| "glove"
+	| "none"
+	| "onepiece";
 
 export type shop = "none" | "all" | "online" | "offline" | "event" | "adluts" | "unique" | "special" | "ordermade";
 //all 是指线上线下商店都有，以及活动场合也可能有。adluts,unique,special,ordermade是独立的。
@@ -246,35 +224,31 @@ export type races =
 	| "noctar";
 
 export type palameter =
-	| "饮食"
-	| "健康"
-	| "魔力"
-	| "体力"
-	| "理智"
-	| "清洁"
-	| "酒精"
-	| "药物"
-	| "欲望"
-	| "快感"
-	| "压力"
-	| "疼痛"
-	| "抑郁"
-	| "恐惧"
-	| "耻辱"
-	| "魔力"
-	| "体力"
-	| "理智"
-	| "情绪"
-	| "快感"
-	| "愤怒"
-	| "射精"
-	| "满意"
-	| "快M"
-	| "快B"
-	| "快C"
-	| "快V"
-	| "快U"
-	| "快A";
+	| "饮食" //food
+	| "健康" //health
+	| "魔力" //mana
+	| "体力" //stamina
+	| "理智" //sanity
+	| "清洁" //clean
+	| "酒精" //alcohol
+	| "药物" //drugs
+	| "欲望" //arousal
+	| "快感" //esctacy
+	| "压力" //stress
+	| "疼痛" //pain
+	| "抑郁" //depress
+	| "恐惧" //fear
+	| "耻辱" //stigma
+	| "情绪" //emotion
+	| "愤怒" //angry
+	| "射精" //ejaculation
+	| "满意" //sastify
+	| "快M" //mouth esctacy
+	| "快B" //breast esctacy
+	| "快C" //critoris esctacy
+	| "快V" //vagina esctacy
+	| "快U" //ureth esctaty
+	| "快A"; //anal esctacy;
 
 export type bases =
 	| "lv"
@@ -283,14 +257,14 @@ export type bases =
 	| "MTK"
 	| "MDF"
 	| "SPD"
-	| "力量"
-	| "体质"
-	| "敏捷"
-	| "意志"
-	| "智力"
-	| "灵感"
-	| "魅力"
-	| "幸运"
+	| "STR" //力量
+	| "CON" //体质
+	| "DEX" //敏捷
+	| "WIL" //意志
+	| "INT" //智力
+	| "PSY" //灵感
+	| "ALR" //魅力
+	| "LUK" //幸运
 	| "hot"
 	| "cold"
 	| "exp";
@@ -382,7 +356,10 @@ export type skincolor =
 	| "fur"
 	| "gray"
 	| "lightfur"
-	| "darkfur";
+	| "darkfur"
+	| "green"
+	| "silver"
+	| "aqua";
 
 export type element = "lumen" | "ark" | "ions" | "flame" | "electron" | "vitae" | "terra";
 export type element_cn = "光" | "暗" | "水" | "火" | "土" | "电" | "木" | "土";
@@ -458,7 +435,6 @@ export type expname =
 	| "战败"
 	| "诱惑"
 	| "被诱惑"
-	| "被猥琐"
 	| "射精"
 	| "高潮"
 	| "M高潮"
@@ -530,7 +506,7 @@ export type degree =
 	| "药隐"
 	| "性瘾"
 	| "束缚"
-	| "调教"
+	| "支配"
 	| "追踪";
 
 export type liquidlayer = "face" | "hair" | "hands" | "legs" | "chest" | "back" | "vagina" | "anal" | "butts";
@@ -561,28 +537,31 @@ export type sexPart<T = any, K extends string = sexpart> = { [key in K]?: T };
 export type Basevalue = [number, number];
 export type Base<T = Basevalue, K extends string = bases> = { [key in K]?: T };
 /*各项基础数值对应基础技能：
-	力量 = 格斗
-	体质 = 健身
-	敏捷 = 跑步
-	意志 = 冥想
-	智力 = 科学
-	灵感 = 创作
-	魅力 = 表演
+	STR = 格斗
+	CON = 健身
+	DEX = 跑步
+	WIL = 冥想
+	INT = 科学
+	PSY = 创作
+	ALR = 表演
 */
 /*具体的战斗技能，以卡片的形式存在。*/
 
 export type Palam<T = number[], K extends string = palameter> = {
 	[key in K]?: T;
 };
+export type Source<T = number, K extends string = palameter> = {
+	[key in K]?: T;
+};
 export type Flags<T = any, K extends string = string> = { [key in K]?: T };
 export type liquid<T = liquids, K extends string = liquidlayer> = { [key in K]?: T };
 
 export type defaultBases = {
-	力量?: number;
-	体质?: number;
-	敏捷?: number;
-	意志?: number;
-	智力?: number;
-	魅力?: number;
-	灵感?: number;
+	STR?: number;
+	CON?: number;
+	DEX?: number;
+	WIL?: number;
+	INT?: number;
+	ALR?: number;
+	PSY?: number;
 };

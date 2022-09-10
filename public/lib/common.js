@@ -15,7 +15,7 @@ function ensure (x, y) {
  * @param {number} max 
  */
 function inrange(x, min, max){
-    return (x >= min && x <= max)
+	return (x >= min && x <= max)
 }
 
 /**
@@ -35,11 +35,11 @@ function between(x,min,max){
  * @returns {number}
  */
 function random(min,max){
-    if(!max){
-        max = min;
-        min = 0;
-    }
-    return Math.floor(Math.random() * (max - min + 1) + min);
+	if(!max){
+		max = min;
+		min = 0;
+	}
+	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 /**
  * 
@@ -124,28 +124,28 @@ function isValid(props){
  * @param {number} bit 
  */
 function getBit(num, bit){
-    return ((num>>bit) % 2 != 0)
+	return ((num>>bit) % 2 != 0)
 }
 /**
  * @param {number} num 
  * @param {number} bit 
  */
 function setBit(num, bit){
-    return num | 1<<bit;
+	return num | 1<<bit;
 }
 /**
  * @param {number} num 
  * @param {number} bit 
  */
 function clearBit(num, bit){
-    return num & ~(1<<bit);
+	return num & ~(1<<bit);
 }
 /**
  * @param {number} num 
  * @param {number} bit 
  */
 function toggleBit(num, bit){
-    return getBit(num, bit) ? clearBit(num, bit) : setBit(num, bit);
+	return getBit(num, bit) ? clearBit(num, bit) : setBit(num, bit);
 }
 
 /** @param {number} c */
@@ -153,24 +153,6 @@ function CtoF(c){
 	return c*1.8+32
 }
 
-
-const select=(...args)=>(con)=>args.includes(con)
-class SelectCase {
-	cases = [];
-	default = "";
-	add(num1, num2, string) {
-	  this.cases.push({ num1, num2, string });
-	}
-	has(num) {
-	  for (const element of this.cases) {
-		let { num1, num2, string } = element;
-		if (num1 <= num && num <= num2) {
-		  return string;
-		}
-	  }
-	  return this.default;
-	}
-}
 /**
  * 
  * @param {number | string} value 
@@ -192,9 +174,9 @@ function draw(array){
 function sum( obj ) {
   let sum = 0;
   for( var el in obj ) {
-    if( obj.hasOwnProperty( el ) ) {
-      sum += parseFloat( obj[el] );
-    }
+	if( obj.hasOwnProperty( el ) ) {
+	  sum += parseFloat( obj[el] );
+	}
   }
   return sum;
 }
@@ -208,13 +190,73 @@ window.findkey = function(data,value, compare = (a, b) => a === b) {
  * @param {Array} arr 
  */
 function swap(arr, a, b){
-    let c = arr[a]
-    let d = arr[b]
-    arr[b] = c;
-    arr[a] = d;
-    return arr
+	let c = arr[a]
+	let d = arr[b]
+	arr[b] = c;
+	arr[a] = d;
+	return arr
 }
 
 function isObject(props) {
 	return Object.prototype.toString.call(props) === "[object Object]";
+}
+
+class SelectCase {
+	constructor() {
+		this.arr = [];
+		this.defaultresult = "";
+		this.condtype = "";
+	}
+	case(cond, result) {
+		this.check(cond);
+		this.arr.push({ cond, result });
+		return this;
+	}
+	else(result) {
+		this.defaultresult = result;
+		return this;
+	}
+	has(pick) {
+		for (const element of this.arr) {
+			const { cond, result } = element;
+			const type = this.type(cond);
+			if (type == "number") {
+				if (pick >= cond[0] && pick <= cond[1])
+					return result;
+			}
+			if (type == "string array") {
+				if (cond.includes(pick))
+					return result;
+			}
+			if (type == "single string") {
+				if (pick === cond)
+					return result;
+			}
+		}
+		return this.defaultresult;
+	}
+	check(cond) {
+		const check = this.type(cond);
+		if (!this.condtype)
+			this.condtype = check;
+		else if (this.condtype !== check)
+			throw new Error("expressions type must be same.");
+	}
+	type(cond) {
+		if (Array.isArray(cond)) {
+			switch (typeof cond[0]) {
+				case "number":
+					if (cond.length !== 2)
+						throw new Error("number case must be [number, number]");
+					return "number";
+				case "string":
+					return "string array";
+				default:
+					throw new Error("selectcase only accept string or number");
+			}
+		}
+		if (typeof cond === "string")
+			return "single string";
+		throw new Error("selectcase only accept string or number");
+	}
 }

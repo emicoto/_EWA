@@ -91,7 +91,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 <style id="style-ui" type="text/css">#ui-dialog-body.settings [id|=setting-body]>div:first-child{display:table;width:100%}#ui-dialog-body.settings [id|=setting-label]{display:table-cell;padding:.4em 2em .4em 0}#ui-dialog-body.settings [id|=setting-label]+div{display:table-cell;min-width:8em;text-align:right;vertical-align:middle;white-space:nowrap}#ui-dialog-body.list{padding:0}#ui-dialog-body.list ul{margin:0;padding:0;list-style:none;border:1px solid transparent}#ui-dialog-body.list li{margin:0}#ui-dialog-body.list li:not(:first-child){border-top:1px solid #444}#ui-dialog-body.list li a{display:block;padding:.25em .75em;border:1px solid transparent;color:#eee;text-decoration:none}#ui-dialog-body.list li a:hover{background-color:#333;border-color:#eee}#ui-dialog-body.saves{padding:0 0 1px}#ui-dialog-body.saves>:not(:first-child){border-top:1px solid #444}#ui-dialog-body.saves table{border-spacing:0;width:100%}#ui-dialog-body.saves tr:not(:first-child){border-top:1px solid #444}#ui-dialog-body.saves td{padding:.33em .33em}#ui-dialog-body.saves td:first-child{min-width:1.5em;text-align:center}#ui-dialog-body.saves td:nth-child(3){line-height:1.2}#ui-dialog-body.saves td:last-child{text-align:right}#ui-dialog-body.saves .empty{color:#999;speak:none;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#ui-dialog-body.saves .datestamp{font-size:75%;margin-left:1em}#ui-dialog-body.saves ul.buttons li{padding:.4em}#ui-dialog-body.saves ul.buttons>li+li>button{margin-left:.2em}#ui-dialog-body.saves ul.buttons li:last-child{float:right}#ui-dialog-body.settings div[id|=header-body]{margin:1em 0}#ui-dialog-body.settings div[id|=header-body]:first-child{margin-top:0}#ui-dialog-body.settings div[id|=header-body]:not(:first-child){border-top:1px solid #444;padding-top:1em}#ui-dialog-body.settings div[id|=header-body]>*{margin:0}#ui-dialog-body.settings h2[id|=header-heading]{font-size:1.375em}#ui-dialog-body.settings p[id|=header-desc],#ui-dialog-body.settings p[id|=setting-desc]{font-size:87.5%;margin:0 0 0 .5em}#ui-dialog-body.settings div[id|=setting-body]+div[id|=setting-body]{margin:1em 0}#ui-dialog-body.settings [id|=setting-control]{white-space:nowrap}#ui-dialog-body.settings button[id|=setting-control]{color:#eee;background-color:transparent;border:1px solid #444;padding:.4em}#ui-dialog-body.settings button[id|=setting-control]:hover{background-color:#333;border-color:#eee}#ui-dialog-body.settings button[id|=setting-control].enabled{background-color:#282;border-color:#4a4}#ui-dialog-body.settings button[id|=setting-control].enabled:hover{background-color:#4a4;border-color:#6c6}#ui-dialog-body.list a,#ui-dialog-body.settings span[id|=setting-input]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#ui-dialog-body.saves button[id=saves-clear]:before,#ui-dialog-body.saves button[id=saves-export]:before,#ui-dialog-body.saves button[id=saves-import]:before,#ui-dialog-body.settings button[id|=setting-control].enabled:after,#ui-dialog-body.settings button[id|=setting-control]:after{font-family:tme-fa-icons!important;font-style:normal;font-weight:900;font-variant:normal;line-height:1;speak:never;text-rendering:auto;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#ui-dialog-body.saves button[id=saves-export]:before{content:"\e829\00a0"}#ui-dialog-body.saves button[id=saves-import]:before{content:"\e82a\00a0"}#ui-dialog-body.saves button[id=saves-clear]:before{content:"\e827\00a0"}#ui-dialog-body.settings button[id|=setting-control]:after{content:"\00a0\00a0\e830"}#ui-dialog-body.settings button[id|=setting-control].enabled:after{content:"\00a0\00a0\e831"}</style>
 <style id="style-ui-bar" type="text/css">#story{margin-left:20em;-webkit-transition:margin-left .2s ease-in;-o-transition:margin-left .2s ease-in;transition:margin-left .2s ease-in}#ui-bar.stowed~#story{margin-left:4.5em}@media screen and (max-width:1136px){#story{margin-left:19em}#ui-bar.stowed~#story{margin-left:3.5em}}@media screen and (max-width:768px){#story{margin-left:3.5em}}#ui-bar{position:fixed;z-index:50;top:0;left:0;width:17.5em;height:100%;margin:0;padding:0;-webkit-transition:left .2s ease-in;-o-transition:left .2s ease-in;transition:left .2s ease-in}#ui-bar.stowed{left:-15.5em}#ui-bar-tray{position:absolute;top:.2em;left:0;right:0}#ui-bar-body{height:90%;height:calc(100% - 2.5em);margin:2.5em 0;padding:0 1.5em}#ui-bar.stowed #ui-bar-body,#ui-bar.stowed #ui-bar-history{visibility:hidden;-webkit-transition:visibility .2s step-end;-o-transition:visibility .2s step-end;transition:visibility .2s step-end}@media (prefers-reduced-motion:reduce){#story{-webkit-transition:margin-left 0s;-o-transition:margin-left 0s;transition:margin-left 0s}#ui-bar{-webkit-transition:left 0s;-o-transition:left 0s;transition:left 0s}}#ui-bar{background-color:#222;border-right:1px solid #444;text-align:center}#ui-bar a{text-decoration:none}#ui-bar hr{border-color:#444}#ui-bar-history [id|=history],#ui-bar-toggle{font-size:1.2em;line-height:inherit;color:#eee;background-color:transparent;border:1px solid #444}#ui-bar-toggle{display:block;position:absolute;top:0;right:0;border-right:none;padding:.3em .45em .25em}#ui-bar.stowed #ui-bar-toggle{padding:.3em .35em .25em .55em}#ui-bar-toggle:hover{background-color:#444;border-color:#eee}#ui-bar-history{margin:0 auto}#ui-bar-history [id|=history]{padding:.2em .45em .35em}#ui-bar-history #history-jumpto{padding:.2em .665em .35em}#ui-bar-history [id|=history]:not(:first-child){margin-left:1.2em}#ui-bar-history [id|=history]:hover{background-color:#444;border-color:#eee}#ui-bar-history [id|=history]:disabled{color:#444;background-color:transparent;border-color:#444}#ui-bar-body{line-height:1.5;overflow:auto}#ui-bar-body>:not(:first-child){margin-top:2em}#story-title{margin:0;font-size:162.5%}#story-author{margin-top:2em;font-weight:700}#menu ul{margin:1em 0 0;padding:0;list-style:none;border:1px solid #444}#menu ul:empty{display:none}#menu li{margin:0}#menu li:not(:first-child){border-top:1px solid #444}#menu li a{display:block;padding:.25em .75em;border:1px solid transparent;color:#eee;text-transform:uppercase}#menu li a:hover{background-color:#444;border-color:#eee}#menu a,#ui-bar-history [id|=history],#ui-bar-toggle{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#menu-core li[id|=menu-item] a:before,#ui-bar-history [id|=history],#ui-bar-toggle:before{font-family:tme-fa-icons!important;font-style:normal;font-weight:900;font-variant:normal;line-height:1;speak:never;text-rendering:auto;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#ui-bar-toggle:before{content:"\e81d"}#ui-bar.stowed #ui-bar-toggle:before{content:"\e81e"}#menu-item-saves a:before{content:"\e82b\00a0"}#menu-item-settings a:before{content:"\e82d\00a0"}#menu-item-restart a:before{content:"\e82c\00a0"}#menu-item-share a:before{content:"\e82f\00a0"}</style>
 <style id="style-ui-debug" type="text/css">#debug-bar{background-color:#222;border-left:1px solid #444;border-top:1px solid #444;bottom:0;margin:0;max-height:75%;padding:.5em;position:fixed;right:0;z-index:99900}#debug-bar>div:not([id])+div{margin-top:.5em}#debug-bar>div>label{margin-right:.5em}#debug-bar>div>input[type=text]{min-width:0;width:8em}#debug-bar>div>select{width:15em}#debug-bar-toggle{color:#eee;background-color:#222;border:1px solid #444;height:101%;height:calc(100% + 1px);left:-2em;left:calc(-2em - 1px);position:absolute;top:-1px;width:2em}#debug-bar-toggle:hover{background-color:#333;border-color:#eee}#debug-bar-hint{bottom:.175em;font-size:4.5em;opacity:.33;pointer-events:none;position:fixed;right:.6em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap}#debug-bar-watch{background-color:#222;border-left:1px solid #444;border-top:1px solid #444;bottom:102%;bottom:calc(100% + 1px);font-size:.9em;left:-1px;max-height:650%;max-height:65vh;position:absolute;overflow-x:hidden;overflow-y:scroll;right:0;z-index:99800}#debug-bar-watch[hidden]{display:none}#debug-bar-watch div{color:#999;font-style:italic;margin:1em auto;text-align:center}#debug-bar-watch table{width:100%}#debug-bar-watch tr:nth-child(2n){background-color:rgba(127,127,127,.15)}#debug-bar-watch td{padding:.2em 0}#debug-bar-watch td:first-child+td{padding:.2em .3em .2em .1em}#debug-bar-watch .watch-delete{background-color:transparent;border:none;color:#c00}#debug-bar-watch-all,#debug-bar-watch-none{margin-left:.5em}#debug-bar-views-toggle,#debug-bar-watch-toggle{color:#eee;background-color:transparent;border:1px solid #444;margin-right:1em;padding:.4em}#debug-bar-views-toggle:hover,#debug-bar-watch-toggle:hover{background-color:#333;border-color:#eee}#debug-bar-watch:not([hidden])~div #debug-bar-watch-toggle,html[data-debug-view] #debug-bar-views-toggle{background-color:#282;border-color:#4a4}#debug-bar-watch:not([hidden])~div #debug-bar-watch-toggle:hover,html[data-debug-view] #debug-bar-views-toggle:hover{background-color:#4a4;border-color:#6c6}#debug-bar-hint:after,#debug-bar-toggle:before,#debug-bar-views-toggle:after,#debug-bar-watch .watch-delete:before,#debug-bar-watch-add:before,#debug-bar-watch-all:before,#debug-bar-watch-none:before,#debug-bar-watch-toggle:after{font-family:tme-fa-icons!important;font-style:normal;font-weight:900;font-variant:normal;line-height:1;speak:never;text-rendering:auto;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#debug-bar-toggle:before{content:"\e838"}#debug-bar-hint:after{content:"\e838\202f\e822"}#debug-bar-watch .watch-delete:before{content:"\e804"}#debug-bar-watch-add:before{content:"\e805"}#debug-bar-watch-all:before{content:"\e83a"}#debug-bar-watch-none:before{content:"\e827"}#debug-bar-views-toggle:after,#debug-bar-watch-toggle:after{content:"\00a0\00a0\e830"}#debug-bar-watch:not([hidden])~div #debug-bar-watch-toggle:after,html[data-debug-view] #debug-bar-views-toggle:after{content:"\00a0\00a0\e831"}html[data-debug-view] .debug{padding:.25em;background-color:#234}html[data-debug-view] .debug[title]{cursor:help}html[data-debug-view] .debug.block{display:inline-block;vertical-align:middle}html[data-debug-view] .debug.invalid{text-decoration:line-through}html[data-debug-view] .debug.hidden,html[data-debug-view] .debug.hidden .debug{background-color:#555}html:not([data-debug-view]) .debug.hidden{display:none}html[data-debug-view] .debug[data-name][data-type].nonvoid:after,html[data-debug-view] .debug[data-name][data-type]:before{background-color:rgba(0,0,0,.25);font-family:monospace,monospace;white-space:pre}html[data-debug-view] .debug[data-name][data-type]:before{content:attr(data-name)}html[data-debug-view] .debug[data-name][data-type|=macro]:before{content:"<<" attr(data-name) ">>"}html[data-debug-view] .debug[data-name][data-type|=macro].nonvoid:after{content:"<</" attr(data-name) ">>"}html[data-debug-view] .debug[data-name][data-type|=html]:before{content:"<" attr(data-name) ">"}html[data-debug-view] .debug[data-name][data-type|=html].nonvoid:after{content:"</" attr(data-name) ">"}html[data-debug-view] .debug[data-name][data-type]:not(:empty):before{margin-right:.25em}html[data-debug-view] .debug[data-name][data-type].nonvoid:not(:empty):after{margin-left:.25em}html[data-debug-view] .debug[data-name][data-type|=special],html[data-debug-view] .debug[data-name][data-type|=special]:before{display:block}</style>
-<script id="script-module-define" type="text/javascript">'use strict';
+<script id="script-module-00_global" type="text/javascript">'use strict';
 
 Object.defineProperty(window, "G", {
   value: {
@@ -99,14 +99,7 @@ Object.defineProperty(window, "G", {
     functions: {}
   }
 });
-$.getJSON("config.json", (data) => {
-  if (data) {
-    for (let i in data) {
-      G.config[i] = data[i];
-    }
-    console.log("read config from local file:", data);
-  }
-});
+
 G.functions.setV = function(props, value) {
   const ISOBJ = Object.prototype.toString.call(value) === "[object Object]";
   console.log(Object.is(V[props], void 0));
@@ -123,7 +116,3004 @@ G.functions.setV = function(props, value) {
     }
   }
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVmaW5lLmpzIiwic291cmNlcyI6WyIuLi8uLi9MaWIvTW9kdWxlL2RlZmluZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJPYmplY3QuZGVmaW5lUHJvcGVydHkod2luZG93LCBcIkdcIiwge1xyXG5cdHZhbHVlOiB7XHJcblx0XHRjb25maWc6IHsgbGFuZ3VhZ2U6IFwiQ05cIiB9LFxyXG5cdFx0ZnVuY3Rpb25zOiB7fSxcclxuXHR9LFxyXG59KTtcclxuXHJcbiQuZ2V0SlNPTihcImNvbmZpZy5qc29uXCIsIChkYXRhKSA9PiB7XHJcblx0aWYgKGRhdGEpIHtcclxuXHRcdGZvciAobGV0IGkgaW4gZGF0YSkge1xyXG5cdFx0XHRHLmNvbmZpZ1tpXSA9IGRhdGFbaV07XHJcblx0XHR9XHJcblx0XHRjb25zb2xlLmxvZyhcInJlYWQgY29uZmlnIGZyb20gbG9jYWwgZmlsZTpcIiwgZGF0YSk7XHJcblx0fVxyXG59KTtcclxuXHJcbkcuZnVuY3Rpb25zLnNldFYgPSBmdW5jdGlvbiAocHJvcHMsIHZhbHVlKSB7XHJcblx0Y29uc3QgSVNPQkogPSBPYmplY3QucHJvdG90eXBlLnRvU3RyaW5nLmNhbGwodmFsdWUpID09PSBcIltvYmplY3QgT2JqZWN0XVwiO1xyXG5cdGNvbnNvbGUubG9nKE9iamVjdC5pcyhWW3Byb3BzXSwgdW5kZWZpbmVkKSk7XHJcblx0aWYgKE9iamVjdC5pcyhWW3Byb3BzXSwgdW5kZWZpbmVkKSkge1xyXG5cdFx0aWYgKElTT0JKKSB7XHJcblx0XHRcdGlmICghVltwcm9wc10pIFZbcHJvcHNdID0ge307XHJcblxyXG5cdFx0XHRPYmplY3Qua2V5cyh2YWx1ZSkuZm9yRWFjaCgodikgPT4ge1xyXG5cdFx0XHRcdFZbcHJvcHNdW3ZdID0gdmFsdWVbdl07XHJcblx0XHRcdH0pO1xyXG5cdFx0fVxyXG5cdFx0aWYgKCFJU09CSikge1xyXG5cdFx0XHRWW3Byb3BzXSA9IHZhbHVlO1xyXG5cdFx0fVxyXG5cdH1cclxufTtcclxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsTUFBTyxDQUFBLGNBQUEsQ0FBZSxRQUFRLEdBQUssRUFBQTtBQUFBLEVBQ2xDLEtBQU8sRUFBQTtBQUFBLElBQ04sTUFBQSxFQUFRLEVBQUUsUUFBQSxFQUFVLElBQUssRUFBQTtBQUFBLElBQ3pCLFdBQVcsRUFBQztBQUFBLEdBQ2I7QUFDRCxDQUFDLENBQUEsQ0FBQTtBQUVELENBQUUsQ0FBQSxPQUFBLENBQVEsYUFBZSxFQUFBLENBQUMsSUFBUyxLQUFBO0FBQ2xDLEVBQUEsSUFBSSxJQUFNLEVBQUE7QUFDVCxJQUFBLEtBQUEsSUFBUyxLQUFLLElBQU0sRUFBQTtBQUNuQixNQUFFLENBQUEsQ0FBQSxNQUFBLENBQU8sS0FBSyxJQUFLLENBQUEsQ0FBQSxDQUFBLENBQUE7QUFBQSxLQUNwQjtBQUNBLElBQVEsT0FBQSxDQUFBLEdBQUEsQ0FBSSxnQ0FBZ0MsSUFBSSxDQUFBLENBQUE7QUFBQSxHQUNqRDtBQUNELENBQUMsQ0FBQSxDQUFBO0FBRUQsQ0FBQSxDQUFFLFNBQVUsQ0FBQSxJQUFBLEdBQU8sU0FBVSxLQUFBLEVBQU8sS0FBTyxFQUFBO0FBQzFDLEVBQUEsTUFBTSxRQUFRLE1BQU8sQ0FBQSxTQUFBLENBQVUsUUFBUyxDQUFBLElBQUEsQ0FBSyxLQUFLLENBQU0sS0FBQSxpQkFBQSxDQUFBO0FBQ3hELEVBQUEsT0FBQSxDQUFRLElBQUksTUFBTyxDQUFBLEVBQUEsQ0FBRyxDQUFFLENBQUEsS0FBQSxDQUFBLEVBQVEsTUFBUyxDQUFDLENBQUEsQ0FBQTtBQUMxQyxFQUFBLElBQUksTUFBTyxDQUFBLEVBQUEsQ0FBRyxDQUFFLENBQUEsS0FBQSxDQUFBLEVBQVEsTUFBUyxDQUFHLEVBQUE7QUFDbkMsSUFBQSxJQUFJLEtBQU8sRUFBQTtBQUNWLE1BQUEsSUFBSSxDQUFDLENBQUUsQ0FBQSxLQUFBLENBQUE7QUFBUSxRQUFBLENBQUEsQ0FBRSxTQUFTLEVBQUMsQ0FBQTtBQUUzQixNQUFBLE1BQUEsQ0FBTyxJQUFLLENBQUEsS0FBSyxDQUFFLENBQUEsT0FBQSxDQUFRLENBQUMsQ0FBTSxLQUFBO0FBQ2pDLFFBQUUsQ0FBQSxDQUFBLEtBQUEsQ0FBQSxDQUFPLEtBQUssS0FBTSxDQUFBLENBQUEsQ0FBQSxDQUFBO0FBQUEsT0FDcEIsQ0FBQSxDQUFBO0FBQUEsS0FDRjtBQUNBLElBQUEsSUFBSSxDQUFDLEtBQU8sRUFBQTtBQUNYLE1BQUEsQ0FBQSxDQUFFLEtBQVMsQ0FBQSxHQUFBLEtBQUEsQ0FBQTtBQUFBLEtBQ1o7QUFBQSxHQUNEO0FBQ0QsQ0FBQTs7In0=</script>
+
+$.getJSON("config.json", (data) => {
+  if (data) {
+    for (let i in data) {
+      G.config[i] = data[i];
+    }
+    console.log("read config from local file:", data);
+  }
+});
+
+window.clone = function(obj) {
+  var copy;
+
+  // Handle the 3 simple types, and null or undefined
+  if (null == obj || "object" != typeof obj) return obj;
+
+  // Handle Date
+  if (obj instanceof Date) {
+    copy = new Date();
+    copy.setTime(obj.getTime());
+    return copy;
+  }
+
+  // Handle Array
+  if (obj instanceof Array) {
+    copy = [];
+    for (var i = 0, len = obj.length; i < len; i++) {
+        copy[i] = clone(obj[i]);
+    }
+    return copy;
+  }
+
+  // Handle Function
+  if (obj instanceof Function) {
+    copy = function() {
+      return obj.apply(this, arguments);
+    }
+    return copy;
+  }
+
+  // Handle Object
+  if (obj instanceof Object) {
+      copy = {};
+      for (var attr in obj) {
+          if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);
+      }
+      return copy;
+  }
+
+  throw new Error("Unable to copy obj as type isn't supported " + obj.constructor.name);
+}</script>
+<script id="script-module-01_loadfirst" type="text/javascript">/**
+ * 
+ * @param {string | string[]} CN 
+ * @param {string | string[]} EN 
+ * @returns {string | string[]}
+ */
+window.lan = function(CN, EN) {
+	if(Array.isArray(CN) && !EN){
+		if(CN.length == 1){
+			EN = CN[0]
+			CN = CN[0]
+		}
+		else{
+			EN = CN[1]
+			CN = CN[0]			
+		}
+	}
+	if (G.config.language == "CN") return CN;
+	if (G.config.language == "EN") return EN;
+}
+
+Object.defineProperties(window, {
+    A:{
+        get:function(){
+            return Avatars
+        }
+    },
+    D:{
+        get:function(){
+            return G.data
+        }
+    },
+    F:{
+        get:function(){
+            return G.functions
+        }
+    },
+	
+	Hairs:{
+		get: function(){
+			return Avatars.Hairs
+		}
+	},
+	Emote:{
+		get:function(){
+			return Avatars.Emote
+		}
+	},
+	AvItems:{
+		get:function(){
+			return Avatars.AvItems
+		}
+	},
+	Races:{
+		get: function(){
+			return G.Races
+		}
+	},
+	Chara:{
+		get: function(){
+			return G.Chara
+		}
+	},
+	lang:{
+		get: function(){
+			return G.config.language
+		},
+		set: function(str){
+			G.config.language = str
+		}
+	},
+	Closet:{
+		get: function(){
+			return G.Closet
+		}
+	}
+})</script>
+<script id="script-module-00_basedata" type="text/javascript">var _$D = (()=>{
+
+const basekey = [
+    "lv",
+    "exp",
+    "ATK",
+    "DEF",
+    "MTK",
+    "MDF",
+    "SPD",
+    "STR",
+    "CON",
+    "DEX",
+    "WIL",
+    "INT",
+    "PSY",
+    "ALR",
+    "LUK",
+    "hot",
+    "cold"
+];
+
+const palamPC = [
+	"饮食", //hungry
+	"健康", //health
+	"魔力", //mana
+	"体力", //stamina
+	"理智", //sanity
+	"清洁", //clean
+
+	"酒精", //alcohol
+	"药物", //drug
+
+	"欲望", //arousal
+	"快感", //pleasure
+	"压力", //stress
+	"疼痛", //pain
+	"抑郁", //depress
+	"恐惧", //fear
+	"耻辱", //humilation
+]
+
+const palamNPC = ["魔力", "体力", "理智", "清洁", "情绪", "欲望", "快感", "愤怒", "射精", "满意"];
+const palamMon = ["欲望", "愤怒", "快感", "射精", "满意"];
+const palamSP = ["快M", "快B", "快C", "快V", "快U", "快A"];
+
+const npcIntFlag = ["favo", "trust", "dom", "sub", "eager", "faith", "intro"];
+const basicflags = [
+	"trueform",
+	"lactation",
+	"lactatecd",
+	"active",
+	"alive",
+	"bestfriend",
+	"date",
+	"notInteractHour",
+];
+
+const explist = [
+	"打工",
+	"下厨",
+	"清扫",
+	"唱歌",
+	"演戏",
+	"舞台",
+	"直播",
+	"交涉",
+	"销售",
+	"探索",
+	"狩猎",
+	"钓鱼",
+
+	"战斗",
+	"战败",
+	"诱惑",
+	"被诱惑",
+
+	"射精",
+	"高潮",
+	"M高潮",
+	"B高潮",
+	"C高潮",
+	"U高潮",
+	"V高潮",
+	"A高潮",
+	"多重高潮",
+	"自慰",
+	"口交",
+	"性交",
+	"肛交",
+	"喷乳",
+
+	"被猥琐",
+	"被眠奸",
+	"被迷奸",
+	"被强奸",
+	"被轮奸",
+	"被兽奸",
+	"被触手奸",
+	"兽交",
+	"触手",
+	"史莱姆",
+
+	"怀孕",
+	"A怀孕",
+	"分娩",
+	"尿道开发",
+	"阴道扩张",
+	"肛门扩张",
+
+	"产卵",
+	"寄生",
+	"监禁",
+	"SM",
+];
+
+const dailyrec = [
+	"高潮",
+	"射精",
+	"喷乳",
+	"A高潮",
+	"M高潮",
+	"B高潮",
+	"C高潮",
+	"V高潮",
+	"U高潮",
+	"浴精",
+	"饮精",
+	"肛内射",
+	"内射",
+	"产卵",
+];
+
+const mark = ["快乐", "恐惧", "痛苦", "耻辱"];
+
+const baseAbl = [
+	"格斗",
+	"健身",
+	"跑步",
+	"科学",
+	"冥想",
+	"创作",
+	"表演",
+	"异能",
+	"奥术",
+	"秘术",
+	"学识",
+];
+
+const sexAbl = ["性技巧", "性抵抗", "口技", "手技", "脚技", "腰技"];
+
+const skill = ["开锁", "黑客", "潜行", "搜索"];
+
+const degrees = ["纯洁", "露出", "滥交", "受虐", "受缚", "施虐", "顺从", "兽交", "药隐", "性瘾"];
+
+const npcdegrees = ["支配", "束缚", "追踪"];
+
+const tattoosA = ["face", "chest", "belly", "armsL", "legsL"];
+const tattoosB = ["back", "neck", "fossa", "buttsR", "buttsL", "armsR", "legsR"];
+const piercingSlots = ["tongue", "labiaL", "labiaR", "penisA", "penisB", "testeA", "testeB", "belly"];
+
+const existstate = ["canhide", "fake", "fog", "natural", "none", "onhead", "slime"];
+
+const wearslots = [
+	"hat",
+	"cover",
+	"outfit_up",
+	"outfit_bt",
+	"inner_up",
+	"inner_bt",
+	"legs",
+	"shoes",
+	"neck",
+	"facial",
+	"hands",
+	"back",
+	"onskin_up",
+	"onskin_bt",
+];
+
+const equipslots = ["weapon", "shield", "acce1", "acce2", "acce3", "penis", "ureth", "vagina", "anal"];
+
+const liquidLayer = ["face", "hair", "hands", "legs", "chest", "back", "butts", "vagina", "anal"];
+
+const PeniSize = {
+	cat: [100, 21],
+	human: [150, 35],
+	dracon: [160, 40],
+	bird: [160, 32],
+	dog: [180, 42],
+	deer: [180, 36],
+	snake: [180, 40],
+	deamon: [210, 48],
+	horse: [240, 56],
+	shark: [320, 60],
+	tentacle: [360, 36],
+};
+
+//深度, 松紧度, 单位也是毫米
+//根据bodysize调整
+//根据湿润度,松紧度能临时增加 3~10
+const vagisize = [
+	[80, 16],
+	[100, 20],
+	[120, 24],
+	[140, 28],
+	[160, 32],
+	[180, 36],
+];
+
+const sensbit = {
+	none: 0,
+	fog: 0.2,
+	slime: 0.5,
+	fake: 0.8,
+	natural: 1.2,
+	canhide: 2,
+	onhead: 0,
+};
+
+function bodyCheck(part) {
+	return part !== "none";
+}
+
+function getMajor(id) {
+	switch (id) {
+		case 1:
+			return lan("文艺创作", "Creativity");
+		case 2:
+			return lan("物理科学", "Science");
+		case 3:
+			return lan("自然科学", "Natural");
+		case 4:
+			return lan("生理科学", "Medical");
+		case 5:
+			return lan("音乐表演", "Performance");
+		case 6:
+			return lan("运动格斗", "Physical");
+	}
+}
+
+function showGender(g) {
+	switch (g) {
+		case "f":
+			return lan("女", "female");
+		case "i":
+			return lan("双性", "intersex");
+		case "m":
+			return lan("男", "male");
+		case "n":
+			return lan("无性", "zerosex");
+	}
+}
+
+function Gender(g) {
+	switch (g) {
+		case "f":
+			return lan("女", "female");
+		case "i":
+			return lan("双", "inter");
+		case "m":
+			return lan("男", "male");
+		case "n":
+			return lan("无", "zero");
+	}
+}
+
+function bodysize(size) {
+    switch (size) {
+		case 0:
+			return lan("娇小", "tiny");
+		case 1:
+			return lan("娇矮", "small");
+		case 2:
+			return lan("普通", "normal");
+		case 3:
+			return lan("修长", "slim");
+		case 4:
+			return lan("高大", "tall");
+		case 5:
+			return lan("巨大", "huge");
+    }
+}
+
+function Sens(int) {
+	if (int < 0.5) return lan("微弱", "faint");
+	if (int < 1) return lan("钝感", "blunt");
+	if (int < 2) return lan("普通", "normal");
+	if (int < 3) return lan("敏感", "tender");
+	if (int < 4) return lan("十分敏感", "sensitive");
+	if (int >= 4) return lan("超敏感", "super sensitive");
+	//最多6
+}
+
+Object.defineProperty(window.G, "data", {
+	value: {
+		basekey: Object.freeze(basekey),
+		palamPC: Object.freeze(palamPC),
+		palamNPC: Object.freeze(palamNPC),
+		palamMon: Object.freeze(palamMon),
+		palamSP: Object.freeze(palamSP),
+		npcIntFlag: Object.freeze(npcIntFlag),
+		basicflags: Object.freeze(basicflags),
+		explist: explist,
+		dailyrec: dailyrec,
+		mark: mark,
+		baseAbl: baseAbl,
+		sexAbl: sexAbl,
+		skill: skill,
+		degrees: degrees,
+		npcdegrees: npcdegrees,
+		tattoosA: Object.freeze(tattoosA),
+		tattoosB: Object.freeze(tattoosB),
+		piercingSlots: Object.freeze(piercingSlots),
+		existstate: Object.freeze(existstate),
+		wearslots: Object.freeze(wearslots),
+		equipslots: equipslots,
+		liquidLayer: Object.freeze(liquidLayer),
+		PeniSize: Object.freeze(PeniSize),
+		vagisize: Object.freeze(vagisize),
+		sensbit: Object.freeze(sensbit),
+		bodyCheck: Object.freeze(bodyCheck),
+		getMajor: Object.freeze(getMajor),
+		showGender: Object.freeze(showGender),
+		Gender:Object.freeze(Gender),
+		bodysize: Object.freeze(bodysize),
+		Sens: Object.freeze(Sens),
+	},
+})
+
+})();</script>
+<script id="script-module-01_races" type="text/javascript">'use strict';
+var _$R = (()=>{
+	const racesdata = {};
+	const monsters = {};
+
+	function convertCheck(part, race) {
+		if (part == "none") return false;
+		if (part == "fake" && race !== "alsha") return false;
+
+		return true;
+	}
+
+	class Races {
+		static add(name, type, size, skin, eye, hair, alter) {
+			racesdata[name] = new Races(name, type, size, skin, eye, hair, alter);
+			return racesdata[name];
+		}
+		static get(name) {
+			return racesdata[name];
+		}
+		static convert(chara, race) {
+			const r = Races.get(race);
+			const b = chara.body;
+
+			chara.info.body = r.bodytype;
+			chara.info.ears = r.eartype;
+
+			chara.body = clone(r.bodypart);
+
+			if (convertCheck(b.vagina, chara.race)) {
+				chara.body.vagina = r.genital.vagina;
+				if (D.bodyCheck(b.critoris)) chara.body.critoris = r.genital.vagina;
+			}
+			if (convertCheck(b.penis, chara.race)) {
+				chara.body.penis = r.genital.penis;
+				if (D.bodyCheck(b.teste)) chara.body.teste = r.genital.penis;
+			}
+
+			chara.race = race;
+
+			return chara;
+		}
+		constructor(name, type, size, skin, eye, hair, alter) {
+			this.name = name;
+			this.bodytype = type;
+			this.headtype = "round";
+			this.eartype = "human";
+			this.bodysize = size;
+			this.avatarinfo = {
+				skin: skin,
+				eyes: eye,
+				hair: hair,
+			};
+			this.bodypart = {
+				eye: "natural",
+				nose: "natural",
+				mouth: "natural",
+				body: "natural",
+				ears: "natural",
+				hands: "natural",
+				wings: "none",
+				horn: "none",
+				fur: "none",
+				tail: "none",
+				organ: "natural",
+			};
+			if (alter) this.alter = {};
+			this.gender = ["f", "m", "i"];
+			this.genital = {
+				penis: "natural",
+				pshape: "human",
+				psize: D.PeniSize['human'],
+				vagina: "natural",
+				vshape: "normal",
+				vsize: D.vagisize[size],
+			};
+			this.warmth = [24, 19];
+			this.cycle = {
+				type: "menst",
+				cir: 28,
+				days: 5,
+			};
+			this.base = {}
+			this.diet = 'omni'
+			this.alter = {}
+		}
+		setBodyPart(part, state) {
+			this.bodypart[part] = state;
+			return this;
+		}
+		setGenital(state, option) {
+			this.genital.penis = state[0];
+			this.genital.vagina = state[1] ? state[1] : state[0];
+
+			if (option?.c) this.genital.interhasCritoris = true;
+			if (option?.t) this.genital.interhasTeste = true;
+
+			return this;
+		}
+
+		setEarType(str) {
+			this.eartype = str;
+			if (["cat", "dot", "rabit", "mouse"].includes(str)) {
+				this.bodypart["ears"] = "onhead";
+			}
+			return this;
+		}
+		setHeadType(str) {
+			this.headtype = str;
+			return this;
+		}
+		hasTail(str) {
+			this.avatarinfo.tail = str;
+			this.bodypart["tail"] = "natural";
+			return this;
+		}
+		hasWings(str) {
+			this.avatarinfo.wing = str;
+			this.bodypart["wings"] = "natural";
+			return this;
+		}
+		hasHorn(str) {
+			this.avatarinfo.horn = str;
+			this.bodypart["horn"] = "natural";
+			return this;
+		}
+		setAlter(obj) {
+			for(let i in obj){
+				this.alter[i] = obj[i]
+			};
+			return this;
+		}
+		setGenderOption(gender) {
+			this.gender = gender;
+			return this;
+		}
+		setTraitOption(str) {
+			this.traits = str;
+			return this;
+		}
+		setPower(str) {
+			this.powertype = str;
+
+			switch (str) {
+				case "arcane":
+				case "occult":
+					this.setElements(["lumen", "ark", "ions", "flame", "electron", "vitae", "terra"]);
+					this.elesize = 3;
+					break;
+				case "elements":
+					this.elesize = 2;
+					this.elements = [];
+					break;
+				case "psychic":
+					this.elesize = 1;
+					this.elements = [];
+					break;
+			}
+
+			return this;
+		}
+		setElements(str) {
+			this.elements = str;
+			return this;
+		}
+		setElementSize(int) {
+			this.elesize = int;
+			return this;
+		}
+		setPenisShape(des) {
+			this.genital.pshape = des;
+			this.genital.psize = D.PeniSize[des];
+			return this;
+		}
+		setVaginaShape(des) {
+			this.genital.vshape = des;
+			return this;
+		}
+		setWarmth(int) {
+			this.warmth = int;
+			return this;
+		}
+		setBase(obj) {
+			this.base = obj;
+			return this;
+		}
+		setDiet(diet) {
+			this.diet = diet;
+			return this;
+		}
+		setCycle(info) {
+			this.cycle = info;
+			return this;
+		}
+		noCycle() {
+			this.cycle = null;
+			return this;
+		}
+		End(){
+			racesdata[this.name] = Object.freeze(racesdata[this.name]);
+		}
+	}
+
+	Races.add("human", "human", 2, "health", "aqua", "brown").setPower("psychic").End();
+
+	Races.add("catvinx", "human", 1, "white", "amber", "platinum", true)
+		.setEarType("cat")
+		.setHeadType("pointy")
+		.setGenital(["canhide", "natural"])
+		.hasTail("cat")
+		.setPower("arcane")
+		.setElementSize(5)
+		.setGenderOption(["f", "m"])
+		.setPenisShape("cat")
+		.setVaginaShape("suji")
+		.setWarmth([24, 16])
+		.setBase({ INT: 2, PSY: 1, CON: -2, STR: -1 })
+		.setTraitOption({ OMEGA: [0, 1], 泌乳: [0, 2] })
+		.setAlter({ skin: ["health", "pale", "sunset", "gray"], mimi: ["cat", "fox"], tail: ["cat", "fox"] })
+		.setCycle({ type: "heat", cir: 56, days: 5 })
+		.End();
+
+	Races.add("sckyrios", "furry", 4, "fur", "black", "gray")
+		.setBodyPart("ears", "none")
+		.setBodyPart("fur", "natural")
+		.setEarType("dog")
+		.setHeadType("furry")
+		.hasTail("dog")
+		.setPower("elements")
+		.setElements(["flame", "electron"])
+		.setGenderOption(["f", "m"])
+		.setPenisShape("dog")
+		.setWarmth([20, 12])
+		.setBase({ STR: 2, CON: 1, INT: -2, WIL: -1 })
+		.setTraitOption({ ABO: [1, 2, 3], OMEGA: [0, 1] })
+		.setCycle({ type: "heat", cir: 56, days: 7 })
+		.setDiet("meat")
+		.setAlter({ skin:['fur'], subcolor:['health','pale','sunset','white','gray','copper']})
+		.End();
+
+	Races.add("lepios", "human", 0, "health", "red", "silver", true)
+		.setEarType("rabit")
+		.hasTail("mouse")
+		.setPower("psychic")
+		.setVaginaShape("cute")
+		.setTraitOption({ 暴食: [0, 1] })
+		.setBase({ DEX: 2, PSY: 1, WIL: -2, STR: -1 })
+		.setAlter({ skin: ["health", "pale", "white", "gray"], mimi: ["rabti", "mouse"] })
+		.End();
+
+	Races.add("dracons", "human", 2, "pale", "pink", "blond")
+		.setGenital(["canhide"], { t: "t" })
+		.hasTail("dracon")
+		.hasHorn("crystal")
+		.setPower("elements")
+		.setElements(["lumen", "ark", "electron", "flame", "ions", "terra", "vitae"])
+		.setElementSize(1)
+		.setTraitOption({ 发光: [0, 1] })
+		.setPenisShape("dracon")
+		.setVaginaShape("suji")
+		.setBase({ WIL: 2, INT: 1, DEX: -2, PSY: -1 })
+		.setWarmth([30, 16])
+		.setCycle({ type: "heat", cir: 84, days: 3 })
+		.setDiet("ore")
+		.setAlter({ skin: ['pale','white','gray','black','aqua','gold'], tail:['dragon', 'cystal'] })
+		.End();
+
+	Races.add("voeli", "human", 2, "black", "amber", "white", true)
+		.setEarType("futher")
+		.setGenital(["canhide", "natural"])
+		.hasWings("voeli")
+		.setAlter({ wing: ["voeli", "bird1", "bird2"] })
+		.setPower("arcane")
+		.setElementSize(2)
+		.setTraitOption({ 飞翔: [1], 生蛋: [0, 1] })
+		.setGenderOption(["f", "m"])
+		.setPenisShape("bird")
+		.setBase({ PSY: 2, DEX: 1, CON: -2, STR: -1 })
+		.setWarmth([32, 16])
+		.setDiet("vegi")
+		.End();
+
+	Races.add("havan", "mermaid", 5, "copper", "black", "black")
+		.setBodyPart("legs", "none")
+		.setGenital(["canhide", "natural"])
+		.hasTail("fish")
+		.setPower("psychic")
+		.setTraitOption({ 强壮: [1], 负罪: [1] })
+		.setPenisShape("shark")
+		.setVaginaShape("suji")
+		.setWarmth([16, 3])
+		.setBase({ CON: 3, INT: -3 })
+		.setCycle({ type: "heat", cir: 36, days: 2 })
+		.setAlter({skin:['copper','pale','gray']})
+		.End();
+
+	Races.add("linlog", "hoof", 2, "lightfur", "lightgreen", "milktea")
+		.setEarType("deer")
+		.setBodyPart("hoof", "natural")
+		.setBodyPart("fur", "natural")
+		.hasHorn("deer")
+		.hasTail("deer")
+		.setPower("elements")
+		.setElements(["vitae", "terra", "ions"])
+		.setTraitOption({ 无垢: [0, 1] })
+		.setPenisShape("deer")
+		.setVaginaShape("pretty")
+		.setWarmth([22, 8])
+		.setBase({ INT: 3, STR: -3 })
+		.setAlter({skin:['lightfur'] , subcolor:['pale','white','health']})
+		.End();
+
+	Races.add("pequitis", "hoof", 4, "darkfur", "brown", "brown")
+		.setEarType("horse")
+		.setBodyPart("hoof", "natural")
+		.setBodyPart("fur", "natural")
+		.hasHorn("cow")
+		.hasTail("horse")
+		.setPower("psychic")
+		.setTraitOption({ 愤怒: [0, 1], 色欲: [0, 1] })
+		.setPenisShape("horse")
+		.setWarmth([20, 15])
+		.setBase({ CON: 2, STR: 2, DEX: 2, INT: -2, WIL: -2, PSY: -2 })
+		.setCycle({ type: "heat", cir: 56, days: 5 })
+		.setAlter({skin:['darkfur'], subcolor:['dark','copper','sunset']})
+		.End();
+
+	Races.add("ulvs", "snake", 3, "copper", "amber", "black", true)
+		.setBodyPart("legs", "none")
+		.setGenital(["canhide"])
+		.hasTail("snake")
+		.setAlter({ skin: ["copper", "sunset", "black", "dark", "pale", "white", "gray",'green'] })
+		.setPower("occult")
+		.setTraitOption({ 生蛋: [0, 1] })
+		.setGenderOption(["i"])
+		.setPenisShape("snake")
+		.setVaginaShape("suji")
+		.setWarmth([32, 24])
+		.setBase({ INT: 2, CON: -2 })
+		.setCycle({ type: "heat", cir: 56, days: 2 })
+		.End();
+
+	Races.add("alsha", "elf", 3, "gold", "amber", "white")
+		.setEarType("elf")
+		.setBodyPart("body", "fake")
+		.setBodyPart("ears", "fake")
+		.setBodyPart("eye", "fake")
+		.setBodyPart("nose", "fake")
+		.setBodyPart("mouth", "fake")
+		.setBodyPart("hands", "fake")
+		.setBodyPart("legs", "fake")
+		.setBodyPart("organ", "fake")
+		.setGenital(["fake"])
+		.setPower("occult")
+		.setBase({ WIL: 4, PSY: -4 })
+		.setTraitOption({ 神使: [1], 造物: [2] })
+		.setWarmth([42, -10])
+		.setGenderOption(["f", "m", "n"])
+		.setAlter({skin:['gold','silver']})
+		.noCycle()
+		.End();
+
+	Races.add("noctar", "elf", 2, "yoru", "lightpurple", "white")
+		.setEarType("sharp")
+		.setBodyPart("body", "fog")
+		.setBodyPart("ears", "fog")
+		.setBodyPart("eye", "fake")
+		.setBodyPart("nose", "fog")
+		.setBodyPart("mouth", "fog")
+		.setBodyPart("hands", "fog")
+		.setBodyPart("legs", "fog")
+		.setBodyPart("tentacles", "fog")
+		.setBodyPart("organ", "fog")
+		.setGenital(["fog"])
+		.setPower("elements")
+		.setElements(["ark", "terra"])
+		.setBase({ PSY: 4, WIL: -4 })
+		.setTraitOption({ 神使: [0, 1], 虚体: [1] })
+		.setGenderOption(["f", "m", "n"])
+		.setWarmth([42, -10])
+		.setVaginaShape("deamon")
+		.setDiet("ore")
+		.setAlter({skin:['yoru']})
+		.noCycle()
+		.End();
+	
+	Object.defineProperty(window.G,'Races',{
+		value: Object.freeze(Races)
+	})
+	Object.defineProperty(window.G, 'racedata', {
+		value: Object.freeze(racesdata)
+	})
+	Object.defineProperty(window.G, 'racelist',{
+		value: Object.keys(racesdata)
+	})
+
+})()</script>
+<script id="script-module-avatars" type="text/javascript">//<reference path="./Avatars.d.ts"/>
+var _$A = (()=>{
+
+const slotbit = {
+	head: 0,
+	top: 5, //长袖上衣范围
+	bottom: 4, //长裤/长裙范围
+
+	shoulder: 1, //脖子到肩膀
+	breast: 1, //胸部
+	waist: 1, //腰部
+	arms: 1, //手臂
+	back: 1, //背部
+
+	hips: 2, //三角内裤范围
+	thign: 1, //大腿
+	legs: 1, //腿部
+	feet: 1, //脚
+
+	torso: 3, //上身主体
+	chest: 2, // 胸腔范围，包前后
+	crotch: 1, //胯部范围，不含屁股
+	butts: 1, //屁股范围，不含前部
+	hands: 1, //手
+
+	mouth: 0,
+	vagina: 0,
+	penis: 0,
+	ureth: 0,
+	nipple: 0,
+	anal: 0,
+	none: 0,
+};
+
+const slotlist = Object.keys(slotbit);
+const Slots= [
+	"head",
+	"mouth",
+	"shoulder",
+	"breast",
+	"waist",
+	"arms",
+	"hands",
+	"back",
+	"crotch",
+	"penis",
+	"ureth",
+	"vagina",
+	"anal",
+	"butts",
+	"thign",
+	"legs",
+	"feet",
+];
+
+const layerlist= [
+	"topeffect",
+	"frame",
+	"addon",
+	"hat",
+	"eyebrow",
+	"hairfront",
+	"horn",
+	"neck",
+	"facial",
+	"emoadd",
+	"eye",
+	"mouth",
+	"cover",
+	"outfit_up",
+	"inner_up",
+	"hands",
+	"outfit_bt",
+	"inner_bt",
+	"shoes",
+	"legs",
+	"belly",
+	"penis",
+	"onskin_up",
+	"onskin_bt",
+	"tattoos",
+	"ears",
+	"head",
+	"body",
+	"hairback",
+	"back",
+	"kemoback",
+	"bgeffect",
+	"background",
+];
+
+const shoplines= [
+	"general",
+	"mens",
+	"womens",
+	"brand",
+	"lingerie",
+	"sexy",
+	"lewd",
+	"spring",
+	"summer",
+	"autumn",
+	"winter",
+	"fasional",
+	"classic",
+	"special",
+	"cosplay",
+	"none",
+];
+
+const shoptype = ["none", "all", "online", "offline", "adluts", "unique", "special", "event", "ordermade"];
+
+const taglist = [
+	"裸露",
+
+	"日常",
+	"睡衣",
+	"学生",
+	"运动",
+	"泳装",
+	"制服",
+	"正式",
+	"舞台",
+	"社交",
+
+	"防水",
+	"雨衣",
+	"潜水",
+	"战斗",
+
+	"商务",
+	"时尚",
+	"COSPLAY",
+	"情趣",
+
+	"仆从",
+	"变态",
+	"神圣",
+	"古风",
+	"洛丽塔",
+	"福瑞",
+	"高跟",
+
+	"闪耀",
+	"魔力",
+	"特殊",
+];
+
+const catLayer = {
+	none: "any",
+	hat: "hat",
+	coat: "cover",
+	upper: "outfit_up",
+	bottom: "outfit_bt",
+	underup: "inner_up",
+	underbt: "inner_bt",
+	scarf: "neck",
+	hairs: "hat",
+	suits: "cover",
+	glove: "hands",
+	earing: "facial",
+	backpack: "back",
+	facial: "facial",
+	socks: "legs",
+	shoes: "shoes",
+	necklace: "neck",
+	accessory: "onskin_up",
+	gear: "onskin_bt",
+	onepiece: "outfit_up",
+};
+
+const shopcategory = Object.keys(catLayer);
+
+const eyebrowlist = ["angry", "confuse", "happy", "normal", "sad"];
+
+const mouthlist = ["angry", "laugh", "oop", "open", "sad", "sigh", "smile", "unhappy"];
+
+const eyelist = [
+	"ahe",
+	"blink1",
+	"blink2a",
+	"blink2b",
+	"close1",
+	"close2",
+	"full",
+	"idle",
+	"half",
+	"quater1",
+	"quater2",
+	"lookdown",
+	"lookleft",
+	"lookup1",
+	"lookup2",
+	"lookup3",
+];
+
+const colorplate = {
+	black: "#56545A",
+	white: "#FFFFFF",
+	gray: "#CBC8C7",
+	blue: "#4089F9",
+	cyan: "#5DD9FA",
+	skyblue: "#DDFDFF",
+	pink: "#FB83C4",
+	purple: "#B36CF6",
+	red: "#F14660",
+	orange: "#FC7051",
+	yellow: "#F8F45F",
+	rice: "#FDF3B1",
+	green: "#8DC862",
+	mint: "#BBEEC1",
+	brown: "#9C6C51",
+};
+
+const haircolor = {
+	black: ["#4F4240", "#CAA799"],
+	darkbrown: ["#765646", "#EACFB2"],
+	wine: ["#9D5755", "#EACFB2"],
+	brown: ["#A07856", "#EACFB2"],
+	milktea: ["#D5AEA0", "#FFEDEA"],
+	blond: ["#FFE664", "#FFFFFF"],
+	softblond: ["#FFEEA9", "#FFFFFF"],
+	platinum: ["#FFF1D5", "#FFFFFF"],
+	silver: ["#EBF0F3", "#FFFFFF"],
+	white: ["#FFFFFF", "#EAFDFF"],
+	gray: ["#979DB0", "#FFFFFF"],
+	purple: ["#C8B5F9", "#FFF1FE"],
+	green: ["#CEF3A0", "#FFFDDA"],
+	blue: ["#6B97F6", "#FFFFFF"],
+	aqua: ["#BADDFF", "#FFFFFF"],
+	pink: ["#FFC0DA", "#FFFDDA"],
+	red: ["#ED5C4D", "#FFD2E7"],
+	orange: ["#FFA63D", "#FAFFCF"],
+};
+
+const skincolors = [
+	"black",
+	"dark",
+	"copper",
+	"gray",
+	"sunset",
+	"health",
+	"white",
+	"pale",
+
+	"darkfur",
+	"lightfur",
+	"fur",
+
+	"gold",
+	"yoru",
+];
+
+const eyecolors = [
+	"amber",
+	"aqua",
+	"black",
+	"blue",
+	"brown",
+	"emerald",
+	"green",
+	"lightgreen",
+	"lightpurple",
+	"pink",
+	"purple",
+	"red",
+	"white",
+];
+
+const bodytypes = ["elf", "furry", "hoof", "human", "mermaid", "snake"];
+
+const headtypes = ["round", "square", "pointy", "furry"];
+
+const eartypes = [
+	"human",
+	"cat",
+	"dog",
+	"deer",
+	"futher",
+	"horse",
+	"mouse",
+	"rabit",
+	"elf",
+	"sharp",
+	"none",
+];
+
+//slot用于计算裸露面积和身体占用部位。
+
+const defaultslot = {
+	none: ["none"],
+	hat: ["head"],
+	coat: ["top"],
+	upper: ["top"],
+	bottom: ["bottom"],
+	underup: ["chest"],
+	underbt: ["hips"],
+	scarf: ["shoulder"],
+	hairs: ["head"],
+	suits: ["top", "bottom"],
+	glove: ["hands"],
+	earing: ["none"],
+	backpack: ["none"],
+	facial: ["none"],
+	socks: ["legs", "feet"],
+	shoes: ["feet"],
+	necklace: ["none"],
+	accessory: ["nipple"],
+	gear: ["anal"],
+	onepiece: ["top", "bottom"],
+};
+
+//------------>> list 区域，先分别命名再整合到list下面-----------//
+
+const emotes= {};
+const data = {};
+const objects = {};
+const items = {};
+const hair = {
+	front: {},
+	back: {},
+};
+
+const list = {
+	slotlist: Object.freeze(slotlist),
+	slots: Object.freeze(Slots),
+	layers: Object.freeze(layerlist),
+
+	shoplines: shoplines,
+	shops: shoptype,
+	tags: taglist,
+
+	catLayer: Object.freeze(catLayer),
+	categories: Object.freeze(shopcategory),
+
+	colorplate: colorplate,
+	haircolor: haircolor,
+	eyecolor: eyecolors,
+	skincolor: skincolors,
+	bodies: bodytypes,
+	heads: headtypes,
+	ears: eartypes,
+	emotes: [],
+};
+
+//---------------->> 主参数定义区 <<-------------------------------//
+
+class Hairs {
+	static add(type, name, maxlong) {
+		hair[type][name] = new Hairs(name, maxlong);
+		objects["hair" + type].push(name);
+		return hair[type][name];
+	}
+	static get(type, name) {
+		return hair[type][name];
+	}
+	static len(len) {
+		const select = new SelectCase();
+		select
+			.case([0, 44], lan("超短", "very short"))
+			.case([50, 99], lan("齐耳", "short"))
+			.case([100, 249], lan("及脖", "medium short"))
+			.case([250, 499], lan("及肩", "shoulder-length"))
+			.case([500, 799], lan("及胸", "long"))
+			.case([800, 1200], lan("及腰", "waist-length"))
+			.else(lan("超长", "super long"));
+
+		return select.has(len);
+	}
+
+	static print(info) {
+		const { haircolor, hairlength, hairstyle } = info;
+		const color = lan(L.color[haircolor]);
+		const frontstyle = lan(L.hairstyle[hairstyle[0]]);
+		const backstyle = lan(L.hairstyle[hairstyle[1]]);
+		const frontlen = this.len(hairlength[0]);
+		const backlen = this.len(hairlength[1]);
+
+		return lan(
+			`${color}色的${backlen}${backstyle}造型，以及${frontlen}${frontstyle}的前发`,
+			`${frontlen} ${frontstyle} front ${color} hair with ${backlen} ${backstyle} back hair`
+		);
+	}
+
+	isFix() {
+		this.fixcolor = true;
+		return this;
+	}
+	constructor(name, maxlong, fixcolor = false) {
+		this.name = name;
+		this.maxlong = maxlong;
+		this.fixcolor = fixcolor;
+	}
+}
+
+class Emote {
+	static add(name, eyebrow, eyes, mouth) {
+		emotes[name] = new Emote(name, eyebrow, eyes, mouth);
+		list.emotes.push(name);
+		return emotes[name];
+	}
+	static get(name) {
+		return emotes[name];
+	}
+	constructor(name, eyebrow, eye, mouth) {
+		this.name = name;
+		this.eyebrow = eyebrow;
+		this.eye = eye;
+		this.mouth = mouth;
+		this.frame = null;
+	}
+	addTear() {
+		this.tear = true;
+		return this;
+	}
+	addShy() {
+		this.shy = true;
+		return this;
+	}
+	addRed() {
+		this.red = true;
+		return this;
+	}
+	addHurt() {
+		this.hurt = true;
+		return this;
+	}
+	addFrame(str) {
+		this.frame = str;
+		return this;
+	}
+}
+
+class AvItems {
+	static add(category, imgname, name, des, gender) {
+		items[category].push(name);
+
+		const UID = this.makeUID(category, items[category].length);
+		data[UID] = new AvItems(UID, category, imgname, name, des, gender);
+
+		return data[UID];
+	}
+	static get(obj) {
+		return data[obj.id];
+	}
+	static getbyID(id) {
+		return data[id];
+	}
+	static getCID(category) {
+		const CID = shopcategory.indexOf(category);
+		return `A${CID}`;
+	}
+	static getOID(count) {
+		return `o${count}`;
+	}
+	static getbyName(name) {
+		for (const [key, obj] of Object.entries(data)) {
+			if (obj.name == name) return obj;
+		}
+	}
+	static makeUID(category, count) {
+		const CID = shopcategory.indexOf(category);
+		return `A${CID}o${count}`;
+	}
+	static addObj(layer, name) {
+		objects[layer].push(name);
+		return objects[layer];
+	}
+	static listUp(category) {
+		const list = [];
+		for (const [key, value] of Object.entries(data)) {
+			if (value.category == category) list.push(value);
+		}
+		return list;
+	}
+	constructor(id, category, imgname = "", name, des, gender = "n") {
+		this.id = id;
+		this.imgname = imgname;
+		this.name = name;
+		this.des = des;
+		this.gender = gender;
+		this.uid = 0;
+		this.name_en = name;
+		this.des_en = des;
+		this.tags = ["日常"];
+		this.hasImg = imgname == "" ? false : true;
+		this.cost = 0;
+		this.durable = 12;
+		this.maxdurable = 12;
+		this.fixcolor = true;
+		this.color = null;
+		this.colorname = null;
+		this.colorplate = [];
+
+		this.category = category;
+		this.layer = catLayer[category];
+		this.shop = "all";
+		this.slot = defaultslot[category];
+		if (category == "shoes" || category == "socks") {
+			this.require = ["elf", "furry", "human"];
+		}
+	}
+
+	setGender(str) {
+		this.gender = str;
+		return this;
+	}
+	setEnglish(name, des) {
+		this.name_en = name;
+		this.des_en = des;
+		return this;
+	}
+	HasImg(f) {
+		this.hasImg = true;
+
+		if (f == "f") {
+			this.hasImg = false;
+		}
+		return this;
+	}
+	hasBDif() {
+		this.hasBreastDif = true;
+		return this;
+	}
+	hasPDif() {
+		this.hasPregnantDif = true;
+		return this;
+	}
+	setCost(int) {
+		this.cost = int;
+		return this;
+	}
+	setWarmth(int) {
+		this.hot = int;
+		this.cold = int;
+		return this;
+	}
+	setHot(int) {
+		this.hot = int;
+		return this;
+	}
+	setCold(int) {
+		this.cold = int;
+		return this;
+	}
+	setDurable(int) {
+		this.durable = int;
+		this.maxdurable = int;
+		return this;
+	}
+	setBeauty(int) {
+		this.beauty = int;
+		return this;
+	}
+	setDefence(int) {
+		this.defence = int;
+		return this;
+	}
+	setSlot(str) {
+		this.slot = str;
+		return this;
+	}
+	setLayer(str) {
+		this.layer = str;
+		this.slot = [defaultslot[str]];
+		return this;
+	}
+	fixedColor(colorplate) {
+		this.fixcolor = true;
+		this.colorplate = colorplate;
+		this.color = colorplate[0];
+		this.colorname = colorplate[0];
+		return this;
+	}
+	customColor(color = "#FDFFFF", colorname = "白") {
+		this.color = color;
+		this.colorname = colorname;
+		this.fixcolor = false;
+		return this;
+	}
+	setShop(str) {
+		this.shop = str;
+		return this;
+	}
+	setLineup(str) {
+		this.lineup = str;
+		return this;
+	}
+	setTags(tag) {
+		this.tags = tag;
+		return this;
+	}
+	isTuckinable() {
+		this.tuckinable = true;
+		this.tuckin = false;
+		return this;
+	}
+	setPatterns(str) {
+		this.pattern = str[0];
+		this.patterns = str;
+		this.fixpattern = true;
+		return this;
+	}
+	customPatterns(defaultcolor) {
+		this.fixpattern = false;
+		this.subcolor = defaultcolor;
+		return this;
+	}
+	setEffect(string) {
+		this.effect = string;
+		return this;
+	}
+	setRequire(str) {
+		this.require = str;
+		return this;
+	}
+	isShortSleeve() {
+		this.slot = ["shoulder", "torso"];
+		return this;
+	}
+	isShortPants() {
+		this.slot = ["hips", "thign"];
+		return this;
+	}
+	isCursed() {
+		this.cursed = true;
+		return this;
+	}
+}
+
+//----------------->> 功能区 <<---------------------------------//
+function Init() {
+	layerlist.forEach((layer) => {
+		if (D.wearslots.includes(layer) === false) objects[layer] = [];
+	});
+	shopcategory.forEach((cat) => {
+		items[cat] = [];
+	});
+	eyelist.forEach((obj) => {
+		objects["eye"].push(obj);
+	});
+	eyebrowlist.forEach((obj) => {
+		objects["eyebrow"].push(obj);
+	});
+	mouthlist.forEach((obj) => {
+		objects["mouth"].push(obj);
+	});
+}
+
+function addColor(name, colorcode) {
+	colorplate[name] = colorcode;
+	return colorplate;
+}
+
+function addHaircolor(index, base, mask) {
+	haircolor[index] = [base, mask];
+	return haircolor;
+}
+
+function getRevealDetail(wear){
+	const set = ["cover", "outfit_up", "outfit_bt", "inner_up", "inner_bt"];
+	const top = ["top", "shoulder", "chest", "waist", "arms", "back", "torso"];
+	const bottom = ["bottom", "hips", "thign", "legs", "crotch", "butts"];
+	const slots = setSlots(wear);
+	const reveal = getReveal(slots);
+	const reveals = [0, 0, 0];
+	const detail = [0, 0, 0];
+	let c = 0;
+
+	for (const [key, value] of Object.entries(wear)) {
+		if (set.includes(key) === false) continue;
+		if (value) {
+			value.slot.forEach((v) => {
+				reveals[c] += slotbit[v];
+
+				if (top.includes(v)) detail[0] += slotbit[v];
+
+				if (bottom.includes(v)) detail[1] += slotbit[v];
+			});
+		}
+		if (key == "cover" || key == "outfit_bt") c++;
+		if (key == "inner_bt") break;
+	}
+	reveals.sort((a, b) => b - a);
+
+	const details = {
+		reveal: reveal[0] ?? 0,
+		total: reveal,
+		tops: detail[0],
+		bottoms: detail[1],
+		slots: slots,
+	};
+
+	return details;
+}
+
+function getReveal(slot) {
+	let reveal = 0;
+	if (!slot) return 0;
+	slot.forEach((v) => {
+		reveal += slotbit[v];
+	});
+	return reveal;
+}
+
+function setSlots(equip) {
+	if (!equip) return [];
+	const index = [
+		"head",
+		"mouth",
+		"shoulder",
+		"breast",
+		"waist",
+		"arms",
+		"hands",
+		"back",
+		"crotch",
+		"penis",
+		"ureth",
+		"vagina",
+		"anal",
+		"butts",
+		"thign",
+		"legs",
+		"feet",
+	];
+	const arr = [];
+
+	let i = 0;
+	for (const [key, obj] of Object.entries(equip)) {
+		if (!obj) continue;
+		if (obj.slot[0] === "none" || !obj.slot) continue;
+		let slot = Array.from(obj.slot).join();
+		slot = slot.replace("top", "shoulder,breast,waist,arms,back");
+		slot = slot.replace("bottom", "crotch,butts,thign,legs");
+		slot = slot.replace("torso", "breast,back,waist");
+		slot = slot.replace("chest", "breast,back");
+		slot = slot.replace("hips", "crotch,butts");
+
+		arr[i] = slot;
+		i++;
+	}
+
+	const arrs = arr.join().split(",");
+	let slots = Array.from(new Set(arrs));
+	slots.sort((start, next) => {
+		return index.indexOf(start) - index.indexOf(next);
+	});
+	if (!slots[0]) return [];
+	return slots;
+}
+
+Object.defineProperty(window, "Avatars", {
+	value: {
+		Init: Object.freeze(Init),
+		addColor: Object.freeze(addColor),
+		addHaircolor: Object.freeze(addHaircolor),
+		getRevealDetail: Object.freeze(getRevealDetail),
+		getReveal: Object.freeze(getReveal),
+		setSlots: Object.freeze(setSlots),
+
+		Hairs: Object.freeze(Hairs),
+		Emote: Object.freeze(Emote),
+		AvItems: Object.freeze(AvItems),
+
+		hair: hair,
+		emotes: emotes,
+		data: data,
+		items: items,
+		objects: objects,
+		list: list,
+	},
+});
+
+})();
+
+A.saveCustomItem = function (item) {
+	const layer = A.catLayer[item.category]
+	const newItem = new AvItems(
+		"",
+		item.category,
+		layer,
+		"",
+		item.name,
+		item.des,
+		item.gender
+	);
+
+	const tags = [item.tag1]
+	if(item.tag2) tags[1] = item.tag2;
+	if(item.tag3) tags[2] = item.tag3;
+
+	newItem
+		.setCost(item.cost)
+		.setBeauty(item.beauty / 100)
+		.setDefence(item.defence / 10)
+		.setWarmth(item.warmth)
+		.setDurable(item.durable)
+		.setTags(tags);
+
+	const data = JSON.stringify(newItem);
+	download(data, "newItem.txt", "text/plain");
+};
+
+function download(content, fileName, contentType) {
+	var a = document.createElement("a");
+	var file = new Blob([content], { type: contentType });
+	a.href = URL.createObjectURL(file);
+	a.download = fileName;
+	a.click();
+}</script>
+<script id="script-module-character" type="text/javascript">var _$Chara = (()=>{
+
+
+function initPlayerPalam() {
+	const palam = {};
+	const set = ["饮食", "健康", "魔力", "体力", "理智", "清洁"];
+	D.palamPC.forEach((k) => {
+		if (set.includes(k)) {
+			palam[k] = [1000, 1000];
+		} else {
+			palam[k] = [0, 1000];
+		}
+	});
+	D.palamSP.forEach((k) => {
+		palam[k] = [0, 1800];
+	});
+	return palam;
+}
+
+function initNPCPalam() {
+	const palam = {};
+	const set = ["魔力", "体力", "理智", "清洁"];
+	D.palamNPC.forEach((k) => {
+		if (set.includes(k)) {
+			palam[k] = [1000, 1000];
+		} else {
+			palam[k] = [0, 1000];
+		}
+	});
+	D.palamSP.forEach((k) => {
+		palam[k] = [0, 2400];
+	});
+	return palam;
+}
+
+function initMonPalam() {
+	const palam = {};
+	D.palamMon.forEach((k) => {
+		palam[k] = [0, 2500];
+	});
+	D.palamSP.forEach((k) => {
+		palam[k] = [0, 5000];
+	});
+}
+
+function Mark() {
+	this.level = 0;
+	this.maxlv = 0;
+	this.hypo = 0;
+	this.history = [];
+}
+
+class Character {
+	 r;
+	static data = {};
+	static list = [];
+	static templet = {};
+	static add(type, race, name, gender) {
+		const CID = `Chara${Object.keys(this.data).length}`;
+		this.data[CID] = new Character(type, race, name, gender);
+		this.data[CID].cid = CID;
+		this.list.push(name);
+		return this.data[CID];
+	}
+	static newtemp(type, race, gender) {
+		const Tid = `${type}-${Object.keys(this.templet).length}`;
+		this.templet[Tid] = new Character("npc", race, "", gender);
+		this.templet[Tid].cid = Tid;
+		return this.templet[Tid];
+	}
+	static initSave(type, chara) {
+		const data = new Character(type, chara.race, chara.name, chara.gender, chara);
+		return data;
+	}
+	static get(cid) {
+		return this.data[cid];
+	}
+
+	static getp(cid) {
+		return this.templet[cid];
+	}
+	constructor(type, race, name, gender, obj) {
+		this.r = clone(Races.get(race));
+
+		if (obj) {
+			for (let i in obj) {
+				this[i] = clone(obj[i]);
+			}
+		} else {
+			this.cid = "";
+			this.name = name;
+			this.gender = gender;
+			this.race = race;
+			this.init(type);
+		}
+	}
+	init(type) {
+		this.birth = [3018, 6, 6];
+		this.powertype = this.r.powertype;
+		this.elements = [];
+		this.diet = this.r.diet;
+		this.major = 1;
+		this.emote = "普通";
+		this.money = 0;
+
+		this.initTraits();
+		this.initBase();
+		this.initPalam(type);
+		this.initSource();
+		this.initFlags(type);
+		this.state = {};
+		this.tcsv = {};
+		this.initExps();
+		this.initInfo();
+		this.initMark();
+		this.initSkill(type);
+		this.initWear();
+		this.initEquip();
+		this.initTattoos();
+		this.initSexparts();
+		this.initLiquids();
+		this.virginity = {};
+		if (this.r.cycle) {
+			this.initCycle();
+		}
+
+		if (type == "player") {
+			this.initDaily();
+		}
+
+		if (type == "npc") {
+			this.initSchedule();
+		}
+		this.preset = {};
+	}
+	initTraits() {
+		const traits = this.r.traits;
+		this.trait = {};
+
+		if (traits) {
+			for (let i in traits) {
+				if (traits[i].length == 1) this.trait[i] = traits[i][0];
+			}
+		}
+	}
+	initBase() {
+		const hot = this.r.warmth[0];
+		const cold = this.r.warmth[1];
+		const adj = this.r.base;
+
+		this.base = {};
+		D.basekey.forEach((k) => {
+			if (adj[k]) this.base[k] = [10 + adj[k], 10 + adj[k]];
+			else this.base[k] = [0, 0];
+		});
+		this.base.lv = [1, 0];
+		this.base.hot = [hot, hot];
+		this.base.cold = [cold, cold];
+	}
+	initPalam(type) {
+		switch (type) {
+			case "player":
+				this.palam = initPlayerPalam();
+				break;
+			case "npc":
+				this.palam = initNPCPalam();
+				break;
+		}
+	}
+	initSource() {
+		this.source = {};
+		for (let k in this.palam) {
+			this.source[k] = 0;
+		}
+	}
+	initFlags(type) {
+		this.flag = {};
+		if (type == "npc") {
+			D.npcIntFlag.forEach((k) => {
+				this.flag[k] = 0;
+			});
+		}
+	}
+	initExps() {
+		this.exp = {}
+		D.explist.forEach((k) => {
+			this.exp[k] = 0;
+		});
+	}
+	initDaily() {
+		D.dailyrec.forEach((k) => {
+			this.daily[k] = 0;
+		});
+	}
+	initInfo() {
+		const a = this.r.avatarinfo;
+		this.info = {
+			eyes: 1,
+			eyecolor: a.eyes,
+
+			haircolor: a.hair,
+			hairstyle: ["natural", "natural"],
+			hairlength: [120, 120],
+
+			breast: 1,
+			hips: 1,
+			bodysize: this.r.bodysize,
+
+			skin: a.skin,
+			body: this.r.bodytype,
+			head: this.r.headtype,
+			ears: this.r.eartype,
+		};
+
+		if (a.tail) this.info.tail = a.tail;
+		if (a.horn) this.info.horn = a.horn;
+		if (a.wing) this.info.wing = a.wing;
+
+		this.initBody(this.r.bodypart, this.r.genital);
+	}
+	initBody(bodypart, g) {
+		this.body = clone(bodypart);
+		let t = g.penis == "canhide" ? "hidden" : g.penis;
+		let c = g.vagina == "canhide" ? "hidden" : g.vagina;
+
+		switch (this.gender) {
+			case "f":
+				this.setGeniState(["none", "none", g.vagina, g.vagina]);
+				break;
+
+			case "m":
+				this.setGeniState([g.penis, t, "none", "none"]);
+				break;
+
+			case "i":
+				if (!g.interhasCritoris) c = "none";
+				if (!g.interhasTeste) t = "none";
+				this.setGeniState([g.penis, t, g.vagina, c]);
+				break;
+
+			case "n":
+				this.setGeniState(["none", "none", "none", "none"]);
+				break;
+		}
+	}
+	initMark() {
+		this.mark = {};
+		D.mark.forEach((v) => {
+			this.mark[v] = new Mark();
+		});
+	}
+	initSkill(type) {
+		this.abl = {};
+		D.baseAbl.forEach((v) => {
+			this.abl[v] = { lv: 1, exp: 0 };
+		});
+
+		this.sbl = {};
+		D.sexAbl.forEach((v) => {
+			this.sbl[v] = { lv: 1, exp: 0 };
+		});
+
+		this.skl = {};
+		D.skill.forEach((v) => {
+			this.skl[v] = { lv: 1, exp: 0 };
+		});
+
+		this.lewd = {};
+		D.degrees.forEach((v) => {
+			this.lewd[v] = 120;
+			if (v == "纯洁") this.lewd[v] = 800;
+		});
+		if (type == "npc") {
+			D.npcdegrees.forEach((v) => {
+				this.lewd[v] = 120;
+			});
+		}
+	}
+	initWear() {
+		this.wear = {};
+		D.wearslots.forEach((k) => {
+			this.wear[k] = null;
+		});
+
+		this.slots = A.getRevealDetail(this.wear);
+	}
+	initTattoos() {
+		this.tattoos = {};
+		D.tattoosA.forEach((k) => {
+			this.tattoos[k] = null;
+		});
+		D.tattoosB.forEach((k) => {
+			this.tattoos[k] = null;
+		});
+	}
+	initEquip() {
+		this.equip = {};
+		D.equipslots.forEach((k) => {
+			this.equip[k] = null;
+		});
+	}
+	initSchedule() {
+		this.schedule = {
+			workday: [],
+			works: [],
+			sleepTime: [22, 8],
+			homeLocation: "",
+			Tracks: {},
+		};
+	}
+	initSexparts() {
+		this.sexparts = {};
+		const { penis, vagina, critoris, organ, mouth } = this.body;
+
+		if (D.bodyCheck(penis)) this.initSexOrgan("penis");
+		if (D.bodyCheck(vagina)) this.initSexOrgan("vagina");
+		if (D.bodyCheck(critoris)) this.initSexOrgan("critoris");
+
+		if (D.bodyCheck(organ)) {
+			this.initSexOrgan("ureth");
+			this.initSexOrgan("anal");
+		}
+
+		if (D.bodyCheck(mouth)) this.initSexOrgan("mouth");
+
+		this.initSexOrgan("breast");
+	}
+	initSexOrgan(part) {
+		const state = this.body[part];
+		this.sexparts[part] = {
+			sens: D.sensbit[state],
+		};
+		const organ = this.sexparts[part];
+
+		let volum = 0;
+		let osize = 0;
+
+		switch (part) {
+			case "vagina":
+			case "penis":
+				const shape = part[0] + "shape";
+				const size = part[0] + "size";
+				organ.shape = this.r.genital[shape];
+				organ.size = this.r.genital[size];
+
+				volum = organ.size[0] * 0.3;
+				if (part == "penis") organ.produce = [volum, volum];
+				break;
+
+			case "breast":
+				volum = this.info.breast * 100;
+				organ.produce = [volum, volum];
+				break;
+
+			case "ureth":
+				if (this.hasPenis()) {
+					osize = this.r.genital.psize[1] / 20;
+				} else {
+					osize = (this.r.bodysize + 1) * 2;
+				}
+				organ.size = [osize, osize + 1];
+				organ.produce = [0, 3000];
+				break;
+
+			case "anal":
+				osize = (this.info.hips + 1) * 5 + random(10);
+				organ.size = [osize, osize + 5];
+				break;
+		}
+	}
+	initLiquids() {
+		this.liquid = {};
+		D.liquidLayer.forEach((k) => {
+			this.liquid[k] = [0, 0, 0, 0];
+		});
+	}
+	initCycle() {
+		const { type, cir, days } = this.r.cycle;
+		this.pregnant = {
+			cycle: {
+				type: type,
+				circle: [cir, cir],
+				days: days,
+				rng: [-2, 2],
+				current: 0,
+				state: 0,
+				phase: "none",
+			},
+			fatherID: [],
+			seedCount: [],
+			inside: [],
+		};
+	}
+	hasPenis() {
+		return this.body.penis !== "none";
+	}
+	hasVagina() {
+		return this.body.vagina !== "none";
+	}
+	setRace(race) {
+		Races.convert(this, race);
+		return this;
+	}
+	setGender(gender) {
+		this.gender = gender;
+		this.initBody(this.r.bodypart, this.r.genital);
+		this.initSexparts();
+		return this;
+	}
+	setGeniState(state) {
+		this.body.penis = state[0];
+		this.body.teste = state[1];
+
+		this.body.vagina = state[2];
+		this.body.critoris = state[3];
+		return this;
+	}
+	setName(name) {
+		this.name = name;
+		return this;
+	}
+	setNick(nick) {
+		this.nick = nick;
+		return this;
+	}
+	setTrait(str) {
+		str.forEach((k) => {
+			this.trait[k] = 1;
+		});
+		return this;
+	}
+	setTitle(str) {
+		this.title = str;
+		return this;
+	}
+	setMajor(int) {
+		this.major = int.clamp(1, 6);
+		return this;
+	}
+	setKojo(str) {
+		this.kojo = str;
+		return this;
+	}
+	setPowertype(str) {
+		this.powertype = str;
+		return this;
+	}
+	setElements(str) {
+		if (str.length > this.r.elesize) {
+			str = str.slice(0, this.r.elesize);
+		}
+		this.elements = str;
+		return this;
+	}
+	Description(str) {
+		this.des = str;
+		return this;
+	}
+	Birthday(int) {
+		this.birth = int;
+		return this;
+	}
+	Base(obj) {
+		const adj = this.r.base;
+
+		for (let i in obj) {
+			if (adj[i]) this.base[i] = [obj[i] + adj[i], obj[i] + adj[i]];
+			else this.base[i] = [obj[i], obj[i]];
+		}
+		return this;
+	}
+	setFlag(obj) {
+		if (!isObject(obj)) return;
+
+		for (let i in obj) {
+			this.flag[i] = obj[i];
+		}
+		return this;
+	}
+	setExp(exp) {
+		for (let i in exp) {
+			this.exp[i] = exp[i];
+		}
+		return this;
+	}
+	Abl(name, level) {
+		this.abl[name].lv = level;
+		return this;
+	}
+	Sbl(name, level) {
+		this.sbl[name].lv = level;
+		return this;
+	}
+	Skill(name, level) {
+		this.skl[name].lv = level;
+		return this;
+	}
+	Lewd(name, int) {
+		this.lewd[name] = int;
+		return this;
+	}
+	setInfo(info) {
+		for (let i in info) {
+			this.info[i] = info[i];
+		}
+		return this;
+	}
+	Eyetype(type) {
+		this.info.eyes = type.clamp(1, 3);
+		return this;
+	}
+	Eyecolor(color) {
+		this.info.eyecolor = color;
+		return this;
+	}
+	Haircolor(color) {
+		this.info.haircolor = color;
+		return this;
+	}
+	HairStyle(front, back) {
+		this.info.hairstyle = [front, back];
+		return this;
+	}
+	Hairlength(front, back) {
+		this.info.hairlength = [front, back];
+		return this;
+	}
+	Breast(int) {
+		this.info.breast = int.clamp(1, 5);
+		return this;
+	}
+	Hips(int) {
+		this.info.hips = int.clamp(1, 5);
+		return this;
+	}
+	Bodysize(int) {
+		this.info.bodysize = int.clamp(0, this.r.bodysize + 1);
+		return this;
+	}
+	SkinColor(skin) {
+		this.info.skin = skin;
+		return this;
+	}
+	Ears(ear) {
+		this.info.ears = ear;
+		return this;
+	}
+	Tail(tail) {
+		this.info.tail = tail;
+		return this;
+	}
+	Horn(horn) {
+		this.info.horn = horn;
+		return this;
+	}
+	Wing(wing) {
+		this.info.wing = wing;
+		return this;
+	}
+	SubBodyColor(color) {
+		this.info.subcolor = color;
+		return this;
+	}
+	Preset(set, preset) {
+		this.preset[set] = preset;
+		return this;
+	}
+	Wear(set) {
+		const preset = this.preset[set];
+		preset.forEach((set) => {
+			Closet.getWear(this, set);
+		});
+
+		return this;
+	}
+	setEquip(slot, name) {
+		const item = Equipment.getbyName(name);
+		this.equip[slot] = clone(item);
+		return this;
+	}
+	setTattoos(slot, id) {
+		const item = Tattoos.get(id);
+		this.tattoos[slot] = clone(item);
+		return this;
+	}
+	setBody(part, state) {
+		this.body[part] = state;
+		return this;
+	}
+	setSens(part, level) {
+		this.sexparts[part].sens = level;
+		return this;
+	}
+	setProduce(part, volum) {
+		this.sexparts[part].produce = [volum, volum];
+		return this;
+	}
+	setSize(part, size) {
+		this.sexparts[part].size = size;
+		return this;
+	}
+	setPshape(shape) {
+		this.sexparts.penis.shape = shape;
+		return this;
+	}
+	setVshape(shape) {
+		this.sexparts.vagina.shape = shape;
+		return this;
+	}
+	setVirginity(part, info) {
+		this.virginity[part] = info;
+		return this;
+	}
+	setWorkday(day) {
+		this.schedule.workday = day;
+		return this;
+	}
+	setWork(workday, startTime, endTime, workplace, worktype) {
+		const work = {
+			workday: workday,
+			workplace: workplace,
+			worktype: worktype,
+			startTime: startTime,
+			endTime: endTime,
+		};
+		if (this.schedule.works.length < 3) {
+			this.schedule.works.push(work);
+
+			let workday = this.schedule.workday;
+			workday = workday.concat(work.workday);
+			workday = Array.from(new Set(workday));
+
+			this.schedule.workday = workday;
+		}
+
+		return this;
+	}
+	setSleepTime(start, end) {
+		this.schedule.sleepTime = [start, end];
+		return this;
+	}
+	setHome(loc) {
+		this.schedule.homeLocation = loc;
+		return this;
+	}
+	setTrack(loc, chance, stayhour, entryTime, exitTime) {
+		this.schedule.Tracks[loc] = {
+			chance: chance,
+			stayHours: stayhour,
+			entryTime: entryTime,
+			exitTime: exitTime ? exitTime : entryTime + stayhour,
+		};
+		return this;
+	}
+	setStartBonus(bonus) {
+		this.startbonus = bonus;
+		return this;
+	}
+	End() {
+		delete this.r;
+
+		if (this.cid.includes("Chara")) {
+			Character.data[this.cid] = Object.freeze(this);
+		} else {
+			Character.templet[this.cid] = Object.freeze(this);
+		}
+	}
+}
+
+	Object.defineProperty(window.G, 'Chara', {
+		value: Object.freeze(Character)
+	})
+
+})();</script>
+<script id="script-module-closet" type="text/javascript">var _$Closet = (()=>{
+
+class Closet{
+	static getWear(chara, set) {
+		const { slot, name, color, colorname, pattern, subcolor } = set;
+		const item = AvItems.getbyName(name);
+		chara.wear[slot] = clone(item);
+
+		if (!item.fixcolor) {
+			if (color) chara.wear[slot].color = color;
+			if (colorname) chara.wear[slot].colorname = colorname;
+		} else if (item?.colorplate.includes(color)) {
+			chara.wear[slot].color = color;
+		}
+
+		if (pattern && item?.patterns.includes(pattern)) {
+			if (pattern) chara.wear[slot].pattern = pattern;
+			if (subcolor && !item.fixpattern) chara.wear[slot].subcolor = subcolor;
+		}
+
+		chara.slots = A.getRevealDetail(chara.wear);
+
+		return chara.wear[slot];
+	}
+}
+
+Object.defineProperty(window.G, 'Closet',{
+    value: Object.freeze(Closet)
+})
+
+})()</script>
+<script id="script-module-game" type="text/javascript">class EGame {
+	constructor() {
+		const setobj = [
+			'flag','cflag','combat','events','chara','player',''
+		]
+	}
+}
+
+
+window.initgame = function(){
+	V.game = new EGame()
+}</script>
+<script id="script-module-AvatarItems" type="text/javascript">//------>> 头部配件 ------------------------//
+A.InitHairs = function () {
+	Hairs.add("front", "natural", 1);
+	Hairs.add("front", "himecut", 1);
+	Hairs.add("front", "curly", 4);
+
+	Hairs.add("back", "curly", 4);
+	Hairs.add("back", "straight", 4);
+
+	return A.hair;
+};
+
+//------------>> 表情设置  ----------------------//
+A.InitEmotes = function () {
+	Emote.add("正常", "normal", "full", "smile");
+	Emote.add("开心", "happy", "quater2", "laugh").addShy();
+
+	Emote.add("伤心", "sad", "quater1", "sad").addTear();
+
+	Emote.add("生气", "angry", "quater2", "open");
+	Emote.add("害羞", "happy", "lookleft", "smile").addShy();
+
+	Emote.add("羞耻", "sad", "full", "oop").addShy();
+
+	Emote.add("困惑", "confuse", "quater2", "unhappy").addFrame("confuse");
+
+	Emote.add("受伤", "angry", "blink1", "open").addHurt();
+
+	Emote.add("快感1", "sad", "quater2", "open").addRed();
+
+	Emote.add("快感2", "confuse", "lookup2", "open").addTear().addRed();
+
+	Emote.add("高潮", "sad", "lookup1", "open").addTear().addRed();
+
+	return A.emotes;
+};
+
+//各分类第一件物品都是无。没穿也算一件物品，用来规避错误。
+//暂时没啥装饰，打包放一块。
+A.InitAccesory = function () {
+	AvItems.add("none", "", "无", "无")
+		.setEnglish("naked", "none")
+		.setLayer("any")
+		.setTags(["裸露"])
+		.setShop("none")
+		.setDurable(0);
+};
+
+//内衣上身
+A.InitInnerTop = function () {
+	AvItems.add("underup", "", "吊带背心", "一件简单的吊带背心，给胸部小小的你带来些许安全感。", "f")
+		.setEnglish("camisole", "A simple camisole, can give you a little bit comfort.")
+		.setCost(30)
+		.setWarmth(-0.2)
+		.setSlot(["torso"]);
+
+	AvItems.add("underup", "", "胸罩", "一件设计朴素的胸罩。", "f")
+		.setEnglish("bra", "A simple designed bra.")
+		.setCost(60);
+};
+
+//内衣下身
+A.InitInnerBottom = function () {
+	AvItems.add("underbt", "boxer", "四角内裤", "一条简单的四角内裤。", "m")
+		.setEnglish("boxer brief", "A simple boxer brief.")
+		.customColor()
+		.setCost(12)
+		.setWarmth(-0.1);
+
+	AvItems.add("underbt", "pantie", "内裤", "一款简单朴素的内裤。", "f")
+		.setEnglish("pantie", "A simple pantie.")
+		.setCost(15);
+};
+
+//暂时不会添加太多，打包放一块。鞋子和袜子
+A.InitLegItems = function () {
+	AvItems.add("shoes", "sportshoes", "运动鞋", "一双普通的白色运动鞋。")
+		.setEnglish("sport shoes", "A simple sport shoes.")
+		.setTags(["日常", "运动"])
+		.fixedColor(["white"])
+		.setCost(60)
+		.setWarmth(-0.1)
+		.setDurable(30);
+
+	AvItems.add("shoes", "highheel", "高跟鞋", "一双简单设计的高跟鞋。", "f")
+		.setEnglish("high heel", "A simple high heel.")
+		.setTags(["日常", "商务", "高跟"])
+		.setCost(80)
+		.setDurable(20)
+		.setBeauty(0.02)
+		.customColor();
+
+	AvItems.add("shoes", "", "皮鞋", "一双设计简单的皮鞋。")
+		.setEnglish("shoes", "A simple shoes.")
+		.setTags(["日常", "正式", "商务"])
+		.setCost(240)
+		.setDurable(25)
+		.setBeauty(0.02);
+
+	AvItems.add("socks", "sportsocks", "运动短袜", "一对简单的运动袜。")
+		.setEnglish("sports socks", "A simple sports socks.")
+		.setTags(["日常", "运动"])
+		.setCost(15)
+		.setWarmth(-0.2)
+		.customColor();
+
+	AvItems.add("socks", "", "短袜", "一对简单的短袜。")
+		.setEnglish("socks", "A simple socks.")
+		.setCost(20)
+		.setWarmth(-0.1);
+};
+
+//上衣和连衣裙之类的。
+A.InitOutfitTops = function () {
+	AvItems.add("upper", "Tshirt", "T恤", "一键简单的T恤。并不能给你多少保护，但总比没有好。")
+		.setEnglish(
+			"T-shirt",
+			"A simple designed T-shirt. It cannot give you much of protection, but better than nothing."
+		)
+		.hasBDif()
+		.hasPDif()
+		.setCost(60)
+		.setWarmth(-1)
+		.setDurable(24)
+		.setDefence(0.5)
+		.customColor()
+		.setPatterns(["slime", "heart"]);
+
+	AvItems.add("upper", "shirt", "衬衫", "一件简单的西式长袖衬衫。浅浅的暗纹给你增加了些许气质。")
+		.setEnglish(
+			"business shirt",
+			"A simple long-sleeved dress shirt. The light dark pattern adds a touch of grace to you."
+		)
+		.setTags(["日常", "正式", "商务"])
+		.hasBDif()
+		.hasPDif()
+		.setCost(150)
+		.setWarmth(-1.5)
+		.setDurable(24)
+		.setBeauty(0.02)
+		.setDefence(0.5)
+		.customColor()
+		.isTuckinable();
+
+	AvItems.add(
+		"onepiece",
+		"bwopice",
+		"BW连衣裙",
+		"一件设计简单的连衣裙。修身的设计显得你身材更苗条。毕竟是易淘上的便宜货，不能指望不了的防御效果。"
+	)
+		.setEnglish(
+			"BW onepiece",
+			"The slim fit design looks slimmer on your body. The cheap goods on Ebay, can not expect the fabric defense effect."
+		)
+		.hasBDif()
+		.hasPDif()
+		.setCost(240)
+		.setWarmth(-0.5)
+		.setDurable(15)
+		.setBeauty(0.05)
+		.fixedColor(["white", "black"]);
+
+	AvItems.add("upper", "slpshortup", "短袖睡衣", "一件设计简单的睡衣。轻柔透气的布料给你带来好梦。")
+		.setEnglish("summer pajamas", "A simple design pajamas. The light and breathable fabric brings you good dreams.")
+		.setTags(["日常", "睡衣"])
+		.hasBDif()
+		.hasPDif()
+		.setCost(80)
+		.setWarmth(-0.5)
+		.customColor()
+		.setPatterns(["line", "dot", "star"])
+		.customPatterns("#787878");
+};
+
+//裤子和裙子
+A.InitOutfitBottoms = function () {
+	AvItems.add("bottom", "shortpant", "短裤", "一条简单的短裤。")
+		.setEnglish("shortpant", "A simple shortpant.")
+		.hasPDif()
+		.setCost(80)
+		.setWarmth(-0.5)
+		.setDurable(20)
+		.setDefence(0.2)
+		.customColor("#787878", "黑");
+
+	AvItems.add("bottom", "shortskirt", "短裙", "一条简单的短裙。", "f")
+		.setEnglish("skirt", "A simple skirt.")
+		.hasPDif()
+		.setCost(80)
+		.setWarmth(-0.2)
+		.setBeauty(0.01)
+		.customColor("#787878", "黑");
+
+	AvItems.add("bottom", "bskirt", "西装短裙", "一条简单的西式短裙。毕竟是廉价款，不能指望耐久度。", "f")
+		.setEnglish("business skirt", "A simple business skirt. Because it's cheap so you can't expect its durability.")
+		.setTags(["日常", "商务"])
+		.hasPDif()
+		.setCost(210)
+		.setWarmth(-0.2)
+		.setBeauty(0.03)
+		.customColor("#787878", "黑");
+
+	AvItems.add("bottom", "slpshortbt", "睡衣短裤", "一件设计简单的睡衣短裤。轻柔透气的布料给你带来好梦。")
+		.setEnglish("summer pajamas", "A simple design pajamas. The light and breathable fabric brings you good dreams.")
+		.setTags(["日常", "睡衣"])
+		.hasPDif()
+		.setCost(80)
+		.setWarmth(-0.5)
+		.setDurable(10)
+		.setDefence(0.2)
+		.customColor()
+		.setPatterns(["line", "dot", "star"])
+		.customPatterns("#787878");
+
+	AvItems.add("bottom", "", "长裤", "一件设计简单的长裤。舒适宽松的布料，修身的设计，穿着很是得体。")
+		.setEnglish(
+			"pant",
+			"A pair of pants with a simple design. Comfortable and loose fabric, slim fit design, very modest to wear."
+		)
+		.setTags(["日常", "正式", "商务"])
+		.setCost(320)
+		.setWarmth(-0.8)
+		.setDurable(20)
+		.setDefence(0.2);
+};
+
+A.InitAvatarDatas = function () {
+	A.Init();
+	A.InitHairs();
+	A.InitEmotes();
+	A.InitAccesory();
+	A.InitInnerTop();
+	A.InitInnerBottom();
+	A.InitLegItems();
+	A.InitOutfitTops();
+	A.InitOutfitBottoms();
+};</script>
+<script id="script-module-charalist" type="text/javascript">F.InitPlayerTemplet = function () {
+	Chara.newtemp("player", "human", "m")
+		.Preset("basic", [
+			{ slot: "inner_bt", name: "四角内裤" },
+			{ slot: "outfit_up", name: "T恤", color: "#F14660", colorname: "红" },
+			{ slot: "outfit_bt", name: "短裤" },
+			{ slot: "legs", name: "运动短袜" },
+			{ slot: "shoes", name: "运动鞋" },
+		])
+		.Wear("basic")
+		.setMajor(2)
+		.Haircolor("milktea")
+		.HairStyle("natural", "straight")
+		.Hairlength(50, 50)
+		.setTrait(["保守"])
+		.setStartBonus("菜鸟")
+		.Description(["一名热衷修仙的男孩。", "A Human boy who love to do Xiuxian activities."]);
+
+	Chara.newtemp("player", "catvinx", "m")
+		.Preset("basic", [
+			{ slot: "inner_bt", name: "内裤" },
+			{ slot: "outfit_up", name: "T恤", pattern: "heart" },
+			{ slot: "outfit_bt", name: "短裙", color: "#FFA9DD", colorname: "粉" },
+			{ slot: "shoes", name: "运动鞋" },
+		])
+		.Wear("basic")
+		.setMajor(5)
+		.setTrait(["开放"])
+		.setStartBonus("人气")
+		.setSens("anal", 2)
+		.HairStyle("curly", "curly")
+		.Hairlength(120, 50)
+		.Description(["一名喜欢直播的女装猫猫。", "A Catvinx boy who love to live steam with crossdress."]);
+
+	Chara.newtemp("player", "sckyrios", "f")
+		.Preset("basic", [
+			{ slot: "inner_up", name: "胸罩" },
+			{ slot: "inner_bt", name: "内裤" },
+			{ slot: "outfit_up", name: "衬衫" },
+			{ slot: "outfit_bt", name: "短裙" },
+			{ slot: "shoes", name: "高跟鞋" },
+		])
+		.Wear("basic")
+		.setMajor(4)
+		.setStartBonus("聪明")
+		.setSens("breast", 2)
+		.setFlag({ transform: { skin: "health", body: "human", head: "round" } })
+		.HairStyle("natural", "straingt")
+		.Description(["一名喜欢研究人体的狼妹。", "A Sckyrios girl who love to study the anatomy."]);
+};
+
+F.InitNPC = function () {
+	Chara.add("npc", "human", "余安", "m")
+		.Birthday([3012, 8, 8])
+		.Preset("basic", [
+			{ slot: "inner_bt", name: "四角内裤" },
+			{ slot: "outfit_up", name: "衬衫" },
+			{ slot: "outfit_bt", name: "长裤" },
+			{ slot: "shoes", name: "皮鞋" },
+		])
+		.Haircolor("darkbrown")
+		.Hairlength(50, 50)
+		.setTrait(["自由业"])
+		.Base({ STR: 8, INT: 14, WIL: 15, PSY: 16, ALR: 12 })
+		.Abl("格斗", 2)
+		.Abl("健身", 3)
+		.Abl("跑步", 3)
+		.Abl("科学", 8)
+		.Abl("冥想", 1)
+		.Abl("创作", 15)
+		.Abl("表演", 3)
+		.Sbl("性技巧", 5)
+		.Sbl("性抵抗", 1)
+		.Sbl("手技", 3)
+		.Sbl("腰技", 3)
+		.Lewd("纯洁", 120)
+		.Lewd("支配", 240)
+		.Lewd("束缚", 400)
+		.Lewd("追踪", 600)
+		.setWork([2, 3, 4, 5, 6], 14, 4, "自宅", "设计")
+		.setTrack("小卖部", 20, 1, 12)
+		.setTrack("小卖部", 20, 1, 19)
+		.setHome("怡安小区")
+		.setSleepTime(5, 12)
+		.setVirginity("penis", { date: "不明", person: "前女友", situation: "在{0}的盛情邀约下丧失了自己的童贞" })
+		.Description([
+			"居住在主角对门的自由设计师。", "A freelance designer who living opposite of your appartment.",
+		]);
+
+	Chara.add("npc", "dracons", "娜娜莉·爱索斯", "i")
+		.Birthday([3016, 5, 28])
+		.Preset("basic", [
+			{ slot: "inner_up", name: "胸罩" },
+			{ slot: "inner_bt", name: "内裤" },
+			{ slot: "outfit_up", name: "BW连衣裙" },
+			{ slot: "shoes", name: "高跟鞋" },
+		])
+		.Wear("basic")
+		.setMajor(2)
+		.setTrait(["聪明", "开放"])
+		.setElements(["ions"])
+		.HairStyle("natrual", "straight")
+		.Hairlength(300, 500)
+		.Base({ STR: 8, CON: 10, DEX: 14, INT: 16, WIL: 12, PSY: 14, ALR: 14 })
+		.Abl("格斗", 7)
+		.Abl("健身", 5)
+		.Abl("跑步", 7)
+		.Abl("科学", 15)
+		.Abl("冥想", 5)
+		.Abl("创作", 11)
+		.Abl("表演", 5)
+		.Abl("奥术", 3)
+		.Sbl("性技巧", 8)
+		.Sbl("性抵抗", 2)
+		.Sbl("口技", 6)
+		.Sbl("手技", 6)
+		.Sbl("脚技", 4)
+		.Sbl("腰技", 1)
+		.Lewd("纯洁", 200)
+		.Lewd("滥交", 500)
+		.Lewd("受虐", 500)
+		.Lewd("顺从", 500)
+		.setWork([1, 3, 5], 9, 11, "景南大学", "学习")
+		.setWork([2, 4], 14, 17, "景南大学", "学习")
+		.setTrack("大学城", 25, 1, 9, 18)
+		.setTrack("海洋馆", 20, 3, 14)
+		.setHome("凤兴苑")
+		.Description([
+			"有些内向的晶龙少女，在奥术研究方面的天才，目前在科大担任科研工作。",
+			"A somewhat introverted dracon girl, a genius in arcane research, currently working as a researcher at KU.",
+		])
+		.setVirginity("anal", {
+			date: "不明",
+			person: "震动棒",
+			situation: "以主角幻想对象，用{0}自卫时破了自己的{1}处女",
+		})
+		.End();
+};</script>
+<script id="script-module-language" type="text/javascript">'use strict';
+
+(() => {
+  const base = {
+    lv: ["Lv.", "Lv."],
+    exp: ["Exp.", "Exp."],
+    ATK: ["\u653B\u51FB", "ATK"],
+    DEF: ["\u9632\u5FA1", "DEF"],
+    MTK: ["\u9B54\u653B", "MATK"],
+    MDF: ["\u9B54\u9632", "MDEF"],
+    SPD: ["\u901F\u5EA6", "SPD"],
+    STR: ["\u529B\u91CF", "Str."],
+    CON: ["\u4F53\u8D28", "Con."],
+    DEX: ["\u654F\u6377", "Dex."],
+    WIL: ["\u610F\u5FD7", "Wil."],
+    INT: ["\u667A\u529B", "Int."],
+    PSY: ["\u7075\u611F", "Psy."],
+    ALR: ["\u9B45\u529B", "Lur."],
+    LUK: ["\u5E78\u8FD0", "Luc."],
+    hot: ["\u8010\u70ED", "Hot"],
+    cold: ["\u8010\u51B7", "Cold"]
+  };
+  const wearcategory = {
+    none: ["\u65E0", "none"],
+    hat: ["\u5E3D\u5B50", "hat"],
+    coat: ["\u5916\u5957", "coat"],
+    top: ["\u4E0A\u8863", "top"],
+    bottom: ["\u88E4\u88D9", "bottom"],
+    underwear: ["\u5185\u8863", "under upper"],
+    underpants: ["\u5185\u88E4", "under bottoms"],
+    scarf: ["\u56F4\u5DFE", "scarf"],
+    suits: ["\u5957\u88C5", "suits"],
+    glove: ["\u624B\u5957", "glove"],
+    earing: ["\u8033\u9970", "earing"],
+    backpack: ["\u80CC\u5305", "backpack"],
+    facial: ["\u9762\u9970", "facial accessory"],
+    socks: ["\u889C\u5B50", "socks"],
+    shoes: ["\u978B\u5B50", "shoes"],
+    necklace: ["\u9879\u94FE", "necklace"],
+    accessory: ["\u88C5\u9970", "body accessory"],
+    gears: ["\u88C5\u5907", "gears"]
+  };
+  const color = {};
+  const dayrecord = {
+    \u9AD8\u6F6E: ["\u9AD8\u6F6E", "orgasm"],
+    \u5C04\u7CBE: ["\u5C04\u7CBE", "ejaculation"],
+    \u55B7\u4E73: ["\u55B7\u4E73", "lactation"],
+    A\u9AD8\u6F6E: ["A\u9AD8\u6F6E", "orgasm A"],
+    M\u9AD8\u6F6E: ["M\u9AD8\u6F6E", "orgasm M"],
+    B\u9AD8\u6F6E: ["B\u9AD8\u6F6E", "orgasm B"],
+    C\u9AD8\u6F6E: ["C\u9AD8\u6F6E", "orgasm C"],
+    V\u9AD8\u6F6E: ["V\u9AD8\u6F6E", "orgasm V"],
+    U\u9AD8\u6F6E: ["U\u9AD8\u6F6E", "orgasm U"],
+    \u6D74\u7CBE: ["\u6D74\u7CBE", "creamy pie"],
+    \u996E\u7CBE: ["\u996E\u7CBE", "swallowed"],
+    \u809B\u5185\u5C04: ["\u809B\u5185\u5C04", "cum in anal"],
+    \u5185\u5C04: ["\u5185\u5C04", "cum inside"],
+    \u4EA7\u5375: ["\u4EA7\u5375", "spawn"]
+  };
+  const degree = {
+    \u7EAF\u6D01: ["\u7EAF\u6D01", "Innocence"],
+    \u9732\u51FA: ["\u9732\u51FA", "Exhibition"],
+    \u6EE5\u4EA4: ["\u6EE5\u4EA4", "Promiscuity"],
+    \u53D7\u8650: ["\u53D7\u8650", "Masochist"],
+    \u53D7\u7F1A: ["\u53D7\u7F1A", "Depender"],
+    \u65BD\u8650: ["\u65BD\u8650", "Sadist"],
+    \u987A\u4ECE: ["\u987A\u4ECE", "Submissive"],
+    \u517D\u4EA4: ["\u517D\u4EA4", "Beastality"],
+    \u836F\u9690: ["\u836F\u9690", "DrugAddiction"],
+    \u6027\u763E: ["\u6027\u763E", "SexAddiction"],
+    \u652F\u914D: ["\u652F\u914D", "Domination"],
+    \u675F\u7F1A: ["\u675F\u7F1A", "Holder"],
+    \u8FFD\u8E2A: ["\u8FFD\u8E2A", "Haunt"]
+  };
+  const element = {
+    lumen: ["\u5149", "Lumen"],
+    ark: ["\u6697", "Ark"],
+    ions: ["\u6C34", "Ions"],
+    flame: ["\u706B", "Flame"],
+    electron: ["\u7535", "Electron"],
+    vitae: ["\u751F\u547D", "Vitae"],
+    terra: ["\u571F", "Terra"]
+  };
+  const exp = {
+    \u6253\u5DE5: ["\u6253\u5DE5", "work"],
+    \u4E0B\u53A8: ["\u4E0B\u53A8", "cook"],
+    \u6E05\u626B: ["\u6E05\u626B", "clean"],
+    \u5531\u6B4C: ["\u5531\u6B4C", "sing"],
+    \u6F14\u620F: ["\u6F14\u620F", "act movies"],
+    \u821E\u53F0: ["\u821E\u53F0", "live stage"],
+    \u76F4\u64AD: ["\u76F4\u64AD", "live stream"],
+    \u4EA4\u6D89: ["\u4EA4\u6D89", "social"],
+    \u9500\u552E: ["\u9500\u552E", "sales"],
+    \u63A2\u7D22: ["\u63A2\u7D22", "explore"],
+    \u72E9\u730E: ["\u72E9\u730E", "hunt"],
+    \u9493\u9C7C: ["\u9493\u9C7C", "fishing"],
+    \u6218\u6597: ["\u6218\u6597", "combat"],
+    \u6218\u8D25: ["\u6218\u8D25", "defeat"],
+    \u8BF1\u60D1: ["\u8BF1\u60D1", "seduce"],
+    \u88AB\u8BF1\u60D1: ["\u88AB\u8BF1\u60D1", "seduced"],
+    \u5C04\u7CBE: ["\u5C04\u7CBE", "cum"],
+    \u9AD8\u6F6E: ["\u9AD8\u6F6E", "orgasm"],
+    M\u9AD8\u6F6E: ["M\u9AD8\u6F6E", "orgasm M"],
+    B\u9AD8\u6F6E: ["B\u9AD8\u6F6E", "orgasm B"],
+    C\u9AD8\u6F6E: ["C\u9AD8\u6F6E", "orgasm C"],
+    U\u9AD8\u6F6E: ["U\u9AD8\u6F6E", "orgasm U"],
+    V\u9AD8\u6F6E: ["V\u9AD8\u6F6E", "orgasm V"],
+    A\u9AD8\u6F6E: ["A\u9AD8\u6F6E", "orgasm A"],
+    \u591A\u91CD\u9AD8\u6F6E: ["\u591A\u91CD\u9AD8\u6F6E", "multip orgasm"],
+    \u81EA\u6170: ["\u81EA\u6170", "masturbation"],
+    \u53E3\u4EA4: ["\u53E3\u4EA4", "oral sex"],
+    \u6027\u4EA4: ["\u6027\u4EA4", "vagina sex"],
+    \u809B\u4EA4: ["\u809B\u4EA4", "anal sex"],
+    \u63D2\u5165: ["\u63D2\u5165", "penetrate"],
+    \u55B7\u4E73: ["\u55B7\u4E73", "lactation"],
+    \u88AB\u7325\u7410: ["\u88AB\u7325\u7410", "molested"],
+    \u88AB\u7720\u5978: ["\u88AB\u7720\u5978", "raped when sleep"],
+    \u88AB\u8FF7\u5978: ["\u88AB\u8FF7\u5978", "raped by drug"],
+    \u88AB\u5F3A\u5978: ["\u88AB\u5F3A\u5978", "be raped"],
+    \u88AB\u8F6E\u5978: ["\u88AB\u8F6E\u5978", "gang raped"],
+    \u88AB\u517D\u5978: ["\u88AB\u517D\u5978", "raped by beast"],
+    \u88AB\u89E6\u624B\u5978: ["\u88AB\u89E6\u624B\u5978", "raped by tentacles"],
+    \u517D\u4EA4: ["\u517D\u4EA4", "beastality"],
+    \u89E6\u624B: ["\u89E6\u624B", "tantacles"],
+    \u53F2\u83B1\u59C6: ["\u53F2\u83B1\u59C6", "slime"],
+    \u6000\u5B55: ["\u6000\u5B55", "pregnant"],
+    A\u6000\u5B55: ["A\u6000\u5B55", "anal pregnant"],
+    \u5206\u5A29: ["\u5206\u5A29", "give birth"],
+    \u5C3F\u9053\u5F00\u53D1: ["\u5C3F\u9053\u5F00\u53D1", "urethral develop"],
+    \u9634\u9053\u6269\u5F20: ["\u9634\u9053\u6269\u5F20", "vagina stretch"],
+    \u809B\u95E8\u6269\u5F20: ["\u809B\u95E8\u6269\u5F20", "anal stretch"],
+    \u4EA7\u5375: ["\u4EA7\u5375", "spawn egg"],
+    \u5BC4\u751F: ["\u5BC4\u751F", "parasitic"],
+    \u76D1\u7981: ["\u76D1\u7981", "imprisoned"],
+    SM: ["SM", "SM trained"]
+  };
+  const marks = {
+    \u75DB\u82E6: ["\u75DB\u82E6", "Pain"],
+    \u5FEB\u4E50: ["\u5FEB\u4E50", "Ecstasy"],
+    \u6050\u60E7: ["\u6050\u60E7", "Fear"],
+    \u803B\u8FB1: ["\u803B\u8FB1", "Stigma"]
+  };
+  const skill = {
+    \u683C\u6597: ["\u683C\u6597", "Combat"],
+    \u5065\u8EAB: ["\u5065\u8EAB", "Fitness"],
+    \u8DD1\u6B65: ["\u8DD1\u6B65", "Running"],
+    \u51A5\u60F3: ["\u51A5\u60F3", "Meditation"],
+    \u79D1\u5B66: ["\u79D1\u5B66", "Science"],
+    \u521B\u4F5C: ["\u521B\u4F5C", "Creativity"],
+    \u8868\u6F14: ["\u8868\u6F14", "Peformance"],
+    \u5F02\u80FD: ["\u5F02\u80FD", "Psychic Power"],
+    \u5965\u672F: ["\u5965\u672F", "Arcane Magic"],
+    \u79D8\u672F: ["\u79D8\u672F", "Classic Magic"],
+    \u5B66\u8BC6: ["\u5B66\u8BC6", "Knowlogic"],
+    \u6027\u6280\u5DE7: ["\u6027\u6280\u5DE7", "Sex Techniques"],
+    \u6027\u62B5\u6297: ["\u6027\u62B5\u6297", "Sex resistance"],
+    \u53E3\u6280: ["\u53E3\u6280", "Mouth Skill"],
+    \u624B\u6280: ["\u624B\u6280", "Hand Skill"],
+    \u811A\u6280: ["\u811A\u6280", "Foot Skill"],
+    \u8170\u6280: ["\u8170\u6280", "Penis Skill"],
+    \u5F00\u9501: ["\u5F00\u9501", "unlock"],
+    \u9ED1\u5BA2: ["\u9ED1\u5BA2", "hacker"],
+    \u6F5C\u884C: ["\u6F5C\u884C", "stalk"],
+    \u641C\u7D22: ["\u641C\u7D22", "explore"]
+  };
+  const weartag = {};
+  const hairstyle = {};
+  const races = {
+    alsha: ["\u9633\u7075", "Alsha"],
+    catvinx: ["\u72D0\u732B", "Catvinx"],
+    dracons: ["\u6676\u9F99", "Dracons"],
+    havan: ["\u6D77\u65CF", "Havans"],
+    human: ["\u65B0\u4EBA\u7C7B", "Human"],
+    lepios: ["\u9F20\u5154", "Lepios"],
+    linlog: ["\u7075\u9E7F", "Linlog"],
+    noctar: ["\u591C\u7075", "Noctar"],
+    pequitis: ["\u89D2\u9A6C", "Pequitis"],
+    sckyrios: ["\u72FC\u4EBA", "Sckyrios"],
+    ulvs: ["\u7075\u86C7", "Ulvs"],
+    voeli: ["\u7FBD\u65CF", "Voeli"]
+  };
+  const major = [
+    ["\u65E0", "none"],
+    ["\u6587\u827A\u521B\u4F5C", "Creativity"],
+    ["\u7269\u7406\u79D1\u5B66", "Science"],
+    ["\u81EA\u7136\u79D1\u5B66", "Natural"],
+    ["\u751F\u7406\u79D1\u5B66", "Medical"],
+    ["\u97F3\u4E50\u8868\u6F14", "Performance"],
+    ["\u8FD0\u52A8\u683C\u6597", "Physical"]
+  ];
+  const gender = {
+    f: ["\u5973", "female"],
+    i: ["\u53CC", "inter"],
+    m: ["\u7537", "male"],
+    n: ["\u65E0", "none"]
+  };
+  $.getJSON("json/language/hairs.json", (data) => {
+    if (data) {
+      console.log("loading the language file from hairs.json");
+      for (let i in data) {
+        hairstyle[i] = data[i];
+      }
+    }
+  });
+  $.getJSON("json/language/colors.json", (data) => {
+    if (data) {
+      console.log("loading the language file from colors.json");
+      for (let i in data) {
+        color[i] = data[i];
+      }
+    }
+  });
+  $.getJSON("json/language/tags.json", (data) => {
+    if (data) {
+      console.log("loading the language file from tags.json");
+      for (let i in data) {
+        weartag[i] = data[i];
+      }
+    }
+  });
+  Object.defineProperty(window, "L", {
+    value: {
+      base: Object.freeze(base),
+      wearcategory,
+      color,
+      dayrecord,
+      degree: Object.freeze(degree),
+      element: Object.freeze(element),
+      exp,
+      marks,
+      skill,
+      weartag,
+      hairstyle,
+      races: Object.freeze(races),
+      major: Object.freeze(major),
+      gender: Object.freeze(gender)
+    }
+  });
+})();</script>
 <link type="image/png" rel="icon" sizes="24x24" href="icon.png" />
 <link rel="stylesheet" href="CSS/jquery-ui.css">
 <link rel="stylesheet" href="CSS/replacelink-macro-set.css">
@@ -239,15 +3229,7 @@ Macro.add('volume', {
 	}
 });
 
-window.lan = function(CN, EN) {
-	if(Array.isArray(CN)){
-		EN = CN[1]
-		CN = CN[0]
-	}
-	if (G.config.language == "CN") return CN;
-	if (G.config.language == "EN") return EN;
-}
-DefineMacroS("lang", lan)
+DefineMacroS("lang", window.lan)
 /* twine-user-script #2: "00-namespace.js" */
 window.EWA = {
 	// In pseudo-load order
@@ -291,11 +3273,6 @@ window.defineGlobalNamespaces = (namespaces) => {
 }
 defineGlobalNamespaces(EWA);
 
-window.Functions = {}
-
-window.EWA.data = {}
-window.EWA.config = {}
-window.EWA.functions = Functions
 /* twine-user-script #3: "01-error.js" */
 /**
  * Error reporter utility that provides enriched error messages to the user as a simple sugarcube plugin app.
@@ -559,62 +3536,6 @@ Object.defineProperties(window, {
 			return setup
 		}
 	},
-	
-	A: {
-		get: function() {
-			return Avatars
-		}
-	},
-	D:{
-		get:function(){
-			return G.data
-		}
-	},
-
-	F:{
-		get:function(){
-			return G.functions
-		}
-	},
-	
-	Hairs:{
-		get: function(){
-			return Avatars.Hairs
-		}
-	},
-	Emote:{
-		get:function(){
-			return Avatars.Emote
-		}
-	},
-	AvItems:{
-		get:function(){
-			return Avatars.AvItems
-		}
-	},
-	Races:{
-		get: function(){
-			return G.Races
-		}
-	},
-	Chara:{
-		get: function(){
-			return G.Chara
-		}
-	},
-	lang:{
-		get: function(){
-			return G.config.language
-		},
-		set: function(str){
-			G.config.language = str
-		}
-	},
-	Closet:{
-		get: function(){
-			return G.Closet
-		}
-	}
 });
 
 /* twine-user-script #5: "01-sugarcubeConfig.js" */
@@ -1128,7 +4049,139 @@ Macro.add("widget", {
     (l10nStrings.macroBackText = "返回"),
     (l10nStrings.macroReturnText = "返回");
 })();
-/* twine-user-script #9: "perflog.js" */
+/* twine-user-script #9: "observable.js" */
+window.inDOM = function(node) {
+	return document.body.contains(node)
+}
+
+/**
+ * Simple observable value framework, somewhat inspired by Vue.js
+ *
+ * @example
+ * var text = new ObservableValue("hello");
+ * text.subscribe( (newText, oldText) => console.log('Text changed from', oldText, 'to', newText) );
+ * text.bindText(document.getElementById("text"));
+ * text.value = "hello world";
+ */
+class ObservableValue {
+	constructor(defaultValue) {
+		this._value = defaultValue;
+		this._listeners = [];
+		this._mutating = false; // we are in process of changing value
+		this._nextValues = null; // queued value changes
+	}
+	/**
+	 * Receive notifications on value change.
+	 * If the onChange function returns exactly false, stop notifications.
+	 * Exact equality is checked, so void-returning functions are fine too.
+	 *
+	 * Be careful with changing values in the listener!
+	 * @param {function} onChange function(newValue, oldValue):any
+	 */
+	subscribe(onChange) {
+		this._listeners.push(onChange);
+	}
+	/**
+	 * Don't notify {@param onChange} listener anymore
+	 */
+	unsubscribe(onChange) {
+		let index = this._listeners.indexOf(onChange);
+		if (index >= 0) this._listeners.splice(index, 1);
+	}
+
+	/**
+	 * Subscribe and auto-unsubscribe when element gets removed from DOM.
+	 * @param {Node} element
+	 * @param {function} onchange function(newValue, oldValue)
+	 * @return {Node} element
+	 */
+	domSubscribe(element, onchange) {
+		this.subscribe((newValue,oldValue)=>{
+			if (onchange(newValue,oldValue) === false) return false;
+			return inDOM(element);
+		});
+		return element
+	}
+	/**
+	 * Bind element's textContent to this value.
+	 * @param {Node} element
+	 * @return {Node} element
+	 */
+	bindText(element) {
+		element.textContent = this._value;
+		this.domSubscribe(element,(newValue)=>{
+			element.textContent = newValue;
+		});
+		return element;
+	}
+	_notifyListeners(newValue,oldValue) {
+		const remove = [];
+		const listeners = this._listeners.slice();
+		for (let listener of listeners) {
+			try {
+				let keep = listener(newValue, oldValue);
+				if (keep === false) remove.push(listener);
+			} catch (e) {
+				remove.push(listener);
+				console.error("Exception in ObservableValue listener: ",e,"listener is ",listener);
+			}
+		}
+		for (let listener of remove) {
+			this.unsubscribe(listener);
+		}
+	}
+	/**
+	 * Get current value
+	 */
+	get value() {
+		return this._value;
+	}
+	/**
+	 * Change value, notifying subscribers
+	 */
+	set value(newValue) {
+		if (this._mutating) {
+			this._nextValues.push(newValue);
+			return;
+		}
+
+		let oldValue = this._value;
+		if (oldValue === newValue) return;
+		this._value = newValue;
+
+		this._mutating = true;
+		this._nextValues = [];
+
+		this._notifyListeners(newValue,oldValue);
+
+		let n = 0;
+		while (this._nextValues.length > 0) {
+			if (n++ > 999) {
+				console.error("Possible endless loop in ObservableValue ",this);
+				break;
+			}
+			oldValue = newValue;
+			newValue = this._nextValues.shift();
+			this._notifyListeners(newValue,oldValue);
+		}
+		this._mutating = false;
+		this._nextValues = null;
+	}
+}
+
+/**
+ * Modify obj, wrapping every property into an ObservableValue. Not deep!
+ * @param {object} obj
+ * @return {object} obj
+ */
+ObservableValue.fromObject = function(obj) {
+	for (let key of Object.keys(obj)) {
+		obj[key] = new ObservableValue(obj[key]);
+	}
+	return obj;
+}
+window.ObservableValue = ObservableValue;
+/* twine-user-script #10: "perflog.js" */
 // Time in milliseconds, float with microsecond precision if available.
 const millitime = (typeof performance === 'object' && typeof performance.now === 'function') ?
 	function() { return performance.now() } : function() { return new Date().getTime() };
@@ -1322,2752 +4375,13 @@ EWA.Perflog.report = function (options) {
 	if (options.limit > 0 && entries.length > options.limit) entries.splice(options.limit);
 	return entries;
 }
-/* twine-user-script #10: "audioloopto-macro-set.min.js" */
+/* twine-user-script #11: "audioloopto-macro-set.min.js" */
 /*! <<audioloopto>> macro set for SugarCube 2.x */
 !function(){"use strict";if("undefined"==typeof version||void 0===version.title||"SugarCube"!==version.title||void 0===version.major||version.major<2||void 0===version.minor||version.minor<28)throw new Error("<<audioloopto>> macro set requires SugarCube 2.28.0 or greater, aborting load");if(Has.audio){var _transitions=new Map;Macro.add("audioloopto",{handler:function(){if(this.args.length<3){var errors=[];return this.args.length<1&&errors.push("loop track ID"),this.args.length<2&&errors.push("passage name"),this.args.length<3&&errors.push("next track ID"),this.error("no "+errors.join(" or ")+" specified")}var loopId=this.args[0],passage=this.args[1],nextId=this.args[2],loopTrack=SimpleAudio.tracks.get(loopId),nextTrack=SimpleAudio.tracks.get(nextId);if(!loopTrack)return this.error('loop track "'+loopId+'" does not exist');if(!Story.has(passage))return this.error('passage "'+passage+'" does not exist');if(!nextTrack)return this.error('next track "'+nextId+'" does not exist');loopTrack.loop(!1),nextTrack.play(),nextTrack.pause();var loopMap=void 0;_transitions.has(loopId)?loopMap=_transitions.get(loopId):(loopMap=new Map,_transitions.set(loopId,loopMap),loopTrack.on("ended.macro-audioloopto",function(){loopMap.has(State.passage)?loopMap.get(State.passage).play():loopTrack.play()})),loopMap.set(passage,nextTrack)}}),Macro.add("audiounloopto",{handler:function(){if(0===this.args.length)return this.error("no loop track ID specified");var loopId=this.args[0],passage=this.args[1],loopTrack=SimpleAudio.tracks.get(loopId);if(!loopTrack)return this.error('loop track "'+loopId+'" does not exist');if(passage&&!Story.has(passage))return this.error('passage "'+passage+'" does not exist');if(passage){var loopMap=_transitions.get(loopId);loopMap&&loopMap.delete(passage)}else _transitions.delete(loopId),loopTrack.off("ended.macro-audioloopto")}})}else Macro.add(["audioloopto","audiounloopto"],{handler:function(){}})}();
-/* twine-user-script #11: "replacelink-macro-set.min.js" */
+/* twine-user-script #12: "replacelink-macro-set.min.js" */
 /*! <<replacelink>> macro set for SugarCube 2.x */
 !function(){"use strict";function showVer(n,notrans){n&&(n.innerHTML="",new Wikifier(n,n.tweecode),n.setAttribute("data-enabled","true"),n.style.display="inline",n.classList.remove("revision-span-out"),notrans||(n.classList.add("revision-span-in"),n.timeout&&clearTimeout(n.timeout),n.timeout=setTimeout(function(){n.classList.remove("revision-span-in"),n=null},20)))}function hideVer(n,notrans){n&&(n.setAttribute("data-enabled","false"),n.classList.remove("revision-span-in"),n.timeout&&clearTimeout(n.timeout),notrans?(n.style.display="none",n.innerHTML="",n=null):(n.classList.add("revision-span-out"),n.timeout=setTimeout(function(){"false"===n.getAttribute("data-enabled")&&(n.classList.remove("revision-span-out"),n.style.display="none",n.innerHTML=""),n=null},1e3)))}function tagcontents(b,starttags,desttags,endtags,k){function tagfound(i,e,endtag){for(var j=0;j<e.length;j++)if(a.indexOf("<<"+e[j]+(endtag?">>":""),i)===i)return e[j]}for(var tg,l=0,c="",a=b.source.slice(k),i=0;i<a.length;i++){if(tg=tagfound(i,starttags))l++;else{if((tg=tagfound(i,desttags,!0))&&0===l)return b.nextMatch=k+i+tg.length+4,[c,tg];if((tg=tagfound(i,endtags,!0))&&(l--,l<0))return null}c+=a.charAt(i)}return null}function revisionSpanHandler(g,e,f,b){function mkspan(vtype){return h=insertElement(m,"span",null,"revision-span "+vtype),h.setAttribute("data-enabled",!1),h.style.display="none",h.tweecode="",h}var becomes,c,cn,m,h,vsn,k=b.source.indexOf(">>",b.matchStart)+2,vsns=[],vtype=e,flen=f.length;if(this.shorthand&&flen)for(;f.length>0;)vsns.push([f.shift(),"insert"===this.flavour?"gains":"becomes"]);else("insert"===this.flavour||"continue"===this.flavour&&"time"===this.trigger)&&vsns.push(["","becomes"]);if("continue"===this.flavour&&flen)b.nextMatch=k+b.source.slice(k).length,vsns.push([b.source.slice(k),vtype]);else{if(becomes=["becomes","gains"],c=tagcontents(b,begintags,becomes.concat(endtags),endtags,k),c&&endtags.indexOf(c[1])===-1){for(;c;)vsns.push(c),c=tagcontents(b,begintags,becomes,endtags,b.nextMatch);c=tagcontents(b,begintags,["/"+e,"end"+e],endtags,b.nextMatch)}if(!c)return void throwError(g,"<<"+e+">>: cannot find a matching close tag");vsns.push(c),"continue"===this.flavour&&(k=b.nextMatch,b.nextMatch=k+b.source.slice(k).length,vsns.push([b.source.slice(k),""]))}for("remove"===this.flavour&&vsns.push(["","becomes"]),cn=0,m=insertElement(g,"span",null,e),m.setAttribute("data-flavour",this.flavour),h=mkspan("initial"),vsn=vsns.shift(),h.tweecode=vsn[0],showVer(h,!0);vsns.length>0;)vsn&&(vtype=vsn[1]),vsn=vsns.shift(),h=mkspan(vtype),h.tweecode=vsn[0];"function"==typeof this.setup&&this.setup(m,g,e,f)}function revisionSetup(m,g,e,f){m.className+=" "+f[0].replace(" ","_")}function keySetup(m,g,e,f){f[0];m.setEventListener("keydown",function l(e){var done=!revise("revise",m);done&&m.removeEventListener("keydown",l)})}function timeSetup(m,g,e,f){function cssTimeUnit(s){if("string"==typeof s){if("ms"===s.slice(-2).toLowerCase())return Number(s.slice(0,-2))||0;if("s"===s.slice(-1).toLowerCase())return 1e3*Number(s.slice(0,-1))||0}return throwError(g,"<<"+e+'>>: "'+s+'" is not a valid CSS time unit'),0}var tm=cssTimeUnit(f[0]),s=passage();setTimeout(function timefn(){if(passage()===s){var done=!revise("revise",m);done||setTimeout(timefn,tm)}},tm)}function hoverSetup(m){var fn,noMouseEnter=null!==document.head.onmouseenter,m1=m.children[0],m2=m.children[1],gains=m2.className.indexOf("gains")>-1;m1&&m2&&(m1.onmouseenter=function(e){for(var efp=document.elementFromPoint(e.clientX,e.clientY);efp&&efp!==this;)efp=efp.parentNode;efp&&"false"!==this.getAttribute("data-enabled")&&revise("revise",this.parentNode)},m2.onmouseleave=function(e){for(var efp=document.elementFromPoint(e.clientX,e.clientY);efp&&efp!==this;)efp=efp.parentNode;efp||"false"!==this.getAttribute("data-enabled")&&revise("revert",this.parentNode)},gains&&(m1.onmouseleave=m2.onmouseleave),noMouseEnter&&(fn=function(n){return function(e){event.relatedTarget&&(event.relatedTarget===this||this.compareDocumentPosition(event.relatedTarget)&Node.DOCUMENT_POSITION_CONTAINED_BY)||this[n]()}},m1.onmouseover=fn("onmouseenter"),m2.onmouseout=fn("onmouseleave"),gains&&(m1.onmouseout=m2.onmouseout)),m=null)}function mouseSetup(m){var evt=null===document.head.onmouseenter?"onmouseenter":"onmouseover";m[evt]=function(){var done=!revise("revise",this);done&&(this[evt]=null)},m=null}function linkSetup(m,g,e,f){var l=document.createElement("a"),p=m.parentNode;l.className="link-internal replaceLink",p.insertBefore(l,m),l.insertBefore(m,null),jQuery(l).ariaClick(function(){var done=!1;m&&m.parentNode===this&&(done=!revise("revise",m),scrollWindowTo(m)),done&&(this.parentNode.insertBefore(m,this),this.parentNode.removeChild(this))}),l=null}function visitedSetup(m,g,e,f){var done,sav=State.variables,os="once seen",d=m.firstChild&&("insert"===this.flavour?m.firstChild.nextSibling:m.firstChild).tweecode;if(sav[os]=sav[os]||{},d&&!sav[os].hasOwnProperty(d))sav[os][d]=1;else{for(var i=sav[os][d];i>0&&!done;i--)done=!revise("revise",m,!0);sav[os].hasOwnProperty(d)&&(sav[os][d]+=1)}}function insideDepartingSpan(elem){for(var r=elem.parentNode;!r.classList.contains("passage");){if(r.classList.contains("revision-span-out"))return!0;r=r.parentNode}}function reviseAll(rt,rname){for(var rall=document.querySelectorAll(".passage [data-flavour]."+rname),ret=!1,i=0;i<rall.length;i++)insideDepartingSpan(rall[i])||(ret=revise(rt,rall[i])||ret);return ret}function revise(rt,r,notrans){function doToGainerSpans(n,fn){for(var k=n-1;k>=0&&rc[k+1].classList.contains("gains");k--)fn(rc[k],notrans)}for(var ind2,curr,next,ind=-1,rev="revert"===rt,rnd=rt.indexOf("random")>-1,fl=r.getAttribute("data-flavour"),rc=r.childNodes,cyc="cycle"===fl,rcl=rc.length-1,k=0;k<=rcl;k++)"true"===rc[k].getAttribute("data-enabled")&&(ind=k);rev&&(ind-=1),curr=ind>=0?rc[ind]:cyc?rc[rcl]:null,ind2=ind,rnd&&(ind2=(ind+Math.floor(Math.random()*rcl))%rcl),next=ind2<rcl?rc[ind2+1]:cyc?rc[0]:null;var docurr=rev?showVer:hideVer,donext=rev?hideVer:showVer,currfn=function(){next&&next.classList.contains("gains")&&!rnd||(docurr(curr,notrans),doToGainerSpans(ind,docurr,notrans))},nextfn=function(){donext(next,notrans),rnd&&doToGainerSpans(ind2+1,donext,notrans)};return rev?(nextfn(),currfn()):(currfn(),nextfn()),!!cyc||(rev?ind>0:ind2<rcl-1)}if("undefined"==typeof version||"undefined"==typeof version.title||"SugarCube"!==version.title||"undefined"==typeof version.major||version.major<2)throw new Error("<<replacelink>> macro set requires SugarCube 2.0.0 or greater, aborting load");version.extensions.replacelinkMacroSet={major:1,minor:1,revision:7};var begintags=[],endtags=[];[{name:"insertlink",flavour:"insert",trigger:"link",setup:linkSetup},{name:"timedinsert",flavour:"insert",trigger:"time",setup:timeSetup},{name:"insertion",flavour:"insert",trigger:"revisemacro",setup:revisionSetup},{name:"later",flavour:"insert",trigger:"visited",setup:visitedSetup},{name:"keyinsert",flavour:"insert",trigger:"key",setup:keySetup},{name:"replacelink",flavour:"replace",trigger:"link",setup:linkSetup},{name:"timedreplace",flavour:"replace",trigger:"time",setup:timeSetup},{name:"mousereplace",flavour:"replace",trigger:"mouse",setup:mouseSetup},{name:"hoverreplace",flavour:"replace",trigger:"hover",setup:hoverSetup},{name:"revision",flavour:"replace",trigger:"revisemacro",setup:revisionSetup},{name:"keyreplace",flavour:"replace",trigger:"key",setup:keySetup},{name:"timedremove",flavour:"remove",trigger:"time",setup:timeSetup},{name:"mouseremove",flavour:"remove",trigger:"mouse",setup:mouseSetup},{name:"hoverremove",flavour:"remove",trigger:"hover",setup:hoverSetup},{name:"removal",flavour:"remove",trigger:"revisemacro",setup:revisionSetup},{name:"once",flavour:"remove",trigger:"visited",setup:visitedSetup},{name:"keyremove",flavour:"remove",trigger:"key",setup:keySetup},{name:"continuelink",flavour:"continue",trigger:"link",setup:linkSetup},{name:"timedcontinue",flavour:"continue",trigger:"time",setup:timeSetup},{name:"mousecontinue",flavour:"continue",trigger:"mouse",setup:mouseSetup},{name:"keycontinue",flavour:"continue",trigger:"key",setup:keySetup},{name:"cycle",flavour:"cycle",trigger:"revisemacro",setup:revisionSetup},{name:"mousecycle",flavour:"cycle",trigger:"mouse",setup:mouseSetup},{name:"timedcycle",flavour:"cycle",trigger:"time",setup:timeSetup},{name:"keycycle",flavour:"replace",trigger:"key",setup:keySetup}].forEach(function(e){e.handler=revisionSpanHandler,e.shorthand=["link","mouse","hover"].indexOf(e.trigger)>-1,macros[e.name]=e,Macro.tags.register(e.name),begintags.push(e.name),endtags.push("/"+e.name,"end"+e.name)}),macros.revertlink=macros.reviselink=macros.randomiselink=macros.randomizelink={handler:function(a,b,c){function disableLink(l){l.style.display="none"}function enableLink(l){l.style.display="inline"}function updateLink(l){if(l.className.indexOf("random")>-1)return void enableLink(l);for(var cannext,canprev,r,fl,rall=document.querySelectorAll(".passage [data-flavour]."+rname),i=0;i<rall.length;i++)r=rall[i],fl=r.getAttribute("data-flavour"),insideDepartingSpan(r)||("cycle"===fl?cannext=canprev=!0:("false"===r.firstChild.getAttribute("data-enabled")&&(canprev=!0),"false"===r.lastChild.getAttribute("data-enabled")&&(cannext=!0)));var can=l.classList.contains("revert")?canprev:cannext;(can?enableLink:disableLink)(l)}function toggleText(w){w.classList.toggle(rl+"Enabled"),w.classList.toggle(rl+"Disabled"),w.style.display="none"===w.style.display?"inline":"none"}if(c.length<2)return void throwError(a,"<<"+b+">>: insufficient arguments (requires at least 2)");var l,rname,actName=b.slice(0,-4),rl="reviseLink",v="",end=!1,out=!1;switch(rname=c.shift().replace(" ","_"),l=insertElement(a,"a"),l.className="link-internal "+rl+" "+rl+"_"+rname+" "+actName,c.length>1&&"$"===c[0][0]&&(v=c[0].slice(1),c.shift()),c[c.length-1]){case"end":end=!0,c.pop();break;case"out":out=!0,c.pop()}for(var h=State.variables,i=0;i<c.length;i++){var on=i===Math.max(c.indexOf(h[v]),0),d=insertElement(null,"span",null,rl+(on?"En":"Dis")+"abled");on?(h[v]=c[i],l.setAttribute("data-cycle",i)):d.style.display="none",insertText(d,c[i]),l.appendChild(d)}jQuery(l).ariaClick(function(){reviseAll(actName,rname);var lall,t=this.childNodes,u=this.getAttribute("data-cycle")-0,m=t.length;if((end||out)&&u>=m-(end?2:1)){if(!end)return void this.parentNode.removeChild(this);var n=this.removeChild(t[u+1]||t[u]);n.className=rl+"End",n.style.display="inline",this.parentNode.replaceChild(n,this)}else toggleText(t[u]),u=(u+1)%m,v&&(h[v]=c[u]),toggleText(t[u]),this.setAttribute("data-cycle",u);lall=document.getElementsByClassName(rl+"_"+rname);for(var i=0;i<lall.length;i++)updateLink(lall[i])}),disableLink(l),setTimeout(function(l){return function(){updateLink(l)}}(l),1),l=null}},macros.mouserevise=macros.hoverrevise={handler:function(a,b,c,d){var endtags=["/"+b,"end"+b],evt=null===window.onmouseenter?"onmouseenter":"onmouseover",t=tagcontents(d,[b],endtags,endtags,d.source.indexOf(">>",d.matchStart)+2);if(t){var rname=c[0].replace(" ","_"),h=insertElement(a,"span",null,"hoverrevise hoverrevise_"+rname),f=function(){var done=!reviseAll("revise",rname);"hoverrevise"!=b&&done&&(this[evt]=null)};new Wikifier(h,t[0]),"hoverrevise"===b?(h.onmouseover=f,h.onmouseout=function(){reviseAll("revert",rname)}):h[evt]=f,h=null}}},Macro.tags.register("mouserevise"),Macro.tags.register("hoverrevise"),macros.instantrevise={handler:function(a,b,c,d){reviseAll("revise",c[0].replace(" ","_"))}}}();
-/* twine-user-script #12: "00-basedata.js" */
-var _$D = (()=>{
-
-const basekeys = [
-	"lv",
-	"exp",
-	"ATK",
-	"DEF",
-	"MTK",
-	"MDF",
-	"SPD",
-	"力量", //STR
-	"体质", //CON
-	"敏捷", //DEX
-	"意志", //WIL
-	"智力", //INT
-	"灵感", //SPR
-	"魅力", //ALR
-	"幸运", //LUK
-	"hot",
-	"cold",
-];
-
-const palamPC = [
-	"饮食", //hungry
-	"健康", //health
-	"魔力", //mana
-	"体力", //stamina
-	"理智", //sanity
-	"清洁", //clean
-
-	"酒精", //alcohol
-	"药物", //drug
-
-	"欲望", //arousal
-	"快感", //pleasure
-	"压力", //stress
-	"疼痛", //pain
-	"抑郁", //depress
-	"恐惧", //fear
-	"耻辱", //humilation
-]
-
-const palamNPC = ["魔力", "体力", "理智", "清洁", "情绪", "欲望", "快感", "愤怒", "射精", "满意"];
-const palamMon = ["欲望", "愤怒", "快感", "射精", "满意"];
-const palamSP = ["快M", "快B", "快C", "快V", "快U", "快A"];
-
-const npcIntFlag = ["favo", "trust", "dom", "sub", "eager", "faith", "intro"];
-const basicflags = [
-	"trueform",
-	"lactation",
-	"lactatecd",
-	"active",
-	"alive",
-	"bestfriend",
-	"date",
-	"notInteractHour",
-];
-
-const explist = [
-	"打工",
-	"下厨",
-	"清扫",
-	"唱歌",
-	"演戏",
-	"舞台",
-	"直播",
-	"交涉",
-	"销售",
-	"探索",
-	"狩猎",
-	"钓鱼",
-
-	"战斗",
-	"战败",
-	"诱惑",
-	"被诱惑",
-	"被猥琐",
-
-	"射精",
-	"高潮",
-	"M高潮",
-	"B高潮",
-	"C高潮",
-	"U高潮",
-	"V高潮",
-	"A高潮",
-	"多重高潮",
-	"自慰",
-	"口交",
-	"性交",
-	"肛交",
-	"喷乳",
-
-	"被猥琐",
-	"被眠奸",
-	"被迷奸",
-	"被强奸",
-	"被轮奸",
-	"被兽奸",
-	"被触手奸",
-	"兽交",
-	"触手",
-	"史莱姆",
-
-	"怀孕",
-	"A怀孕",
-	"分娩",
-	"尿道开发",
-	"阴道扩张",
-	"肛门扩张",
-
-	"产卵",
-	"寄生",
-	"监禁",
-	"SM",
-];
-
-const dailyrec = [
-	"高潮",
-	"射精",
-	"喷乳",
-	"A高潮",
-	"M高潮",
-	"B高潮",
-	"C高潮",
-	"V高潮",
-	"U高潮",
-	"浴精",
-	"饮精",
-	"肛内射",
-	"内射",
-	"射精",
-	"产卵",
-];
-
-const mark = ["快乐", "恐惧", "痛苦", "耻辱"];
-
-const baseAbl = [
-	"格斗",
-	"健身",
-	"跑步",
-	"科学",
-	"冥想",
-	"创作",
-	"表演",
-	"异能",
-	"奥术",
-	"秘术",
-	"学识",
-];
-
-const sexAbl = ["性技巧", "性抵抗", "口技", "手技", "脚技", "腰技"];
-
-const skill = ["开锁", "黑客", "潜行", "搜索"];
-
-const degrees = ["纯洁", "露出", "滥交", "受虐", "受缚", "施虐", "顺从", "兽交", "药隐", "性瘾"];
-
-const npcdegrees = ["调教", "束缚", "追踪"];
-
-const tattoosA = ["face", "chest", "belly", "armsL", "legsL"];
-const tattoosB = ["back", "neck", "fossa", "buttsR", "buttsL", "armsR", "legsR"];
-const piercingSlots = ["tongue", "labiaL", "labiaR", "penisA", "penisB", "testeA", "testeB", "belly"];
-
-const existstate = ["canhide", "fake", "fog", "natural", "none", "onhead", "slime"];
-
-const wearslots = [
-	"hat",
-	"cover",
-	"outfit_up",
-	"outfit_bt",
-	"inner_up",
-	"inner_bt",
-	"legs",
-	"shoes",
-	"neck",
-	"facial",
-	"hands",
-	"back",
-	"onskin_up",
-	"onskin_bt",
-];
-
-const equipslots = ["weapon", "shield", "acce1", "acce2", "acce3", "penis", "ureth", "vagina", "anal"];
-
-const liquidLayer = ["face", "hair", "hands", "legs", "chest", "back", "butts", "vagina", "anal"];
-
-const PeniSize = {
-	cat: [100, 21],
-	human: [150, 35],
-	dracon: [160, 40],
-	bird: [160, 32],
-	dog: [180, 42],
-	deer: [180, 36],
-	snake: [180, 40],
-	deamon: [210, 48],
-	horse: [240, 56],
-	shark: [320, 60],
-	tentacle: [360, 36],
-};
-
-//深度, 松紧度, 单位也是毫米
-//根据bodysize调整
-//根据湿润度,松紧度能临时增加 3~10
-const vagisize = [
-	[80, 16],
-	[100, 20],
-	[120, 24],
-	[140, 28],
-	[160, 32],
-	[180, 36],
-];
-
-const sensbit = {
-	none: 0,
-	fog: 0.2,
-	slime: 0.5,
-	fake: 0.8,
-	natural: 1.2,
-	canhide: 2,
-	onhead: 0,
-};
-
-function bodyCheck(part) {
-	return part !== "none";
-}
-
-function getMajor(id) {
-	switch (id) {
-		case 1:
-			return lan("文艺创作", "Creativity");
-		case 2:
-			return lan("物理科学", "Science");
-		case 3:
-			return lan("自然科学", "Natural");
-		case 4:
-			return lan("生理科学", "Medical");
-		case 5:
-			return lan("音乐表演", "Performance");
-		case 6:
-			return lan("运动格斗", "Physical");
-	}
-}
-
-function showGender(g) {
-	switch (g) {
-		case "f":
-			return lan("女", "female");
-		case "i":
-			return lan("双性", "intersex");
-		case "m":
-			return lan("男", "male");
-		case "n":
-			return lan("无性", "zerosex");
-	}
-}
-
-function Gender(g) {
-	switch (g) {
-		case "f":
-			return lan("女", "female");
-		case "i":
-			return lan("双", "inter");
-		case "m":
-			return lan("男", "male");
-		case "n":
-			return lan("无", "zero");
-	}
-}
-
-function bodysize(size) {
-    switch (size) {
-        case 0:
-            return "tiny";
-        case 1:
-            return "small";
-        case 2:
-            return "normal";
-        case 3:
-            return "slim";
-        case 4:
-            return "tall";
-        case 5:
-            return "huge";
-    }
-}
-
-function Sens(int) {
-	if (int < 0.5) return lan("微弱", "faint");
-	if (int < 1) return lan("钝感", "blunt");
-	if (int < 2) return lan("普通", "normal");
-	if (int < 3) return lan("敏感", "tender");
-	if (int < 4) return lan("十分敏感", "sensitive");
-	if (int >= 4) return lan("超敏感", "super sensitive");
-	//最多6
-}
-
-Object.defineProperty(window.G, "data", {
-	value: {
-		basekeys: Object.freeze(basekeys),
-		palamPC: Object.freeze(palamPC),
-		palamNPC: Object.freeze(palamNPC),
-		palamMon: Object.freeze(palamMon),
-		palamSP: Object.freeze(palamSP),
-		npcIntFlag: Object.freeze(npcIntFlag),
-		basicflags: Object.freeze(basicflags),
-		explist: explist,
-		dailyrec: dailyrec,
-		mark: mark,
-		baseAbl: baseAbl,
-		sexAbl: sexAbl,
-		skill: skill,
-		degrees: degrees,
-		npcdegrees: npcdegrees,
-		tattoosA: Object.freeze(tattoosA),
-		tattoosB: Object.freeze(tattoosB),
-		piercingSlots: Object.freeze(piercingSlots),
-		existstate: Object.freeze(existstate),
-		wearslots: Object.freeze(wearslots),
-		equipslots: equipslots,
-		liquidLayer: Object.freeze(liquidLayer),
-		PeniSize: Object.freeze(PeniSize),
-		vagisize: Object.freeze(vagisize),
-		sensbit: Object.freeze(sensbit),
-		bodyCheck: Object.freeze(bodyCheck),
-		getMajor: Object.freeze(getMajor),
-		showGender: Object.freeze(showGender),
-		Gender: Object.freeze(Gender),
-        bodysize: Object.freeze(bodysize),
-		Sens:Object.freeze(Sens),
-	},
-})
-
-})();
-/* twine-user-script #13: "01-races.js" */
-var _$R = (()=>{
-	const racesdata = {};
-	const monsters = {};
-
-	function convertCheck(part, race) {
-		if (part == "none") return false;
-		if (part == "fake" && race !== "alsha") return false;
-
-		return true;
-	}
-
-	class Races {
-		static add(name, type, size, skin, eye, hair, alter) {
-			racesdata[name] = new Races(name, type, size, skin, eye, hair, alter);
-			return racesdata[name];
-		}
-		static get(name) {
-			return racesdata[name];
-		}
-		static convert(chara, race) {
-			const r = Races.get(race);
-			const b = chara.body;
-
-			chara.info.body = r.bodytype;
-			chara.info.ears = r.eartype;
-
-			chara.body = clone(r.bodypart);
-
-			if (convertCheck(b.vagina, chara.race)) {
-				chara.body.vagina = r.genital.vagina;
-				if (D.bodyCheck(b.critoris)) chara.body.critoris = r.genital.vagina;
-			}
-			if (convertCheck(b.penis, chara.race)) {
-				chara.body.penis = r.genital.penis;
-				if (D.bodyCheck(b.teste)) chara.body.teste = r.genital.penis;
-			}
-
-			chara.race = race;
-
-			return chara;
-		}
-		static print(type){
-			switch (type) {
-				case "alsha":
-					return lan("阳灵", "Alsha");
-				case "catvinx":
-					return lan("狐猫", "Catvinx");
-				case "dracons":
-					return lan("晶龙", "Dracons");
-				case "havan":
-					return lan("海族", "Havans");
-				case "human":
-					return lan("纯人", "Human");
-				case "lepios":
-					return lan("鼠兔", "Lepios");
-				case "linlog":
-					return lan("灵鹿", "Linlog");
-				case "noctar":
-					return lan("夜灵", "Noctar");
-				case "pequitis":
-					return lan("角马", "Pequitis");
-				case "sckyrios":
-					return lan("狼人", "Sckyrios");
-				case "ulvs":
-					return lan("灵蛇", "Ulvs");
-				case "voeli":
-					return lan("羽族", "Voeli");
-			}
-		}
-		constructor(name, type, size, skin, eye, hair, alter) {
-			this.name = name;
-			this.bodytype = type;
-			this.headtype = "round";
-			this.eartype = "human";
-			this.bodysize = size;
-			this.avatarinfo = {
-				skin: skin,
-				eyes: eye,
-				hair: hair,
-			};
-			this.bodypart = {
-				eye: "natural",
-				nose: "natural",
-				mouth: "natural",
-				body: "natural",
-				ears: "natural",
-				hands: "natural",
-				wings: "none",
-				horn: "none",
-				fur: "none",
-				tail: "none",
-				organ: "natural",
-			};
-			if (alter) this.alter = {};
-			this.gender = ["f", "m", "i"];
-			this.genital = {
-				penis: "natural",
-				pshape: "human",
-				psize: D.PeniSize['human'],
-				vagina: "natural",
-				vshape: "normal",
-				vsize: D.vagisize[size],
-			};
-			this.warmth = [24, 19];
-			this.cycle = {
-				type: "menst",
-				cir: 28,
-				days: 5,
-			};
-			this.base = {}
-			this.diet = 'omni'
-			this.alter = {}
-		}
-		setBodyPart(part, state) {
-			this.bodypart[part] = state;
-			return this;
-		}
-		setGenital(state, option) {
-			this.genital.penis = state[0];
-			this.genital.vagina = state[1] ? state[1] : state[0];
-
-			if (option?.c) this.genital.interhasCritoris = true;
-			if (option?.t) this.genital.interhasTeste = true;
-
-			return this;
-		}
-
-		setEarType(str) {
-			this.eartype = str;
-			if (["cat", "dot", "rabit", "mouse"].includes(str)) {
-				this.bodypart["ears"] = "onhead";
-			}
-			return this;
-		}
-		setHeadType(str) {
-			this.headtype = str;
-			return this;
-		}
-		hasTail(str) {
-			this.avatarinfo.tail = str;
-			this.bodypart["tail"] = "natural";
-			return this;
-		}
-		hasWings(str) {
-			this.avatarinfo.wing = str;
-			this.bodypart["wings"] = "natural";
-			return this;
-		}
-		hasHorn(str) {
-			this.avatarinfo.horn = str;
-			this.bodypart["horn"] = "natural";
-			return this;
-		}
-		setAlter(obj) {
-			console.log(obj)
-			for(let i in obj){
-				this.alter[i] = obj[i]
-			};
-			return this;
-		}
-		setGenderOption(gender) {
-			this.gender = gender;
-			return this;
-		}
-		setTraitOption(str) {
-			this.traits = str;
-			return this;
-		}
-		setPower(str) {
-			this.powertype = str;
-
-			switch (str) {
-				case "arcane":
-				case "occult":
-					this.setElements(["lumen", "ark", "ions", "flame", "electron", "vitae", "terra"]);
-					this.elesize = 3;
-					break;
-				case "elements":
-					this.elesize = 2;
-					this.elements = [];
-					break;
-				case "psychic":
-					this.elesize = 1;
-					this.elements = [];
-					break;
-			}
-
-			return this;
-		}
-		setElements(str) {
-			this.elements = str;
-			return this;
-		}
-		setElementSize(int) {
-			this.elesize = int;
-			return this;
-		}
-		setPenisShape(des) {
-			this.genital.pshape = des;
-			this.genital.psize = D.PeniSize[des];
-			return this;
-		}
-		setVaginaShape(des) {
-			this.genital.vshape = des;
-			return this;
-		}
-		setWarmth(int) {
-			this.warmth = int;
-			return this;
-		}
-		setBase(obj) {
-			this.base = obj;
-			return this;
-		}
-		setDiet(diet) {
-			this.diet = diet;
-			return this;
-		}
-		setCycle(info) {
-			this.cycle = info;
-			return this;
-		}
-		noCycle() {
-			this.cycle = null;
-			return this;
-		}
-		End(){
-			racesdata[this.name] = Object.freeze(racesdata[this.name]);
-		}
-	}
-
-	Races.add("human", "human", 2, "health", "aqua", "brown").setPower("psychic").End();
-
-	Races.add("catvinx", "human", 1, "white", "amber", "platinum", true)
-		.setEarType("cat")
-		.setHeadType("pointy")
-		.setGenital(["canhide", "natural"])
-		.hasTail("cat")
-		.setPower("arcane")
-		.setElementSize(5)
-		.setGenderOption(["f", "m"])
-		.setPenisShape("cat")
-		.setVaginaShape("suji")
-		.setWarmth([24, 16])
-		.setBase({ 智力: 2, 灵感: 1, 体质: -2, 力量: -1 })
-		.setTraitOption({ OMEGA: [0, 1], 泌乳: [0, 2] })
-		.setAlter({ skin: ["health", "pale", "sunset", "gray"], mimi: ["cat", "fox"], tail: ["cat", "fox"] })
-		.setCycle({ type: "heat", cir: 56, days: 5 })
-		.End();
-
-	Races.add("sckyrios", "furry", 4, "fur", "black", "gray")
-		.setBodyPart("ears", "none")
-		.setBodyPart("fur", "natural")
-		.setEarType("dog")
-		.setHeadType("furry")
-		.hasTail("dog")
-		.setPower("elements")
-		.setElements(["flame", "electron"])
-		.setGenderOption(["f", "m"])
-		.setPenisShape("dog")
-		.setWarmth([20, 12])
-		.setBase({ 力量: 2, 体质: 1, 智力: -2, 意志: -1 })
-		.setTraitOption({ ABO: [1, 2, 3], OMEGA: [0, 1] })
-		.setCycle({ type: "heat", cir: 56, days: 7 })
-		.setDiet("meat")
-		.setAlter({ skin:['fur'], subcolor:['health','pale','sunset','white','gray','copper']})
-		.End();
-
-	Races.add("lepios", "human", 0, "health", "red", "silver", true)
-		.setEarType("rabit")
-		.hasTail("mouse")
-		.setPower("psychic")
-		.setVaginaShape("cute")
-		.setTraitOption({ 暴食: [0, 1] })
-		.setBase({ 敏捷: 2, 灵感: 1, 意志: -2, 力量: -1 })
-		.setAlter({ skin: ["health", "pale", "white", "gray"], mimi: ["rabti", "mouse"] })
-		.End();
-
-	Races.add("dracons", "human", 2, "pale", "pink", "blond")
-		.setGenital(["canhide"], { t: "t" })
-		.hasTail("dracon")
-		.hasHorn("crystal")
-		.setPower("elements")
-		.setElements(["lumen", "ark", "electron", "flame", "ions", "terra", "vitae"])
-		.setElementSize(1)
-		.setTraitOption({ 发光: [0, 1] })
-		.setPenisShape("dracon")
-		.setVaginaShape("suji")
-		.setBase({ 意志: 2, 智力: 1, 敏捷: -2, 灵感: -1 })
-		.setWarmth([30, 16])
-		.setCycle({ type: "heat", cir: 84, days: 3 })
-		.setDiet("ore")
-		.setAlter({ skin: ['pale','white','gray','black','aqua','gold'], tail:['dragon', 'cystal'] })
-		.End();
-
-	Races.add("voeli", "human", 2, "black", "amber", "white", true)
-		.setEarType("futher")
-		.setGenital(["canhide", "natural"])
-		.hasWings("voeli")
-		.setAlter({ wing: ["voeli", "bird1", "bird2"] })
-		.setPower("arcane")
-		.setElementSize(2)
-		.setTraitOption({ 飞翔: [1], 生蛋: [0, 1] })
-		.setGenderOption(["f", "m"])
-		.setPenisShape("bird")
-		.setBase({ 灵感: 2, 敏捷: 1, 体质: -2, 力量: -1 })
-		.setWarmth([32, 16])
-		.setDiet("vegi")
-		.End();
-
-	Races.add("havan", "mermaid", 5, "copper", "black", "black")
-		.setBodyPart("legs", "none")
-		.setGenital(["canhide", "natural"])
-		.hasTail("fish")
-		.setPower("psychic")
-		.setTraitOption({ 强壮: [1], 负罪: [1] })
-		.setPenisShape("shark")
-		.setVaginaShape("suji")
-		.setWarmth([16, 3])
-		.setBase({ 体质: 3, 智力: -3 })
-		.setCycle({ type: "heat", cir: 36, days: 2 })
-		.setAlter({skin:['copper','pale','gray']})
-		.End();
-
-	Races.add("linlog", "hoof", 2, "lightfur", "lightgreen", "milktea")
-		.setEarType("deer")
-		.setBodyPart("hoof", "natural")
-		.setBodyPart("fur", "natural")
-		.hasHorn("deer")
-		.hasTail("deer")
-		.setPower("elements")
-		.setElements(["vitae", "terra", "ions"])
-		.setTraitOption({ 无垢: [0, 1] })
-		.setPenisShape("deer")
-		.setVaginaShape("pretty")
-		.setWarmth([22, 8])
-		.setBase({ 智力: 3, 力量: -3 })
-		.setAlter({skin:['lightfur'] , subcolor:['pale','white','health']})
-		.End();
-
-	Races.add("pequitis", "hoof", 4, "darkfur", "brown", "brown")
-		.setEarType("horse")
-		.setBodyPart("hoof", "natural")
-		.setBodyPart("fur", "natural")
-		.hasHorn("cow")
-		.hasTail("horse")
-		.setPower("psychic")
-		.setTraitOption({ 愤怒: [0, 1], 色欲: [0, 1] })
-		.setPenisShape("horse")
-		.setWarmth([20, 15])
-		.setBase({ 体质: 2, 力量: 2, 敏捷: 2, 智力: -2, 意志: -2, 灵感: -2 })
-		.setCycle({ type: "heat", cir: 56, days: 5 })
-		.setAlter({skin:['darkfur'], subcolor:['dark','copper','sunset']})
-		.End();
-
-	Races.add("ulvs", "snake", 3, "copper", "amber", "black", true)
-		.setBodyPart("legs", "none")
-		.setGenital(["canhide"])
-		.hasTail("snake")
-		.setAlter({ skin: ["copper", "sunset", "black", "dark", "pale", "white", "gray",'green'] })
-		.setPower("occult")
-		.setTraitOption({ 生蛋: [0, 1] })
-		.setGenderOption(["i"])
-		.setPenisShape("snake")
-		.setVaginaShape("suji")
-		.setWarmth([32, 24])
-		.setBase({ 智力: 2, 体质: -2 })
-		.setCycle({ type: "heat", cir: 56, days: 2 })
-		.End();
-
-	Races.add("alsha", "elf", 3, "gold", "amber", "white")
-		.setEarType("elf")
-		.setBodyPart("body", "fake")
-		.setBodyPart("ears", "fake")
-		.setBodyPart("eye", "fake")
-		.setBodyPart("nose", "fake")
-		.setBodyPart("mouth", "fake")
-		.setBodyPart("hands", "fake")
-		.setBodyPart("legs", "fake")
-		.setBodyPart("organ", "fake")
-		.setGenital(["fake"])
-		.setPower("occult")
-		.setBase({ 意志: 4, 灵感: -4 })
-		.setTraitOption({ 神使: [1], 造物: [2] })
-		.setWarmth([42, -10])
-		.setGenderOption(["f", "m", "n"])
-		.setAlter({skin:['gold','silver']})
-		.noCycle()
-		.End();
-
-	Races.add("noctar", "elf", 2, "yoru", "lightpurple", "white")
-		.setEarType("sharp")
-		.setBodyPart("body", "fog")
-		.setBodyPart("ears", "fog")
-		.setBodyPart("eye", "fake")
-		.setBodyPart("nose", "fog")
-		.setBodyPart("mouth", "fog")
-		.setBodyPart("hands", "fog")
-		.setBodyPart("legs", "fog")
-		.setBodyPart("tentacles", "fog")
-		.setBodyPart("organ", "fog")
-		.setGenital(["fog"])
-		.setPower("elements")
-		.setElements(["ark", "terra"])
-		.setBase({ 灵感: 4, 意志: -4 })
-		.setTraitOption({ 神使: [0, 1], 虚体: [1] })
-		.setGenderOption(["f", "m", "n"])
-		.setWarmth([42, -10])
-		.setVaginaShape("deamon")
-		.setDiet("ore")
-		.setAlter({skin:['yoru']})
-		.noCycle()
-		.End();
-	
-	Object.defineProperty(window.G,'Races',{
-		value: Object.freeze(Races)
-	})
-	Object.defineProperty(window.G, 'racedata', {
-		value: Object.freeze(racesdata)
-	})
-	Object.defineProperty(window.G, 'racelist',{
-		value: Object.keys(racesdata)
-	})
-
-})()
-/* twine-user-script #14: "avatars.js" */
-//<reference path="./Avatars.d.ts"/>
-var _$A = (()=>{
-
-	const slotbit = {
-		head: 0,
-		top: 5, //长袖上衣范围
-		bottom: 4, //长裤/长裙范围
-
-		shoulder: 1, //脖子到肩膀
-		breast: 1, //胸部
-		waist: 1, //腰部
-		arms: 1, //手臂
-		back: 1, //背部
-
-		hips: 2, //三角内裤范围
-		thign: 1, //大腿
-		legs: 1, //腿部
-		feet: 1, //脚
-
-		torso: 3, //上身主体
-		chest: 2, // 胸腔范围，包前后
-		crotch: 1, //胯部范围，不含屁股
-		butts: 1, //屁股范围，不含前部
-		hands: 1, //手
-
-		mouth: 0,
-		vagina: 0,
-		penis: 0,
-		ureth: 0,
-		nipple: 0,
-		anal: 0,
-		none: 0,
-	};
-
-	const slotlist = Object.keys(slotbit);
-	const Slots = [
-		"head",
-		"mouth",
-		"shoulder",
-		"breast",
-		"waist",
-		"arms",
-		"hands",
-		"back",
-		"crotch",
-		"penis",
-		"ureth",
-		"vagina",
-		"anal",
-		"butts",
-		"thign",
-		"legs",
-		"feet",
-	];
-
-	const layerlist = [
-		"topeffect",
-		"frame",
-		"addon",
-		"hat",
-		"eyebrow",
-		"hairfront",
-		"horn",
-		"neck",
-		"facial",
-		"emoadd",
-		"eye",
-		"mouth",
-		"cover",
-		"outfit_up",
-		"inner_up",
-		"hands",
-		"outfit_bt",
-		"inner_bt",
-		"shoes",
-		"legs",
-		"belly",
-		"penis",
-		"onskin_up",
-		"onskin_bt",
-		"tattoos",
-		"ears",
-		"head",
-		"body",
-		"hairback",
-		"back",
-		"kemoback",
-		"bgeffect",
-		"background",
-	];
-
-	const shoplines = [
-		"general",
-		"mens",
-		"womens",
-		"brand",
-		"lingerie",
-		"sexy",
-		"lewd",
-		"spring",
-		"summer",
-		"autumn",
-		"winter",
-		"fasional",
-		"classic",
-		"special",
-		"cosplay",
-		"none",
-	];
-
-	const shoptype = ["none", "all", "online", "offline", "adluts", "unique", "special", "event", "ordermade"];
-
-	const taglist = [
-		"裸露",
-
-		"日常",
-		"睡衣",
-		"学生",
-		"运动",
-		"泳装",
-		"制服",
-		"正式",
-		"舞台",
-		"社交",
-
-		"防水",
-		"雨衣",
-		"潜水",
-		"战斗",
-
-		"商务",
-		"时尚",
-		"COSPLAY",
-		"情趣",
-
-		"仆从",
-		"变态",
-		"神圣",
-		"古风",
-		"洛丽塔",
-		"福瑞",
-		"高跟",
-
-		"闪耀",
-		"魔力",
-		"特殊",
-	];
-
-	const catLayer = {
-		无: "any",
-		帽子: "hat",
-		外套: "cover",
-		上衣: "outfit_up",
-		裤裙: "outfit_bt",
-		内衣: "inner_up",
-		内裤: "inner_bt",
-		围巾: "neck",
-		头饰: "hat",
-		套装: "cover",
-		手套: "hands",
-		耳饰: "facial",
-		背包: "back",
-		脸饰: "facial",
-		袜子: "legs",
-		鞋子: "shoes",
-		首饰: "neck",
-		装饰: "onskin_up",
-		道具: "onskin_bt",
-	};
-
-	const shopcategory = Object.keys(catLayer);
-
-	const eyebrowlist = ["angry", "confuse", "happy", "normal", "sad"];
-
-	const mouthlist = ["angry", "laugh", "oop", "open", "sad", "sigh", "smile", "unhappy"];
-
-	const eyelist = [
-		"ahe",
-		"blink1",
-		"blink2a",
-		"blink2b",
-		"close1",
-		"close2",
-		"full",
-		"idle",
-		"half",
-		"quater1",
-		"quater2",
-		"lookdown",
-		"lookleft",
-		"lookup1",
-		"lookup2",
-		"lookup3",
-	];
-
-	const colorplate = {
-		black:  "#56545A",
-		white: "#FFFFFF",
-		gray: "#CBC8C7" ,
-		blue: "#4089F9" ,
-		cyan: "#5DD9FA",
-		skyblue:"#DDFDFF",
-		pink: "#FB83C4",
-		purple: "#B36CF6",
-		red: "#F14660",
-		orange: "#FC7051",
-		yellow: "#F8F45F",
-		rice: "#FDF3B1",
-		green: "#8DC862",
-		mint: "#BBEEC1",
-		brown: "#9C6C51",
-	};
-
-	const haircolor = {
-		black: ["#4F4240", "#CAA799"],
-		darkbrown: ["#765646", "#EACFB2"],
-		wine: ["#9D5755", "#EACFB2"],
-		brown: ["#A07856", "#EACFB2"],
-		milktea: ["#D5AEA0", "#FFEDEA"],
-		gold: ["#FFE664", "#FFFFFF"],
-		softgold: ["#FFEEA9", "#FFFFFF"],
-		platinum: ["#FFF1D5", "#FFFFFF"],
-		silver: ["#EBF0F3", "#FFFFFF"],
-		white: ["#FFFFFF", "#EAFDFF"],
-		gray: ["#979DB0", "#FFFFFF"],
-		purple: ["#C8B5F9", "#FFF1FE"],
-		green: ["#CEF3A0", "#FFFDDA"],
-		blue: ["#6B97F6", "#FFFFFF"],
-		aqua: ["#BADDFF", "#FFFFFF"],
-		pink: ["#FFC0DA", "#FFFDDA"],
-		red: ["#ED5C4D", "#FFD2E7"],
-		orange: ["#FFA63D", "#FAFFCF"],
-	};
-
-	const skincolors = [
-		"black",
-		"dark",
-		"copper",
-		"gray",
-		"sunset",
-		"health",
-		"white",
-		"pale",
-
-		"darkfur",
-		"lightfur",
-		"fur",
-
-		"gold",
-		"yoru",
-	];
-
-	const eyecolors = [
-		"amber",
-		"aqua",
-		"black",
-		"blue",
-		"brown",
-		"emerald",
-		"green",
-		"lightgreen",
-		"lightpurple",
-		"pink",
-		"purple",
-		"red",
-		"white",
-	];
-
-	const bodytypes = ["elf", "furry", "hoof", "human", "mermaid", "snake"];
-
-	const headtypes = ["round", "square", "pointy", "furry"];
-
-	const eartypes = [
-		"human",
-		"cat",
-		"dog",
-		"deer",
-		"futher",
-		"horse",
-		"mouse",
-		"rabit",
-		"elf",
-		"sharp",
-		"none",
-	];
-
-	const defaultslot = {
-		无: ["none"],
-		帽子: ["head"],
-		外套: ["top"],
-		上衣: ["top"],
-		裤裙: ["bottom"],
-		内衣: ["chest"],
-		内裤: ["hips"],
-		围巾: ["shoulder"],
-		头饰: ["head"],
-		套装: ["top", "bottom"],
-		手套: ["hands"],
-		耳饰: ["none"],
-		背包: ["none"],
-		脸饰: ["none"],
-		袜子: ["legs", "feet"],
-		鞋子: ["feet"],
-		首饰: ["none"],
-		装饰: ["nipple"],
-		道具: ["anal"],
-	};
-
-	const colorname = {
-		black:['黑','black'],
-		white:['白','white'],
-		gray:['灰','gray'],
-		blue:['蓝','blue'],
-		cyan:['青','cyan'],
-		skyblue:['天蓝','skyblue'],
-		pink:['粉','pink'],
-		purple:['紫','purple'],
-		red:['红','red'],
-		orange:['橙','orange'],
-		yellow:['黄','yellow'],
-		rice:['米黄','rice'],
-		green:['绿','green'],
-		mint:['薄荷','mint'],
-		brown:['棕','brown'],
-		darkbrown:['深棕','darkbrown'],
-		wine:['酒红','wine'],
-		milktea:['奶茶','milk tea'],
-		gold:['金','gold'],
-		softgold:['浅金','soft gold'],
-		platinum:['白金','platinum'],
-		silver:['银','silver'],
-		aqua:['水蓝','aqua'],
-		dark:['暗','dark'],
-		copper:['铜','copper'],
-		sunset:['麦黄','sunset'],
-		health:['健康白','health'],
-		pale:['苍白','pale'],
-		yoru:['夜蓝','night'],
-		amber:['琥珀','amber'],
-		emerald:['绿宝石','emerald'],
-		lightgreen:['淡绿','light green'],
-		lightpurple:['淡紫','light purple'],
-		fur:['发色','furry'],
-		darkfur:['发色','furry'],
-		lightfur:['发色','furry'],
-
-	}
-
-	const emotes = {};
-	const data = {};
-	const objects = {};
-	const equips = {};
-	const hair = {
-		front: {},
-		back: {},
-	};
-
-	const list = {
-		slotlist: Object.freeze(slotlist),
-		slots: Object.freeze(Slots),
-		layers: Object.freeze(layerlist),
-
-		shoplines: shoplines,
-		shops: shoptype,
-		tags: taglist,
-
-		catLayer: Object.freeze(catLayer),
-		categories: Object.freeze(shopcategory),
-
-		colorplate: colorplate,
-		haircolor: haircolor,
-		eyecolor: eyecolors,
-		skincolor: skincolors,
-		colorname: colorname,
-		bodies: bodytypes,
-		heads: headtypes,
-		ears: eartypes,
-		emotes: [],
-	};
-
-	//------------>> list 区域，先分别命名再整合到list下面-----------//
-
-
-	class Hairs {
-		static add(type, name, maxlong) {
-			hair[type][name] = new Hairs(name, maxlong);
-			objects["hair" + type].push(name);
-			return hair[type][name];
-		}
-		isFix() {
-			this.fixcolor = true;
-			return this;
-		}
-		constructor(name, maxlong, fixcolor = false) {
-			this.name = name;
-			this.maxlong = maxlong;
-			this.fixcolor = fixcolor;
-		}
-	}
-
-	class Emote {
-		static add(name, eyebrow, eyes, mouth) {
-			emotes[name] = new Emote(name, eyebrow, eyes, mouth);
-			list.emotes.push(name);
-			return emotes[name];
-		}
-		constructor(name, eyebrow, eye, mouth) {
-			this.name = name;
-			this.eyebrow = eyebrow;
-			this.eye = eye;
-			this.mouth = mouth;
-			this.frame = null;
-		}
-		addTear() {
-			this.tear = true;
-			return this;
-		}
-		addShy() {
-			this.shy = true;
-			return this;
-		}
-		addRed() {
-			this.red = true;
-			return this;
-		}
-		addHurt() {
-			this.hurt = true;
-			return this;
-		}
-		addFrame(str) {
-			this.frame = str;
-			return this;
-		}
-	}
-
-	class AvItems {
-		static add(category, imgname, name, des, gender) {
-			equips[category].push(name);
-
-			const UID = this.makeUID(category, equips[category].length);
-			data[UID] = new AvItems(UID, category, imgname, name, des, gender);
-
-			return data[UID];
-		}
-		static get(obj) {
-			return data[obj.id];
-		}
-		static getbyID(id) {
-			return data[id];
-		}
-		static getCID(category) {
-			const CID = shopcategory.indexOf(category);
-			return `A${CID}`;
-		}
-		static getOID(count) {
-			return `o${count}`;
-		}
-		static getbyName(name) {
-			for (const [key, obj] of Object.entries(data)) {
-				if (obj.name == name) return obj;
-			}
-		}
-		static makeUID(category, count) {
-			const CID = shopcategory.indexOf(category);
-			return `A${CID}o${count}`;
-		}
-		static addObj(layer, name) {
-			objects[layer].push(name);
-			return objects[layer];
-		}
-		static listUp(category) {
-			const list = [];
-			for (const [key, value] of Object.entries(data)) {
-				if (value.category == category) list.push(value);
-			}
-			return list;
-		}
-		constructor(id, category, imgname = "", name, des, gender = "n") {
-			this.id = id;
-			this.imgname = imgname;
-			this.name = name;
-			this.des = des;
-			this.gender = gender;
-			this.uid = 0;
-			this.name_en = name;
-			this.des_en = des;
-			this.tags = ["日常"];
-			this.hasImg = imgname == "" ? false : true;
-			this.cost = 0;
-			this.durable = 12;
-			this.maxdurable = 12;
-			this.fixcolor = true;
-			this.color = null;
-			this.colorname = null;
-			this.colorplate = [];
-
-			this.category = category;
-			this.layer = catLayer[category];
-			this.shop = "all";
-			this.slot = defaultslot[category];
-			if (category == "鞋子" || category == "袜子") {
-				this.require = ["elf", "furry", "human"];
-			}
-		}
-
-		setGender(str) {
-			this.gender = str;
-			return this;
-		}
-		setEnglish(name, des) {
-			this.name_en = name;
-			this.des_en = des;
-			return this;
-		}
-		HasImg(f) {
-			this.hasImg = true;
-
-			if (f == "f") {
-				this.hasImg = false;
-			}
-			return this;
-		}
-		hasBDif() {
-			this.hasBreastDif = true;
-			return this;
-		}
-		hasPDif() {
-			this.hasPregnantDif = true;
-			return this;
-		}
-		setCost(int) {
-			this.cost = int;
-			return this;
-		}
-		setWarmth(int) {
-			this.hot = int;
-			this.cold = int;
-			return this;
-		}
-		setHot(int) {
-			this.hot = int;
-			return this;
-		}
-		setCold(int) {
-			this.cold = int;
-			return this;
-		}
-		setDurable(int) {
-			this.durable = int;
-			this.maxdurable = int;
-			return this;
-		}
-		setBeauty(int) {
-			this.beauty = int;
-			return this;
-		}
-		setDefence(int) {
-			this.defence = int;
-			return this;
-		}
-		setSlot(str) {
-			this.slot = str;
-			return this;
-		}
-		setLayer(str) {
-			this.layer = str;
-			this.slot = [defaultslot[str]];
-			return this;
-		}
-		fixedColor(colorplate) {
-			this.fixcolor = true;
-			this.colorplate = colorplate;
-			this.color = colorplate[0];
-			this.colorname = colorplate[0];
-			return this;
-		}
-		customColor(color = "#FDFFFF", colorname = "白") {
-			this.color = color;
-			this.colorname = colorname;
-			this.fixcolor = false;
-			return this;
-		}
-		setShop(str) {
-			this.shop = str;
-			return this;
-		}
-		setLineup(str) {
-			this.lineup = str;
-			return this;
-		}
-		setTags(tag) {
-			this.tags = tag;
-			return this;
-		}
-		isTuckinable() {
-			this.tuckinable = true;
-			this.tuckin = false;
-			return this;
-		}
-		setPatterns(str) {
-			this.pattern = str[0];
-			this.patterns = str;
-			this.fixpattern = true;
-			return this;
-		}
-		customPatterns(defaultcolor) {
-			this.fixpattern = false;
-			this.subcolor = defaultcolor;
-			return this;
-		}
-		setEffect(string) {
-			this.effect = string;
-			return this;
-		}
-		setRequire(str) {
-			this.require = str;
-			return this;
-		}
-		isShortSleeve() {
-			this.slot = ["shoulder", "torso"];
-			return this;
-		}
-		isShortPants() {
-			this.slot = ["hips", "thign"];
-			return this;
-		}
-		isCursed() {
-			this.cursed = true;
-			return this;
-		}
-	}
-
-	//----------------->> 功能区 <<---------------------------------//
-	function Init() {
-		layerlist.forEach((layer) => {
-			if (D.wearslots.includes(layer) === false) objects[layer] = [];
-		});
-		shopcategory.forEach((cat) => {
-			equips[cat] = [];
-		});
-		eyelist.forEach((obj) => {
-			objects["eye"].push(obj);
-		});
-		eyebrowlist.forEach((obj) => {
-			objects["eyebrow"].push(obj);
-		});
-		mouthlist.forEach((obj) => {
-			objects["mouth"].push(obj);
-		});
-	}
-
-	function addColor(index, name, colorcode) {
-		colorplate[index] = { name: name, code: colorcode };
-		return colorplate;
-	}
-
-	function addHaircolor(index, base, mask) {
-		haircolor[index] = [base, mask];
-		return haircolor;
-	}
-
-	function getRevealDetail(equips) {
-		const set = ["cover", "outfit_up", "outfit_bt", "inner_up", "inner_bt"];
-		const top = ["top", "shoulder", "chest", "waist", "arms", "back", "torso"];
-		const bottom = ["bottom", "hips", "thign", "legs", "crotch", "butts"];
-		const slots = setSlots(equips);
-		const reveal = getReveal(slots);
-		const reveals = [0, 0, 0];
-		const detail = [0, 0, 0];
-		let c = 0;
-
-		for (const [key, value] of Object.entries(equips)) {
-			if (set.includes(key) === false) continue;
-			if (value) {
-				value.slot.forEach((v) => {
-					reveals[c] += slotbit[v];
-
-					if (top.includes(v)) detail[0] += slotbit[v];
-
-					if (bottom.includes(v)) detail[1] += slotbit[v];
-				});
-			}
-			if (key == "cover" || key == "outfit_bt") c++;
-			if (key == "inner_bt") break;
-		}
-	
-		reveals.sort((a, b) => b - a);
-
-		const details = {
-			reveal: reveals[0] ?? 0,
-			total: reveal,
-			tops: detail[0],
-			bottoms: detail[1],
-			slots: slots,
-		};
-
-		return details;
-	}
-
-	function getReveal(slot) {
-		let reveal = 0;
-		if(!slot) return 0;
-
-		slot.forEach((v) => {
-			reveal += slotbit[v];
-		});
-		return reveal;
-	}
-
-	function setSlots(equip) {
-		if(!equip) return []
-
-		const index = [
-			"head",
-			"mouth",
-			"shoulder",
-			"breast",
-			"waist",
-			"arms",
-			"hands",
-			"back",
-			"crotch",
-			"penis",
-			"ureth",
-			"vagina",
-			"anal",
-			"butts",
-			"thign",
-			"legs",
-			"feet",
-		];
-		const arr = [];
-
-		let i = 0
-		for (const [key, obj] of Object.entries(equip)) {
-			if(!obj) continue;
-			if (obj.slot[0] === "none" || !obj.slot) continue;
-			let slot = obj.slot.join();
-			slot = slot.replace("top", "shoulder,breast,waist,arms,back");
-			slot = slot.replace("bottom", "crotch,butts,thign,legs");
-			slot = slot.replace("torso", "breast,back,waist");
-			slot = slot.replace("chest", "breast,back");
-			slot = slot.replace("hips", "crotch,butts");
-
-			arr[i] = slot;
-			i++
-		}
-
-		const arrs = arr.join().split(",");
-		let slots = Array.from(new Set(arrs));
-		slots.sort((start, next) => {
-			return index.indexOf(start) - index.indexOf(next);
-		});
-		return slots;
-	}
-
-	Object.defineProperty(window, "Avatars", {
-		value: {
-			Init: Object.freeze(Init),
-			addColor: Object.freeze(addColor),
-			addHaircolor: Object.freeze(addHaircolor),
-			getRevealDetail: Object.freeze(getRevealDetail),
-			getReveal: Object.freeze(getReveal),
-			setSlots: Object.freeze(setSlots),
-
-			Hairs: Object.freeze(Hairs),
-			Emote: Object.freeze(Emote),
-			AvItems: Object.freeze(AvItems),
-
-			hair: hair,
-			emotes: emotes,
-			data: data,
-			equips: equips,
-			objects: objects,
-			list: list,
-		},
-	});
-
-})();
-
-A.saveCustomItem = function (item) {
-	const layer = A.catLayer[item.category]
-	const newItem = new AvItems(
-		"",
-		item.category,
-		layer,
-		"",
-		item.name,
-		item.des,
-		item.gender
-	);
-
-	const tags = [item.tag1]
-	if(item.tag2) tags[1] = item.tag2;
-	if(item.tag3) tags[2] = item.tag3;
-
-	newItem
-		.setCost(item.cost)
-		.setBeauty(item.beauty / 100)
-		.setDefence(item.defence / 10)
-		.setWarmth(item.warmth)
-		.setDurable(item.durable)
-		.setTags(tags);
-
-	const data = JSON.stringify(newItem);
-	download(data, "newItem.txt", "text/plain");
-};
-
-function download(content, fileName, contentType) {
-	var a = document.createElement("a");
-	var file = new Blob([content], { type: contentType });
-	a.href = URL.createObjectURL(file);
-	a.download = fileName;
-	a.click();
-}
-/* twine-user-script #15: "character.js" */
-var _$Chara = (()=>{
-
-function initPlayerPalam() {
-	const palam = {};
-	const set = ["饮食", "健康", "魔力", "体力", "理智", "清洁"];
-	D.palamPC.forEach((k) => {
-		if (set.includes(k)) {
-			palam[k] = [1000, 1000];
-		} else {
-			palam[k] = [0, 1000];
-		}
-	});
-	D.palamSP.forEach((k) => {
-		palam[k] = [0, 1800];
-	});
-	return palam;
-}
-
-function initNPCPalam() {
-	const palam = {};
-	const set = ["魔力", "体力", "理智", "清洁"];
-	D.palamNPC.forEach((k) => {
-		if (set.includes(k)) {
-			palam[k] = [1000, 1000];
-		} else {
-			palam[k] = [0, 1000];
-		}
-	});
-	D.palamSP.forEach((k) => {
-		palam[k] = [0, 2400];
-	});
-	return palam;
-}
-
-function initMonPalam() {
-	const palam = {};
-	D.palamMon.forEach((k) => {
-		palam[k] = [0, 2500];
-	});
-	D.palamSP.forEach((k) => {
-		palam[k] = [0, 5000];
-	});
-}
-
-function Mark() {
-	this.level = 0;
-	this.maxlv = 0;
-	this.hypo = 0;
-	this.history = [];
-}
-
-class Character {
-	r;
-	static data = {};
-	static list = [];
-	static templet = {};
-	static add(type, race, name, gender) {
-		const CID = `Chara${Object.keys(this.data).length}`;
-		this.data[CID] = new Character(type, race, name, gender);
-		this.data[CID].cid = CID;
-		this.list.push(name);
-		return this.data[CID];
-	}
-	static newtemp(type, race, gender) {
-		const Tid = `${type}-${Object.keys(this.templet).length}`;
-		this.templet[Tid] = new Character(type, race, "", gender);
-		this.templet[Tid].cid = Tid;
-		return this.templet[Tid];
-	}
-	static initSave(type, chara) {
-		const data = new Character(type, chara.race, chara.name, chara.gender, chara);
-		return data;
-	}
-	static get(cid) {
-		return this.data[cid];
-	}
-
-	constructor(type, race, name, gender, obj) {
-		this.r = clone(Races.get(race));
-
-		if (obj) {
-			for (let i in obj) {
-				this[i] = clone(obj[i]);
-			}
-		} else {
-			this.name = name;
-			this.gender = gender;
-			this.race = race;
-			this.init(type);
-		}
-	}
-
-	init(type) {
-		this.powertype = this.r.powertype;
-		this.elements = [];
-		this.diet = this.r.diet;
-		this.major = 1
-		this.emote = "普通";
-		this.money = 0;
-		this.birth = [3012, 1, 1]
-
-		this.initTraits();
-		this.initBase();
-		this.initPalam(type);
-		this.initSource();
-		this.initFlags(type);
-		this.initExps();
-		this.initInfo();
-		this.initMark();
-		this.initSkill(type);
-		this.initWear();
-		this.initEquip();
-		this.initTattoos();
-		this.initSexparts();
-		this.initLiquids();
-		this.virginity = {};
-		if (this.r.cycle) {
-			this.initCycle();
-		}
-
-		if (type == "player") {
-			this.initDaily();
-		}
-
-		if (type == "npc") {
-			this.initSchedule();
-		}
-		this.preset = {}
-	}
-
-	initTraits() {
-		const traits = this.r.traits;
-		this.trait = {};
-
-		if (traits) {
-			for (let i in traits) {
-				if (traits[i].length == 1) this.trait[i] = traits[i][0];
-			}
-		}
-	}
-
-	initBase() {
-		const hot = this.r.warmth[0];
-		const cold = this.r.warmth[1];
-		const adj = this.r.base;
-
-		this.base = {};
-
-		D.basekeys.forEach((k) => {
-			if(adj[k]) this.base[k] = [10 + adj[k], 10 + adj[k]];
-			else this.base[k] = [10, 10];
-			
-		});
-		this.base.lv = [1, 0];
-		this.base.exp = [0, 0];
-		this.base.hot = [hot, hot];
-		this.base.cold = [cold, cold];
-	}
-
-	initPalam(type) {
-		switch (type) {
-			case "player":
-				this.palam = initPlayerPalam();
-				break;
-			case "npc":
-				this.palam = initNPCPalam();
-				break;
-		}
-	}
-
-	initSource() {
-		this.source = {};
-		for (let k in this.palam) {
-			this.source[k] = 0;
-		}
-	}
-
-	initFlags(type) {
-		this.flag = {};
-		if (type == "npc") {
-			D.npcIntFlag.forEach((k) => {
-				this.flag[k] = 0;
-			});
-		}
-	}
-
-	initExps() {
-		this.exp = {}
-		D.explist.forEach((k) => {
-			this.exp[k] = 0;
-		});
-	}
-
-	initDaily() {
-		this.daily = {}
-		D.dailyrec.forEach((k) => {
-			this.daily[k] = 0;
-		});
-	}
-
-	initInfo() {
-		const a = this.r.avatarinfo;
-		this.info = {
-			eyes: 1,
-			eyecolor: a.eyes,
-
-			haircolor: a.hair,
-			hairstyle: ["natural", "natural"],
-			hairlength: [120, 120],
-
-			breast: 1,
-			hips: 1,
-			bodysize: this.r.bodysize,
-
-			skin: a.skin,
-			body: this.r.bodytype,
-			head: this.r.headtype,
-			ears: this.r.eartype,
-		};
-
-		if (a.tail) this.info.tail = a.tail;
-		if (a.horn) this.info.horn = a.horn;
-		if (a.wing) this.info.wing = a.wing;
-
-		this.initBody(this.r.bodypart, this.r.genital);
-	}
-
-	initBody(bodypart, g) {
-		this.body = clone(bodypart);
-		let t = g.penis == "canhide" ? "hidden" : g.penis;
-		let c = g.vagina == "canhide" ? "hidden" : g.vagina;
-
-		switch (this.gender) {
-			case "f":
-				this.setGeniState(["none", "none", g.vagina, g.vagina]);
-				break;
-
-			case "m":
-				this.setGeniState([g.penis, t, "none", "none"]);
-				break;
-
-			case "i":
-				if (!g.interhasCritoris) c = "none";
-				if (!g.interhasTeste) t = "none";
-				this.setGeniState([g.penis, t, g.vagina, c]);
-				break;
-
-			case "n":
-				this.setGeniState(["none", "none", "none", "none"]);
-				break;
-		}
-	}
-
-	initMark() {
-		this.mark = {};
-		D.mark.forEach((v) => {
-			this.mark[v] = new Mark();
-		});
-	}
-
-	initSkill(type) {
-		this.abl = {};
-		D.baseAbl.forEach((v) => {
-			this.abl[v] = { lv: 1, exp: 0 };
-		});
-
-		this.sbl = {};
-		D.sexAbl.forEach((v) => {
-			this.sbl[v] = { lv: 1, exp: 0 };
-		});
-
-		this.skl = {};
-		D.skill.forEach((v) => {
-			this.skl[v] = { lv: 1, exp: 0 };
-		});
-
-		this.lewd = {};
-		D.degrees.forEach((v) => {
-			this.lewd[v] = 120;
-			if (v == "纯洁") this.lewd[v] = 800;
-		});
-		if (type == "npc") {
-			D.npcdegrees.forEach((v) => {
-				this.lewd[v] = 120;
-			});
-		}
-	}
-
-	initWear() {
-		this.wear = {};
-		D.wearslots.forEach((k) => {
-			this.wear[k] = null;
-		});
-
-		this.slots = A.getRevealDetail(this.wear);
-	}
-
-	initTattoos() {
-		this.tattoos = {};
-		D.tattoosA.forEach((k) => {
-			this.tattoos[k] = null;
-		});
-		D.tattoosB.forEach((k) => {
-			this.tattoos[k] = null;
-		});
-	}
-
-	initEquip() {
-		this.equip = {};
-		D.equipslots.forEach((k) => {
-			this.equip[k] = null;
-		});
-	}
-
-	initSchedule() {
-		this.schedule = {
-			workday: [],
-			works: [],
-			sleepTime: [22, 8],
-			homeLocation: "",
-			Tracks: {},
-		};
-	}
-
-	initSexparts() {
-		this.sexparts = {};
-		const { penis, vagina, critoris, organ, mouth } = this.body;
-
-		if (D.bodyCheck(penis)) this.initSexOrgan("penis");
-		if (D.bodyCheck(vagina)) this.initSexOrgan("vagina");
-		if (D.bodyCheck(critoris)) this.initSexOrgan("critoris");
-
-		if (D.bodyCheck(organ)) {
-			this.initSexOrgan("ureth");
-			this.initSexOrgan("anal");
-		}
-
-		if (D.bodyCheck(mouth)) this.initSexOrgan("mouth");
-
-		this.initSexOrgan("breast");
-	}
-
-	initSexOrgan(part) {
-		const state = this.body[part] ? this.body[part] : this.body.organ ;
-		this.sexparts[part] = {
-			sens: D.sensbit[state],
-		};
-		const organ = this.sexparts[part];
-
-		let volum = 0;
-		let osize = 0;
-
-		switch (part) {
-			case "vagina":
-			case "penis":
-				const shape = part[0] + "shape";
-				const size = part[0] + "size";
-				organ.shape = this.r.genital[shape];
-				organ.size = this.r.genital[size];
-
-				volum = organ.size[0] * 0.3;
-				if (part == "penis") organ.produce = [volum, volum];
-				break;
-
-			case "breast":
-				volum = this.info.breast * 100;
-				organ.produce = [volum, volum];
-				break;
-
-			case "ureth":
-				if (this.hasPenis()) {
-					osize = this.r.genital.psize[1] / 20;
-				} else {
-					osize = (this.r.bodysize + 1) * 2;
-				}
-				organ.size = [osize, osize + 1];
-				organ.produce = [0, 3000];
-				break;
-
-			case "anal":
-				osize = (this.info.hips + 1) * 5 + random(10);
-				organ.size = [osize, osize + 5];
-				break;
-		}
-	}
-
-	initLiquids() {
-		this.liquid = {};
-		D.liquidLayer.forEach((k) => {
-			this.liquid[k] = [0, 0, 0, 0];
-		});
-	}
-
-	initCycle() {
-		const { type, cir, days } = this.r.cycle;
-		this.pregnant = {
-			cycle: {
-				type: type,
-				circle: [cir, cir],
-				days: days,
-				rng: [-2, 2],
-				current: 0,
-				state: 0,
-				phase: "none",
-			},
-			fatherID: [],
-			seedCount: [],
-			inside: [],
-		};
-	}
-
-	hasPenis() {
-		return this.body.penis !== "none";
-	}
-
-	hasVagina() {
-		return this.body.vagina !== "none";
-	}
-	setRace(race) {
-		Races.convert(this, race);
-		return this;
-	}
-	setGender(gender) {
-		this.gender = gender;
-		this.initBody(this.r.bodypart, this.r.genital);
-		this.initSexparts();
-		return this;
-	}
-	setGeniState(state) {
-		this.body.penis = state[0];
-		this.body.teste = state[1];
-
-		this.body.vagina = state[2];
-		this.body.critoris = state[3];
-		return this;
-	}
-
-	setName(name) {
-		this.name = name;
-		return this;
-	}
-	
-	setNick(nick) {
-		this.nick = nick;
-		return this;
-	}
-
-	setTrait(str) {
-		str.forEach((k) => {
-			this.trait[k] = 1;
-		});
-		return this;
-	}
-
-	setTitle(str) {
-		this.title = str;
-		return this;
-	}
-
-	setMajor(int){
-		this.major = int.clamp(1,6)
-		return this
-	}
-
-	setKojo(str) {
-		this.kojo = str;
-		return this;
-	}
-
-	setPowertype(str) {
-		this.powertype = str;
-		return this;
-	}
-
-	setElements(str) {
-		if (str.length > this.r.elesize) {
-			str = str.slice(0, this.r.elesize);
-		}
-		this.elements = str;
-		return this;
-	}
-
-	Description(str) {
-		this.des = str;
-		return this;
-	}
-	Birthday(int) {
-		this.birth = int;
-		return this;
-	}
-	Base(obj) {
-		const adj = this.r.base;
-
-		for (let i in obj) {
-			if (adj[i]) this.base[i] = [obj[i] + adj[i], obj[i] + adj[i]];
-			else this.base[i] = [obj[i], obj[i]];
-		}
-		return this;
-	}
-
-	setFlag(obj) {
-		if (!isObject(obj)) return;
-
-		for (let i in obj) {
-			this.flag[i] = obj[i];
-		}
-		return this;
-	}
-
-	setExp(exp) {
-		for (let i in exp) {
-			this.exp[i] = exp[i];
-		}
-		return this;
-	}
-
-	Abl(name, level) {
-		this.abl[name].lv = level;
-		return this;
-	}
-
-	Sbl(name, level) {
-		this.sbl[name].lv = level;
-		return this;
-	}
-
-	Skill(name, level) {
-		this.skl[name].lv = level;
-		return this;
-	}
-
-	Lewd(name, int) {
-		this.lewd[name] = int;
-		return this;
-	}
-
-	setInfo(info) {
-		for (let i in info) {
-			this.info[i] = info[i];
-		}
-		return this;
-	}
-
-	Eyetype(type) {
-		this.info.eyes = type;
-		return this;
-	}
-
-	Eyecolor(color) {
-		this.info.eyecolor = color;
-		return this;
-	}
-
-	Haircolor(color) {
-		this.info.haircolor = color;
-		return this;
-	}
-
-	HairStyle(front, back) {
-		this.info.hairstyle = [front, back];
-		return this;
-	}
-
-	Hairlength(front, back) {
-		this.info.hairlength = [front, back];
-		return this;
-	}
-
-	Breast(int) {
-		this.info.breast = int.clamp(1, 5);
-		return this;
-	}
-
-	Hips(int) {
-		this.info.hips = int.clamp(1, 5);
-		return this;
-	}
-
-	Bodysize(int) {
-		this.info.bodysize = int.clamp(0, this.r.bodysize + 1);
-		return this;
-	}
-
-	SkinColor(skin) {
-		this.info.skin = skin;
-		return this;
-	}
-
-	Ears(ear) {
-		this.info.ears = ear;
-		return this;
-	}
-
-	Tail(tail) {
-		this.info.tail = tail;
-		return this;
-	}
-
-	Horn(horn) {
-		this.info.horn = horn;
-		return this;
-	}
-
-	Wing(wing) {
-		this.info.wing = wing;
-		return this;
-	}
-
-	SubBodyColor(color) {
-		this.info.subcolor = color;
-		return this;
-	}
-
-	Preset(set, preset) {
-		this.preset[set] = preset;
-		return this;
-	}
-	Wear(set) {
-		const preset = this.preset[set];
-		preset.forEach((set) => {
-			Closet.getWear(this, set);
-		});
-		return this;
-	}
-
-	setEquip(slot, name) {
-		const item = Equipment.getbyName(name);
-		this.equip[slot] = clone(item);
-		return this;
-	}
-
-	setTattoos(slot, id) {
-		const item = Tattoos.get(id);
-		this.tattoos[slot] = item;
-		return this;
-	}
-
-	setBody(part, state) {
-		this.body[part] = state;
-		return this;
-	}
-
-	setSens(part, level) {
-		this.sexparts[part].sens = level;
-		return this;
-	}
-
-	setProduce(part, volum) {
-		this.sexparts[part].produce = [volum, volum];
-		return this;
-	}
-
-	setSize(part, size) {
-		this.sexparts[part].size = size;
-		return this;
-	}
-
-	setPshape(shape) {
-		this.sexparts.penis.shape = shape;
-		return this;
-	}
-
-	setVshape(shape) {
-		this.sexparts.vagina.shape = shape;
-		return this;
-	}
-
-	setVirginity(part, info) {
-		this.virginity[part] = info;
-		return this;
-	}
-
-	setWorkday(day) {
-		this.schedule.workday = day;
-		return this;
-	}
-
-	setWork(workday, startTime, endTime, workplace, worktype) {
-		const work = {
-			workday: workday,
-			workplace: workplace,
-			worktype: worktype,
-			startTime: startTime,
-			endTime: endTime,
-		};
-		
-		if (this.schedule.works.length < 3) {
-			this.schedule.works.push(work);
-
-			let workday = this.schedule.workday;
-			workday = workday.concat(work.workday);
-			workday = Array.from(new Set(workday));
-
-			this.schedule.workday = workday;
-		}
-
-		return this;
-	}
-
-	setSleepTime(start, end) {
-		this.schedule.sleepTime = [start, end];
-		return this;
-	}
-
-	setHome(loc) {
-		this.schedule.homeLocation = loc;
-		return this;
-	}
-
-	setTrack(loc, chance, stayhour, entryTime, exitTime) {
-		this.schedule.Tracks[loc] = {
-			chance: chance,
-			stayHours: stayhour,
-			entryTime: entryTime,
-			exitTime: exitTime ? exitTime : entryTime + stayhour,
-		};
-		return this;
-	}
-
-	setStartBonus(bonus) {
-		this.startbonus = bonus;
-		return this;
-	}
-	End() {
-		delete this.r
-
-		if (this.cid.includes("Chara")) {
-			Character.data[this.cid] = Object.freeze(this);
-		} else {
-			Character.templet[this.cid] = Object.freeze(this);
-		}
-	}
-}
-
-	Object.defineProperty(window.G, 'Chara', {
-		value: Object.freeze(Character)
-	})
-
-})();
-/* twine-user-script #16: "closet.js" */
-var _$Closet = (()=>{
-
-class Closet{
-	static getWear(chara, set) {
-		const { slot, name, color, colorname, pattern, subcolor } = set;
-		const item = AvItems.getbyName(name);
-		chara.wear[slot] = clone(item);
-
-		if (!item.fixcolor) {
-			if (color) chara.wear[slot].color = color;
-			if (colorname) chara.wear[slot].colorname = colorname;
-		} else if (item?.colorplate.includes(color)) {
-			chara.wear[slot].color = color;
-		}
-
-		if (pattern && item?.patterns.includes(pattern)) {
-			if (pattern) chara.wear[slot].pattern = pattern;
-			if (subcolor && !item.fixpattern) chara.wear[slot].subcolor = subcolor;
-		}
-
-		chara.slots = A.getRevealDetail(chara.wear);
-
-		return chara.wear[slot];
-	}
-}
-
-Object.defineProperty(window.G, 'Closet',{
-    value: Object.freeze(Closet)
-})
-
-})()
-/* twine-user-script #17: "game.js" */
-class EGame {
-	constructor() {
-		const setobj = [
-			'flag','cflag','combat','events','chara','player',''
-		]
-	}
-}
-
-
-window.initgame = function(){
-	V.game = new EGame()
-}
-/* twine-user-script #18: "AvatarItems.js" */
-
-//------>> 头部配件 ------------------------//
-A.InitHairs = function () {
-	Hairs.add("front", "natural", 1);
-	Hairs.add("front", "himecut", 1);
-	Hairs.add("front", "curly", 4);
-
-	Hairs.add("back", "curly", 4);
-	Hairs.add("back", "straight", 4);
-
-	return A.hair;
-};
-
-//------------>> 表情设置  ----------------------//
-A.InitEmotes = function () {
-	Emote.add("正常", "normal", "full", "smile");
-	Emote.add("开心", "happy", "quater2", "laugh").addShy();
-
-	Emote.add("伤心", "sad", "quater1", "sad").addTear();
-
-	Emote.add("生气", "angry", "quater2", "open");
-	Emote.add("害羞", "happy", "lookleft", "smile").addShy();
-
-	Emote.add("羞耻", "sad", "full", "oop").addShy();
-
-	Emote.add("困惑", "confuse", "quater2", "unhappy").addFrame("confuse");
-
-	Emote.add("受伤", "angry", "blink1", "open").addHurt();
-
-	Emote.add("快感1", "sad", "quater2", "open").addRed();
-
-	Emote.add("快感2", "confuse", "lookup2", "open").addTear().addRed();
-
-	Emote.add("高潮", "sad", "lookup1", "open").addTear().addRed();
-
-	return A.emotes;
-};
-
-//各分类第一件物品都是无。没穿也算一件物品，用来规避错误。
-//暂时没啥装饰，打包放一块。
-A.InitAccesory = function () {
-	AvItems.add("无", "", "无", "无")
-		.setEnglish("naked", "none")
-		.setLayer("any")
-		.setTags(["裸露"])
-		.setShop("none")
-		.setDurable(0);
-};
-
-//内衣上身
-A.InitInnerTop = function () {
-	AvItems.add("内衣", "", "吊带背心", "一件简单的吊带背心，给胸部小小的你带来些许安全感。", "f")
-		.setEnglish("camisole", "A simple camisole, can give you a little bit comfort.")
-		.setCost(30)
-		.setWarmth(-0.2)
-		.setSlot(["torso"]);
-
-	AvItems.add("内衣", "", "胸罩", "一件设计朴素的胸罩。", "f").setEnglish("bra", "A simple designed bra.").setCost(60);
-};
-
-//内衣下身
-A.InitInnerBottom = function () {
-	AvItems.add("内裤", "boxer", "四角内裤", "一条简单的四角内裤。", "m")
-		.setEnglish("boxer brief", "A simple boxer brief.")
-		.customColor()
-		.setCost(12)
-		.setWarmth(-0.1);
-
-	AvItems.add("内裤", "pantie", "内裤", "一款简单朴素的内裤。", "f")
-		.setEnglish("pantie", "A simple pantie.")
-		.setCost(15);
-};
-
-//暂时不会添加太多，打包放一块。鞋子和袜子
-A.InitLegItems = function () {
-	AvItems.add("鞋子", "sportshoes", "运动鞋", "一双普通的白色运动鞋。")
-		.setEnglish("sport shoes", "A simple sport shoes.")
-		.setTags(["日常", "运动"])
-		.fixedColor(["white"])
-		.setCost(60)
-		.setWarmth(-0.1)
-		.setDurable(30);
-
-	AvItems.add("鞋子", "highheel", "高跟鞋", "一双简单设计的高跟鞋。", "f")
-		.setEnglish("high heel", "A simple high heel.")
-		.setTags(["日常", "商务", "高跟"])
-		.setCost(80)
-		.setDurable(20)
-		.setBeauty(0.02)
-		.customColor();
-
-	AvItems.add("鞋子", "", "皮鞋", "一双设计简单的皮鞋。")
-		.setEnglish("shoes", "A simple shoes.")
-		.setTags(["日常", "正式", "商务"])
-		.setCost(240)
-		.setDurable(25)
-		.setBeauty(0.02);
-
-	AvItems.add("袜子", "sportsocks", "运动短袜", "一对简单的运动袜。")
-		.setEnglish("sports socks", "A simple sports socks.")
-		.setTags(["日常", "运动"])
-		.setCost(15)
-		.setWarmth(-0.2)
-		.customColor();
-
-	AvItems.add("袜子", "", "短袜", "一对简单的短袜。")
-		.setEnglish("socks", "A simple socks.")
-		.setCost(20)
-		.setWarmth(-0.1);
-};
-
-//上衣和连衣裙之类的。
-A.InitOutfitTops = function () {
-	AvItems.add("上衣", "Tshirt", "T恤", "一键简单的T恤。并不能给你多少保护，但总比没有好。")
-		.setEnglish(
-			"T-shirt",
-			"A simple designed T-shirt. It cannot give you much of protection, but better than nothing."
-		)
-		.hasBDif()
-		.hasPDif()
-		.setCost(60)
-		.setWarmth(-1)
-		.setDurable(24)
-		.setDefence(0.5)
-		.customColor()
-		.setPatterns(["slime", "heart"]);
-
-	AvItems.add("上衣", "shirt", "衬衫", "一件简单的西式长袖衬衫。浅浅的暗纹给你增加了些许气质。")
-		.setEnglish(
-			"business shirt",
-			"A simple long-sleeved dress shirt. The light dark pattern adds a touch of grace to you."
-		)
-		.setTags(["日常", "正式", "商务"])
-		.hasBDif()
-		.hasPDif()
-		.setCost(150)
-		.setWarmth(-1.5)
-		.setDurable(24)
-		.setBeauty(0.02)
-		.setDefence(0.5)
-		.customColor()
-		.isTuckinable();
-
-	AvItems.add(
-		"上衣",
-		"bwopice",
-		"BW连衣裙",
-		"一件设计简单的连衣裙。修身的设计显得你身材更苗条。毕竟是易淘上的便宜货，不能指望不了的防御效果。"
-	)
-		.setEnglish(
-			"BW onepiece",
-			"The slim fit design looks slimmer on your body. The cheap goods on Ebay, can not expect the fabric defense effect."
-		)
-		.hasBDif()
-		.hasPDif()
-		.setCost(240)
-		.setWarmth(-0.5)
-		.setDurable(15)
-		.setBeauty(0.05)
-		.fixedColor(["white", "black"])
-		.setSlot(["top", "bottom"]);
-
-	AvItems.add("上衣", "slpshortup", "短袖睡衣", "一件设计简单的睡衣。轻柔透气的布料给你带来好梦。")
-		.setEnglish("summer pajamas", "A simple design pajamas. The light and breathable fabric brings you good dreams.")
-		.setTags(["日常", "睡衣"])
-		.hasBDif()
-		.hasPDif()
-		.setCost(80)
-		.setWarmth(-0.5)
-		.customColor()
-		.setPatterns(["line", "dot", "star"])
-		.customPatterns("#787878");
-};
-
-//裤子和裙子
-A.InitOutfitBottoms = function () {
-	AvItems.add("裤裙", "shortpant", "短裤", "一条简单的短裤。")
-		.setEnglish("shortpant", "A simple shortpant.")
-		.hasPDif()
-		.setCost(80)
-		.setWarmth(-0.5)
-		.setDurable(20)
-		.setDefence(0.2)
-		.customColor("#787878", "黑");
-
-	AvItems.add("裤裙", "shortskirt", "短裙", "一条简单的短裙。", "f")
-		.setEnglish("skirt", "A simple skirt.")
-		.hasPDif()
-		.setCost(80)
-		.setWarmth(-0.2)
-		.setBeauty(0.01)
-		.customColor("#787878", "黑");
-
-	AvItems.add("裤裙", "bskirt", "西装短裙", "一条简单的西式短裙。毕竟是廉价款，不能指望耐久度。", "f")
-		.setEnglish("business skirt", "A simple business skirt. Because it's cheap so you can't expect its durability.")
-		.setTags(["日常", "商务"])
-		.hasPDif()
-		.setCost(210)
-		.setWarmth(-0.2)
-		.setBeauty(0.03)
-		.customColor("#787878", "黑");
-
-	AvItems.add("裤裙", "slpshortbt", "睡衣短裤", "一件设计简单的睡衣短裤。轻柔透气的布料给你带来好梦。")
-		.setEnglish("summer pajamas", "A simple design pajamas. The light and breathable fabric brings you good dreams.")
-		.setTags(["日常", "睡衣"])
-		.hasPDif()
-		.setCost(80)
-		.setWarmth(-0.5)
-		.setDurable(10)
-		.setDefence(0.2)
-		.customColor()
-		.setPatterns(["line", "dot", "star"])
-		.customPatterns("#787878");
-
-	AvItems.add("裤裙", "", "长裤", "一件设计简单的长裤。舒适宽松的布料，修身的设计，穿着很是得体。")
-		.setEnglish(
-			"pant",
-			"A pair of pants with a simple design. Comfortable and loose fabric, slim fit design, very modest to wear."
-		)
-		.setTags(["日常", "正式", "商务"])
-		.setCost(320)
-		.setWarmth(-0.8)
-		.setDurable(20)
-		.setDefence(0.2);
-};
-
-A.InitAvatarDatas = function () {
-	A.Init();
-	A.InitHairs();
-	A.InitEmotes();
-	A.InitAccesory();
-	A.InitInnerTop();
-	A.InitInnerBottom();
-	A.InitLegItems();
-	A.InitOutfitTops();
-	A.InitOutfitBottoms();
-};
-/* twine-user-script #19: "charalist.js" */
-
-F.InitPlayerTemplet = function () {
-	Chara.newtemp("player", "human", "m")
-		.Preset("basic", [
-			{ slot: "inner_bt", name: "四角内裤" },
-			{ slot: "outfit_up", name: "T恤", color: "#F14660", colorname: "红" },
-			{ slot: "outfit_bt", name: "短裤" },
-			{ slot: "legs", name: "运动短袜" },
-			{ slot: "shoes", name: "运动鞋" },
-		])
-		.Wear("basic")
-		.setMajor(2)
-		.Haircolor("milktea")
-		.HairStyle("natural", "straight")
-		.Hairlength(50, 50)
-		.setTrait(["保守"])
-		.setStartBonus("菜鸟")
-		.Description(["一名热衷修仙的男孩。", "A Human boy who love to do Xiuxian activities."]);
-
-	Chara.newtemp("player", "catvinx", "m")
-		.Preset("basic", [
-			{ slot: "inner_bt", name: "内裤" },
-			{ slot: "outfit_up", name: "T恤", pattern: "heart" },
-			{ slot: "outfit_bt", name: "短裙", color: "#FFA9DD", colorname: "粉" },
-			{ slot: "shoes", name: "运动鞋" },
-		])
-		.Wear("basic")
-		.setMajor(5)
-		.setTrait(["开放"])
-		.setStartBonus("人气")
-		.setSens("anal", 2)
-		.HairStyle("curly", "curly")
-		.Hairlength(120, 50)
-		.Description(["一名喜欢直播的女装猫猫。", "A Catvinx boy who love to live steam with crossdress."]);
-
-	Chara.newtemp("player", "sckyrios", "f")
-		.Preset("basic", [
-			{ slot: "inner_up", name: "胸罩" },
-			{ slot: "inner_bt", name: "内裤" },
-			{ slot: "outfit_up", name: "衬衫" },
-			{ slot: "outfit_bt", name: "短裙" },
-			{ slot: "shoes", name: "高跟鞋" },
-		])
-		.Wear("basic")
-		.setMajor(4)
-		.setStartBonus("聪明")
-		.setSens("breast", 2)
-		.setFlag({ transform: { skin: "health", body: "human", head: "round" } })
-		.HairStyle("natural", "straingt")
-		.Description(["一名喜欢研究人体的狼妹。", "A Sckyrios girl who love to study the anatomy."]);
-};
-
-F.InitNPC = function () {
-	Chara.add("npc", "human", "余安", "m")
-		.Birthday([3012, 8, 8])
-		.Preset("basic", [
-			{ slot: "inner_bt", name: "四角内裤" },
-			{ slot: "outfit_up", name: "衬衫" },
-			{ slot: "outfit_bt", name: "长裤" },
-			{ slot: "shoes", name: "皮鞋" },
-		])
-		.Haircolor("darkbrown")
-		.Hairlength(50, 50)
-		.setTrait(["自由业"])
-		.Base({ 力量: 8, 智力: 14, 意志: 15, 灵感: 16, 魅力: 12 })
-		.Abl("格斗", 2)
-		.Abl("健身", 3)
-		.Abl("跑步", 3)
-		.Abl("科学", 8)
-		.Abl("冥想", 1)
-		.Abl("创作", 15)
-		.Abl("表演", 3)
-		.Sbl("性技巧", 5)
-		.Sbl("性抵抗", 1)
-		.Sbl("手技", 3)
-		.Sbl("腰技", 3)
-		.Lewd("纯洁", 120)
-		.Lewd("调教", 240)
-		.Lewd("束缚", 400)
-		.Lewd("追踪", 600)
-		.setWork([2, 3, 4, 5, 6], 14, 4, "自宅", "设计")
-		.setTrack("小卖部", 20, 1, 12)
-		.setTrack("小卖部", 20, 1, 19)
-		.setHome("怡安小区")
-		.setSleepTime(5, 12)
-		.setVirginity("penis", { date: "不明", person: "前女友", situation: "在{0}的盛情邀约下丧失了自己的童贞" })
-		.Description([
-			"居住在主角对门的自由设计师。", "A freelance designer who living opposite of your appartment.",
-		]);
-
-	Chara.add("npc", "dracons", "娜娜莉·爱索斯", "i")
-		.Birthday([3016, 5, 28])
-		.Preset("basic", [
-			{ slot: "inner_up", name: "胸罩" },
-			{ slot: "inner_bt", name: "内裤" },
-			{ slot: "outfit_up", name: "BW连衣裙" },
-			{ slot: "shoes", name: "高跟鞋" },
-		])
-		.Wear("basic")
-		.setMajor(2)
-		.setTrait(["聪明", "开放"])
-		.setElements(["ions"])
-		.HairStyle("natrual", "straight")
-		.Hairlength(300, 500)
-		.Base({ 力量: 8, 体质: 10, 敏捷: 14, 智力: 16, 意志: 12, 灵感: 14, 魅力: 14 })
-		.Abl("格斗", 7)
-		.Abl("健身", 5)
-		.Abl("跑步", 7)
-		.Abl("科学", 15)
-		.Abl("冥想", 5)
-		.Abl("创作", 11)
-		.Abl("表演", 5)
-		.Abl("奥术", 3)
-		.Sbl("性技巧", 8)
-		.Sbl("性抵抗", 2)
-		.Sbl("口技", 6)
-		.Sbl("手技", 6)
-		.Sbl("脚技", 4)
-		.Sbl("腰技", 1)
-		.Lewd("纯洁", 200)
-		.Lewd("滥交", 500)
-		.Lewd("受虐", 500)
-		.Lewd("顺从", 500)
-		.setWork([1, 3, 5], 9, 11, "景南大学", "学习")
-		.setWork([2, 4], 14, 17, "景南大学", "学习")
-		.setTrack("大学城", 25, 1, 9, 18)
-		.setTrack("海洋馆", 20, 3, 14)
-		.setHome("凤兴苑")
-		.Description([
-			"有些内向的晶龙少女，在奥术研究方面的天才，目前在科大担任科研工作。",
-			"A somewhat introverted dracon girl, a genius in arcane research, currently working as a researcher at KU.",
-		])
-		.setVirginity("anal", {
-			date: "不明",
-			person: "震动棒",
-			situation: "以主角幻想对象，用{0}自卫时破了自己的{1}处女",
-		})
-		.End();
-};
-/* twine-user-script #20: "CharaMaker.js" */
+/* twine-user-script #13: "CharaMaker.js" */
 F.test = function(arg1, arg2){
     console.log('有变化了',arg1, arg2)
 }
@@ -4088,21 +4402,23 @@ G.CharaMaker = class{
 
 	constructor(type) {
 		this.racelist.forEach((k) => {
-			this.racename.push(Races.print(k));
+			this.racename.push(lan(L.races[k]));
 		});
 
 		this.chara = new Chara(type, this.race, this.name, this.gender);
 		this.chara.init(type);
         this.InitRace(this.race);
-        this.p1 = 63
-        this.p2 = 42
+        this.p1 = 63;
+        this.p2 = 42;
+        this.usedp1 = 0;
+        this.usedp2 = 0;
 
         this.eyecolorlist.forEach((k)=>{
-            this.eyecolorname.push(lan(A.list.colorname[k]))
+            this.eyecolorname.push(lan(L.color[k]))
         })
 
         this.haircolorlist.forEach((k)=>{
-            this.haircolorname.push(lan(A.list.colorname[k]))
+            this.haircolorname.push(lan(L.color[k]))
         })
 
 	}
@@ -4114,49 +4430,42 @@ G.CharaMaker = class{
 		this.genderlist = this.r.gender;
 		this.gendername = [];
 		this.genderlist.forEach((k) => {
-			this.gendername.push(D.Gender(k));
+			this.gendername.push(lan(L.gender[k]));
 		});
 
-  
-            if(this.r.alter.skin){
-                this.skinlist = this.r.alter.skin;
-            }
-            else{
-                this.skinlist = A.list.skincolor.slice(0,7)
-            }
-            
-            if(this.r.alter.mimi)
-                this.earlist = this.r.alter.mimi;
-            
-            if(this.r.alter.tail)
-                this.taillist = this.r.alter.tail;
-            
-            if(this.r.alter.horn)
-                this.hornlist = this.r.alter.horn;
-            
-            if(this.r.alter.wing)
-                this.winglist = this.r.alter.wing; 
-            
-            if(this.r.alter.subcolor){
-                this.skinlistb = this.r.alter.subcolor;
-                this.skinnameb = []
-            
-                this.skinlistb.forEach((k)=>{
-                    this.skinnameb.push(lan(A.list.colorname[k]))
-                })
-            }
-                
+		if (this.r.alter.skin) {
+			this.skinlist = this.r.alter.skin;
+		} else {
+			this.skinlist = A.list.skincolor.slice(0, 7);
+		}
 
-        this.skinname = []
+		if (this.r.alter.mimi) this.earlist = this.r.alter.mimi;
 
-        this.skinlist.forEach((k)=>{
-            this.skinname.push(lan(A.list.colorname[k]))
-        })
+		if (this.r.alter.tail) this.taillist = this.r.alter.tail;
+
+		if (this.r.alter.horn) this.hornlist = this.r.alter.horn;
+
+		if (this.r.alter.wing) this.winglist = this.r.alter.wing;
+
+		if (this.r.alter.subcolor) {
+			this.skinlistb = this.r.alter.subcolor;
+			this.skinnameb = [];
+
+			this.skinlistb.forEach((k) => {
+				this.skinnameb.push(lan(L.color[k]));
+			});
+		}
+
+		this.skinname = [];
+
+		this.skinlist.forEach((k) => {
+			this.skinname.push(lan(L.color[k]));
+		});
 
 		this.elementlist = this.r.elements;
 		this.elsize = this.r.elesize;
-        console.log(this)
-	}    
+		console.log(this);
+	}   
 }
 
 
@@ -4183,7 +4492,7 @@ F.CMApply = function(id, value){
     }
 
 }
-/* twine-user-script #21: "InputTool.js" */
+/* twine-user-script #14: "InputTool.js" */
 
 F.Textbox = function(args){
     const { id, minlen, maxlen, size, on, value, inp } = args
@@ -4244,7 +4553,7 @@ F.Range = function(args){
 
     return `<<print "${txt}" >>`
 }
-/* twine-user-script #22: "Lib.js" */
+/* twine-user-script #15: "Lib.js" */
 ;(function () {
 	'use strict';
 
@@ -4252,7 +4561,7 @@ F.Range = function(args){
 
 })();
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGliLmpzIiwic291cmNlcyI6W10sInNvdXJjZXNDb250ZW50IjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7OzsifQ==
-/* twine-user-script #23: "init.js" */
+/* twine-user-script #16: "init.js" */
 ;(function () {
 	'use strict';
 

@@ -5,15 +5,6 @@ Object.defineProperty(window, "G", {
 	},
 });
 
-$.getJSON("config.json", (data) => {
-	if (data) {
-		for (let i in data) {
-			G.config[i] = data[i];
-		}
-		console.log("read config from local file:", data);
-	}
-});
-
 G.functions.setV = function (props, value) {
 	const ISOBJ = Object.prototype.toString.call(value) === "[object Object]";
 	console.log(Object.is(V[props], undefined));
@@ -30,3 +21,12 @@ G.functions.setV = function (props, value) {
 		}
 	}
 };
+
+$.getJSON("config.json", (data) => {
+	if (data) {
+		for (let i in data) {
+			G.config[i] = data[i];
+		}
+		console.log("read config from local file:", data);
+	}
+});

@@ -1,22 +1,6 @@
-import { layers, races } from "../contraction/type";
-import { AvItems } from "./Avatars";
-import { Character } from "../contraction/Character";
-
-function isValid(props) {
-	const type = typeof props;
-	const isArray = Array.isArray(props);
-
-	if (isArray) {
-		return props.length > 0;
-	}
-
-	if (type == "object") {
-		return JSON.stringify(props) !== "{}";
-	}
-
-	if (props === undefined || props === null) return false;
-	return true;
-}
+import { layers, races, Character, Wear, CharaInfo } from "../construction";
+import { SelectCase } from "../../selectcase";
+import { AvItems, Emote, Hairs } from "./Avatars";
 
 export interface AvOptions {
 	show: boolean;
@@ -127,17 +111,20 @@ const avatarlayers: layers[] = [
 	"bgeffect",
 ];
 
-function AvOptions(obj?: AvItems) {
-	if (obj) {
-		this.show = obj.hasImg;
-		this.src = obj.imgname;
+function AvOptions(obj?: AvItems, path?: string) {
+	if (obj.hasImg) {
+		this.show = true;
+		this.src = path;
+
 		if (!obj.fixcolor) {
 			this.color = obj.color;
 		}
 
-		this.pattern = obj.pattern;
-		if (!obj.fixpattern) {
-			this.subcolor = obj.subcolor;
+		if (this.pattern) {
+			this.pattern = obj.pattern;
+			if (!obj.fixpattern) {
+				this.subcolor = obj.subcolor;
+			}
 		}
 	} else {
 		this.show = false;
@@ -145,23 +132,83 @@ function AvOptions(obj?: AvItems) {
 	}
 }
 
+const eyedif = ["blink2", "full", "lookup3"];
+
 export class Avatar {
 	private chara: Character;
+	private wear: Wear;
+	private info: CharaInfo;
+	private race: races;
+	private emote: string;
+	private face: Emote;
+	private hair: Hairs; //hair data
 
 	constructor(obj: Character) {
 		this.chara = obj;
-		for (const [k, v] of Object.entries(obj.equip)) {
-			if (isValid(v)) {
+		this.wear = obj.wear;
+		this.info = obj.info;
+		this.race = obj.race;
+		this.emote = obj.emote;
+
+		this.hair = Hairs.get("front", this.info.hairstyle[0]);
+
+		this.initWear();
+	}
+
+	initWear() {
+		for (const [k, v] of Object.entries(this.wear)) {
+			if (v.hasImg) {
+				const path = this.path(v) + this.bdif(v) + this.pdif(v);
+				this[k] = new AvOptions(v, path);
+			} else {
 				this[k] = new AvOptions(v);
 			}
 		}
 	}
+
+	bsize() {
+		const size = this.info.breast;
+		if (inrange(size, 0, 1)) return 1;
+		if (inrange(size, 2, 3)) return 2;
+
+		return 3;
+	}
+
+	bdif(obj: AvItems) {
+		if (obj.hasBreastDif) return `_${this.bsize()}`;
+		else return "";
+	}
+
+	pdif(obj: AvItems) {
+		if (obj.hasPregnantDif && this.chara.state.怀孕) return "p";
+		else return "";
+	}
+
+	path(obj: AvItems) {
+		if (obj.fixcolor) return `${obj.imgname}/${obj.color}`;
+		else return `${obj.imgname}/basic`;
+	}
+
+	harilen(len) {
+		const select = new SelectCase();
+		select.case([0, 99], 1).case([100, 499], 2).case([500, 799], 3).else(4);
+
+		return select.has(len);
+	}
+
+	hairdif(len) {
+		if (Hairs.len(len) <= this.hair.maxlong) return "_" + Hairs.len(len);
+		else return "_" + this.hair.maxlong;
+	}
+
 	setOption(key: layers, value) {
 		this[key] = value;
 	}
 
-	setBody() {
-		const { race, info } = this.chara;
+	setBody() {}
+
+	setFace() {
+		this.face = Emote.get(this.emote);
 	}
 
 	static set(obj: Character) {

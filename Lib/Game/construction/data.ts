@@ -1,6 +1,7 @@
-var _$D = (()=>{
+import { lan } from "../Utils";
+import { existency } from "../type";
 
-const basekeys = [
+export const basekey = [
 	"lv",
 	"exp",
 	"ATK",
@@ -8,19 +9,19 @@ const basekeys = [
 	"MTK",
 	"MDF",
 	"SPD",
-	"力量", //STR
-	"体质", //CON
-	"敏捷", //DEX
-	"意志", //WIL
-	"智力", //INT
-	"灵感", //SPR
-	"魅力", //ALR
-	"幸运", //LUK
+	"STR",
+	"CON",
+	"DEX",
+	"WIL",
+	"INT",
+	"PSY",
+	"ALR",
+	"LUK",
 	"hot",
 	"cold",
 ];
 
-const palamPC = [
+export const palamPC = [
 	"饮食", //hungry
 	"健康", //health
 	"魔力", //mana
@@ -38,14 +39,14 @@ const palamPC = [
 	"抑郁", //depress
 	"恐惧", //fear
 	"耻辱", //humilation
-]
+];
 
-const palamNPC = ["魔力", "体力", "理智", "清洁", "情绪", "欲望", "快感", "愤怒", "射精", "满意"];
-const palamMon = ["欲望", "愤怒", "快感", "射精", "满意"];
-const palamSP = ["快M", "快B", "快C", "快V", "快U", "快A"];
+export const palamNPC = ["魔力", "体力", "理智", "清洁", "情绪", "欲望", "快感", "愤怒", "射精", "满意"];
+export const palamMon = ["欲望", "愤怒", "快感", "射精", "满意"];
+export const palamSP = ["快M", "快B", "快C", "快V", "快U", "快A"];
 
-const npcIntFlag = ["favo", "trust", "dom", "sub", "eager", "faith", "intro"];
-const basicflags = [
+export const npcIntFlag = ["favo", "trust", "dom", "sub", "eager", "faith", "intro"];
+export const basicflags = [
 	"trueform",
 	"lactation",
 	"lactatecd",
@@ -56,7 +57,7 @@ const basicflags = [
 	"notInteractHour",
 ];
 
-const explist = [
+export const explist = [
 	"打工",
 	"下厨",
 	"清扫",
@@ -115,7 +116,7 @@ const explist = [
 	"SM",
 ];
 
-const dailyrec = [
+export const dailyrec = [
 	"高潮",
 	"射精",
 	"喷乳",
@@ -129,41 +130,28 @@ const dailyrec = [
 	"饮精",
 	"肛内射",
 	"内射",
-	"射精",
 	"产卵",
 ];
 
-const mark = ["快乐", "恐惧", "痛苦", "耻辱"];
+export const mark = ["快乐", "恐惧", "痛苦", "耻辱"];
 
-const baseAbl = [
-	"格斗",
-	"健身",
-	"跑步",
-	"科学",
-	"冥想",
-	"创作",
-	"表演",
-	"异能",
-	"奥术",
-	"秘术",
-	"学识",
-];
+export const baseAbl = ["格斗", "健身", "跑步", "科学", "冥想", "创作", "表演", "异能", "奥术", "秘术", "学识"];
 
-const sexAbl = ["性技巧", "性抵抗", "口技", "手技", "脚技", "腰技"];
+export const sexAbl = ["性技巧", "性抵抗", "口技", "手技", "脚技", "腰技"];
 
-const skill = ["开锁", "黑客", "潜行", "搜索"];
+export const skill = ["开锁", "黑客", "潜行", "搜索", "机械", "料理", "钓鱼", "种植", "草药学", "异界语"];
 
-const degrees = ["纯洁", "露出", "滥交", "受虐", "受缚", "施虐", "顺从", "兽交", "药隐", "性瘾"];
+export const degrees = ["纯洁", "露出", "滥交", "受虐", "受缚", "施虐", "顺从", "兽交", "药隐", "性瘾"];
 
-const npcdegrees = ["调教", "束缚", "追踪"];
+export const npcdegrees = ["支配", "束缚", "追踪"];
 
-const tattoosA = ["face", "chest", "belly", "armsL", "legsL"];
-const tattoosB = ["back", "neck", "fossa", "buttsR", "buttsL", "armsR", "legsR"];
-const piercingSlots = ["tongue", "labiaL", "labiaR", "penisA", "penisB", "testeA", "testeB", "belly"];
+export const tattoosA = ["face", "chest", "belly", "armsL", "legsL"];
+export const tattoosB = ["back", "neck", "fossa", "buttsR", "buttsL", "armsR", "legsR"];
+export const piercingSlots = ["tongue", "labiaL", "labiaR", "penisA", "penisB", "testeA", "testeB", "belly"];
 
-const existstate = ["canhide", "fake", "fog", "natural", "none", "onhead", "slime"];
+export const existstate = ["canhide", "fake", "fog", "natural", "none", "onhead", "slime"];
 
-const wearslots = [
+export const wearslots = [
 	"hat",
 	"cover",
 	"outfit_up",
@@ -180,11 +168,12 @@ const wearslots = [
 	"onskin_bt",
 ];
 
-const equipslots = ["weapon", "shield", "acce1", "acce2", "acce3", "penis", "ureth", "vagina", "anal"];
+export const equipslots = ["weapon", "shield", "acce1", "acce2", "acce3", "penis", "ureth", "vagina", "anal"];
 
-const liquidLayer = ["face", "hair", "hands", "legs", "chest", "back", "butts", "vagina", "anal"];
+export const liquidLayer = ["face", "hair", "hands", "legs", "chest", "back", "butts", "vagina", "anal"];
 
-const PeniSize = {
+//长度,粗度.单位是毫米.
+export const PeniSize = {
 	cat: [100, 21],
 	human: [150, 35],
 	dracon: [160, 40],
@@ -201,7 +190,7 @@ const PeniSize = {
 //深度, 松紧度, 单位也是毫米
 //根据bodysize调整
 //根据湿润度,松紧度能临时增加 3~10
-const vagisize = [
+export const vagisize = [
 	[80, 16],
 	[100, 20],
 	[120, 24],
@@ -210,7 +199,7 @@ const vagisize = [
 	[180, 36],
 ];
 
-const sensbit = {
+export const sensbit = {
 	none: 0,
 	fog: 0.2,
 	slime: 0.5,
@@ -220,71 +209,28 @@ const sensbit = {
 	onhead: 0,
 };
 
-function bodyCheck(part) {
+export function bodyCheck(part: existency) {
 	return part !== "none";
 }
 
-function getMajor(id) {
-	switch (id) {
+export function bodysize(size: number) {
+	switch (size) {
+		case 0:
+			return lan("娇小", "tiny");
 		case 1:
-			return lan("文艺创作", "Creativity");
+			return lan("娇矮", "small");
 		case 2:
-			return lan("物理科学", "Science");
+			return lan("普通", "normal");
 		case 3:
-			return lan("自然科学", "Natural");
+			return lan("修长", "slim");
 		case 4:
-			return lan("生理科学", "Medical");
+			return lan("高大", "tall");
 		case 5:
-			return lan("音乐表演", "Performance");
-		case 6:
-			return lan("运动格斗", "Physical");
+			return lan("巨大", "huge");
 	}
 }
 
-function showGender(g) {
-	switch (g) {
-		case "f":
-			return lan("女", "female");
-		case "i":
-			return lan("双性", "intersex");
-		case "m":
-			return lan("男", "male");
-		case "n":
-			return lan("无性", "zerosex");
-	}
-}
-
-function Gender(g) {
-	switch (g) {
-		case "f":
-			return lan("女", "female");
-		case "i":
-			return lan("双", "inter");
-		case "m":
-			return lan("男", "male");
-		case "n":
-			return lan("无", "zero");
-	}
-}
-
-function bodysize(size) {
-    switch (size) {
-        case 0:
-            return "tiny";
-        case 1:
-            return "small";
-        case 2:
-            return "normal";
-        case 3:
-            return "slim";
-        case 4:
-            return "tall";
-        case 5:
-            return "huge";
-    }
-}
-
-function Sens(int) {
+export function Sens(int: number) {
 	if (int < 0.5) return lan("微弱", "faint");
 	if (int < 1) return lan("钝感", "blunt");
 	if (int < 2) return lan("普通", "normal");
@@ -294,9 +240,9 @@ function Sens(int) {
 	//最多6
 }
 
-Object.defineProperty(window.G, "data", {
+Object.defineProperty(window, "gamedata", {
 	value: {
-		basekeys: Object.freeze(basekeys),
+		basekey: Object.freeze(basekey),
 		palamPC: Object.freeze(palamPC),
 		palamNPC: Object.freeze(palamNPC),
 		palamMon: Object.freeze(palamMon),
@@ -322,12 +268,7 @@ Object.defineProperty(window.G, "data", {
 		vagisize: Object.freeze(vagisize),
 		sensbit: Object.freeze(sensbit),
 		bodyCheck: Object.freeze(bodyCheck),
-		getMajor: Object.freeze(getMajor),
-		showGender: Object.freeze(showGender),
-		Gender: Object.freeze(Gender),
-        bodysize: Object.freeze(bodysize),
-		Sens:Object.freeze(Sens),
+		bodysize: Object.freeze(bodysize),
+		Sens: Object.freeze(Sens),
 	},
-})
-
-})();
+});

@@ -1,4 +1,131 @@
-var _$Chara = (()=>{
+import * as D from "./data";
+import * as A from "../avatar";
+
+import { Races } from "./Races";
+import {
+	VirginityInfo,
+	CharaInfo,
+	revealDetails,
+	SexPart,
+	pregnancy,
+	Marks,
+	Skill,
+	pirecing,
+	tatoos,
+	GenitalState,
+	Equip,
+	Schedule,
+	WorkSchedule,
+	preset,
+} from "./interface";
+import {
+	Dict,
+	existency,
+	gender,
+	races,
+	Wear,
+	Existency,
+	sexpart,
+	penishape,
+	vaginashape,
+	element,
+	powertype,
+	sexPart,
+	charatype,
+	Base,
+	Palam,
+	Flags,
+	liquid,
+	dailyrecords,
+	exprecords,
+	Lewdegree,
+	defaultBases,
+	ability,
+	sexablity,
+	degree,
+	skincolor,
+	eartype,
+	equipslot,
+	tatooslot,
+	bodypart,
+	Source,
+	haircolor,
+	eyecolor,
+} from "../type";
+import { Equipment } from "./Equipment";
+import { Tattoos } from "./tattos";
+import { Closet } from "./Closet";
+
+export type virginity<T = VirginityInfo, K extends string = sexpart> = { [key in K]?: T };
+
+export type ABL<T = Skill, K extends string = string> = { [key in K]?: T };
+
+export interface Character {
+	//主要信息
+	cid: string;
+	name: string;
+	nick: string; //昵称. 可自定义
+	callname?: string; //角色对玩家的特殊称呼.
+	race: races;
+	gender: gender;
+	trait: Dict<number>; //天赋，素质。只存在有与无的概念。少数会有数值差分. 态度也在这.
+	title: string;
+	major: number; //主修专业, 学校分区用.
+	kojo: string; //文本模板ID。影响角色文本。
+	powertype: powertype;
+	elements: element[];
+	des: [string, string]; //角色介绍
+	diet: string; //推荐食谱
+	birth?: number[]; //生日计算
+
+	//数据组
+	base: Base; //角色基础数值。0号位是现在显示值，1号位是基础值。
+	palam: Palam; //常规变量。生活模式与调教模式需要的。
+	source: Source; //处理源，内部跟palam一样，位置不一样是因为处理上的问题。
+	flag: Flags; //角色事件管理开关，可以随意插拔，就不做规划限制了。好感度之类的也塞这里。
+	state: any;
+	tcsv: any;
+
+	exp: exprecords;
+	daily?: dailyrecords;
+	mark: Marks;
+
+	//技能与XP相关:
+	abl: ABL; //基础技能、战斗技能是一样的处理。max 20
+	sbl: ABL; //涩涩技能, max 10
+	skl: ABL; //一些可习得的技能. max 6
+
+	//但代表涩涩程度的就DOL那种处理方式。因为是代表某个程度，而不是某种技能。
+	lewd: Lewdegree;
+
+	//外貌信息，用于创建纸娃娃
+	info: CharaInfo;
+	emote: string;
+
+	wear: Wear; //穿身上的都在这。
+	equip: Equip; //武器, 护盾, 饰品等功能型装备
+	tattoos: tatoos; //会有多层纹身。胸前，肚子，手，脚，面部
+	pirecing: pirecing;
+	slots: revealDetails;
+
+	//身体部件内详，用于涩涩
+	body: Existency;
+	sexparts: sexPart<SexPart>;
+	pregnant?: pregnancy; //正常的子宫怀孕
+	analPregnant?: pregnancy; //肠内受孕
+	exPregnant?: pregnancy; //特殊怀孕，主要用在特殊种族上。非特殊种族也有可能出现？首次受孕时生成。
+	virginity: virginity;
+	liquid: liquid;
+
+	schedule?: Schedule; //npc的活动轨迹设定
+	preset?: Dict<preset[]>; //npc的装扮预设
+
+	money: number; //npc有个钱包意思意思得了。物品栏就根据资金状况临时生成的吧。
+	//单位是宝石币, 10宝币 = 1晶币, 100晶币=1星币
+	startbonus?: string; //玩家用. 出生时的奖励特征
+}
+
+//--------------<<  上面为定义, 以下为代码  >>---------------------->>>>
 
 function initPlayerPalam() {
 	const palam = {};
@@ -49,33 +176,36 @@ function Mark() {
 	this.history = [];
 }
 
-class Character {
-	r;
-	static data = {};
-	static list = [];
-	static templet = {};
-	static add(type, race, name, gender) {
+export class Character {
+	private r?: Races;
+	static data: Dict<Character> = {};
+	static list: string[] = [];
+	static templet: Dict<Character> = {};
+	static add(type: charatype, race: races, name: string, gender: gender): Character {
 		const CID = `Chara${Object.keys(this.data).length}`;
 		this.data[CID] = new Character(type, race, name, gender);
 		this.data[CID].cid = CID;
 		this.list.push(name);
 		return this.data[CID];
 	}
-	static newtemp(type, race, gender) {
+	static newtemp(type: charatype, race: races, gender: gender) {
 		const Tid = `${type}-${Object.keys(this.templet).length}`;
-		this.templet[Tid] = new Character(type, race, "", gender);
+		this.templet[Tid] = new Character("npc", race, "", gender);
 		this.templet[Tid].cid = Tid;
 		return this.templet[Tid];
 	}
-	static initSave(type, chara) {
+	static initSave(type: charatype, chara: Character) {
 		const data = new Character(type, chara.race, chara.name, chara.gender, chara);
 		return data;
 	}
-	static get(cid) {
+	static get(cid: string) {
 		return this.data[cid];
 	}
 
-	constructor(type, race, name, gender, obj) {
+	static getp(cid: string) {
+		return this.templet[cid];
+	}
+	constructor(type: charatype, race: races, name: string, gender: gender, obj?: Character) {
 		this.r = clone(Races.get(race));
 
 		if (obj) {
@@ -83,27 +213,29 @@ class Character {
 				this[i] = clone(obj[i]);
 			}
 		} else {
+			this.cid = "";
 			this.name = name;
 			this.gender = gender;
 			this.race = race;
 			this.init(type);
 		}
 	}
-
-	init(type) {
+	init(type: charatype) {
+		this.birth = [3018, 6, 6];
 		this.powertype = this.r.powertype;
 		this.elements = [];
 		this.diet = this.r.diet;
-		this.major = 1
+		this.major = 1;
 		this.emote = "普通";
 		this.money = 0;
-		this.birth = [3012, 1, 1]
 
 		this.initTraits();
 		this.initBase();
 		this.initPalam(type);
 		this.initSource();
 		this.initFlags(type);
+		this.state = {};
+		this.tcsv = {};
 		this.initExps();
 		this.initInfo();
 		this.initMark();
@@ -125,10 +257,9 @@ class Character {
 		if (type == "npc") {
 			this.initSchedule();
 		}
-		this.preset = {}
+		this.preset = {};
 	}
-
-	initTraits() {
+	initTraits?() {
 		const traits = this.r.traits;
 		this.trait = {};
 
@@ -138,26 +269,21 @@ class Character {
 			}
 		}
 	}
-
-	initBase() {
+	initBase?() {
 		const hot = this.r.warmth[0];
 		const cold = this.r.warmth[1];
 		const adj = this.r.base;
 
 		this.base = {};
-
-		D.basekeys.forEach((k) => {
-			if(adj[k]) this.base[k] = [10 + adj[k], 10 + adj[k]];
-			else this.base[k] = [10, 10];
-			
+		D.basekey.forEach((k) => {
+			if (adj[k]) this.base[k] = [10 + adj[k], 10 + adj[k]];
+			else this.base[k] = [0, 0];
 		});
 		this.base.lv = [1, 0];
-		this.base.exp = [0, 0];
 		this.base.hot = [hot, hot];
 		this.base.cold = [cold, cold];
 	}
-
-	initPalam(type) {
+	initPalam?(type?: charatype) {
 		switch (type) {
 			case "player":
 				this.palam = initPlayerPalam();
@@ -167,15 +293,13 @@ class Character {
 				break;
 		}
 	}
-
-	initSource() {
+	initSource?() {
 		this.source = {};
 		for (let k in this.palam) {
 			this.source[k] = 0;
 		}
 	}
-
-	initFlags(type) {
+	initFlags?(type: charatype) {
 		this.flag = {};
 		if (type == "npc") {
 			D.npcIntFlag.forEach((k) => {
@@ -183,22 +307,18 @@ class Character {
 			});
 		}
 	}
-
-	initExps() {
+	initExps?() {
 		this.exp = {}
 		D.explist.forEach((k) => {
 			this.exp[k] = 0;
 		});
 	}
-
-	initDaily() {
-		this.daily = {}
+	initDaily?() {
 		D.dailyrec.forEach((k) => {
 			this.daily[k] = 0;
 		});
 	}
-
-	initInfo() {
+	initInfo?() {
 		const a = this.r.avatarinfo;
 		this.info = {
 			eyes: 1,
@@ -224,11 +344,10 @@ class Character {
 
 		this.initBody(this.r.bodypart, this.r.genital);
 	}
-
-	initBody(bodypart, g) {
+	initBody?(bodypart: Existency, g: GenitalState) {
 		this.body = clone(bodypart);
-		let t = g.penis == "canhide" ? "hidden" : g.penis;
-		let c = g.vagina == "canhide" ? "hidden" : g.vagina;
+		let t: existency = g.penis == "canhide" ? "hidden" : g.penis;
+		let c: existency = g.vagina == "canhide" ? "hidden" : g.vagina;
 
 		switch (this.gender) {
 			case "f":
@@ -250,15 +369,13 @@ class Character {
 				break;
 		}
 	}
-
-	initMark() {
+	initMark?() {
 		this.mark = {};
 		D.mark.forEach((v) => {
 			this.mark[v] = new Mark();
 		});
 	}
-
-	initSkill(type) {
+	initSkill?(type: charatype) {
 		this.abl = {};
 		D.baseAbl.forEach((v) => {
 			this.abl[v] = { lv: 1, exp: 0 };
@@ -285,8 +402,7 @@ class Character {
 			});
 		}
 	}
-
-	initWear() {
+	initWear?() {
 		this.wear = {};
 		D.wearslots.forEach((k) => {
 			this.wear[k] = null;
@@ -294,8 +410,7 @@ class Character {
 
 		this.slots = A.getRevealDetail(this.wear);
 	}
-
-	initTattoos() {
+	initTattoos?() {
 		this.tattoos = {};
 		D.tattoosA.forEach((k) => {
 			this.tattoos[k] = null;
@@ -304,15 +419,13 @@ class Character {
 			this.tattoos[k] = null;
 		});
 	}
-
-	initEquip() {
+	initEquip?() {
 		this.equip = {};
 		D.equipslots.forEach((k) => {
 			this.equip[k] = null;
 		});
 	}
-
-	initSchedule() {
+	initSchedule?() {
 		this.schedule = {
 			workday: [],
 			works: [],
@@ -321,8 +434,7 @@ class Character {
 			Tracks: {},
 		};
 	}
-
-	initSexparts() {
+	initSexparts?() {
 		this.sexparts = {};
 		const { penis, vagina, critoris, organ, mouth } = this.body;
 
@@ -339,9 +451,8 @@ class Character {
 
 		this.initSexOrgan("breast");
 	}
-
-	initSexOrgan(part) {
-		const state = this.body[part] ? this.body[part] : this.body.organ ;
+	initSexOrgan?(part: sexpart) {
+		const state = this.body[part];
 		this.sexparts[part] = {
 			sens: D.sensbit[state],
 		};
@@ -383,15 +494,13 @@ class Character {
 				break;
 		}
 	}
-
-	initLiquids() {
+	initLiquids?() {
 		this.liquid = {};
 		D.liquidLayer.forEach((k) => {
 			this.liquid[k] = [0, 0, 0, 0];
 		});
 	}
-
-	initCycle() {
+	initCycle?() {
 		const { type, cir, days } = this.r.cycle;
 		this.pregnant = {
 			cycle: {
@@ -408,25 +517,23 @@ class Character {
 			inside: [],
 		};
 	}
-
-	hasPenis() {
+	hasPenis?() {
 		return this.body.penis !== "none";
 	}
-
-	hasVagina() {
+	hasVagina?() {
 		return this.body.vagina !== "none";
 	}
-	setRace(race) {
+	setRace(race: races) {
 		Races.convert(this, race);
 		return this;
 	}
-	setGender(gender) {
+	setGender(gender: gender) {
 		this.gender = gender;
 		this.initBody(this.r.bodypart, this.r.genital);
 		this.initSexparts();
 		return this;
 	}
-	setGeniState(state) {
+	setGeniState(state: existency[]) {
 		this.body.penis = state[0];
 		this.body.teste = state[1];
 
@@ -434,61 +541,52 @@ class Character {
 		this.body.critoris = state[3];
 		return this;
 	}
-
-	setName(name) {
+	setName?(name: string) {
 		this.name = name;
 		return this;
 	}
-	
-	setNick(nick) {
+	setNick?(nick: string) {
 		this.nick = nick;
 		return this;
 	}
-
-	setTrait(str) {
+	setTrait?(str: string[]) {
 		str.forEach((k) => {
 			this.trait[k] = 1;
 		});
 		return this;
 	}
-
-	setTitle(str) {
+	setTitle?(str: string) {
 		this.title = str;
 		return this;
 	}
-
-	setMajor(int){
-		this.major = int.clamp(1,6)
-		return this
+	setMajor?(int: number) {
+		this.major = int.clamp(1, 6);
+		return this;
 	}
-
-	setKojo(str) {
+	setKojo?(str: string) {
 		this.kojo = str;
 		return this;
 	}
-
-	setPowertype(str) {
+	setPowertype?(str: powertype) {
 		this.powertype = str;
 		return this;
 	}
-
-	setElements(str) {
+	setElements?(str: element[]) {
 		if (str.length > this.r.elesize) {
 			str = str.slice(0, this.r.elesize);
 		}
 		this.elements = str;
 		return this;
 	}
-
-	Description(str) {
+	Description?(str: [string, string]) {
 		this.des = str;
 		return this;
 	}
-	Birthday(int) {
+	Birthday?(int: number[]) {
 		this.birth = int;
 		return this;
 	}
-	Base(obj) {
+	Base?(obj: defaultBases) {
 		const adj = this.r.base;
 
 		for (let i in obj) {
@@ -497,8 +595,7 @@ class Character {
 		}
 		return this;
 	}
-
-	setFlag(obj) {
+	setFlag?(obj) {
 		if (!isObject(obj)) return;
 
 		for (let i in obj) {
@@ -506,184 +603,152 @@ class Character {
 		}
 		return this;
 	}
-
-	setExp(exp) {
+	setExp?(exp: exprecords) {
 		for (let i in exp) {
 			this.exp[i] = exp[i];
 		}
 		return this;
 	}
-
-	Abl(name, level) {
+	Abl?(name: ability, level: number) {
 		this.abl[name].lv = level;
 		return this;
 	}
-
-	Sbl(name, level) {
+	Sbl?(name: sexablity, level: number) {
 		this.sbl[name].lv = level;
 		return this;
 	}
-
-	Skill(name, level) {
+	Skill?(name: string, level: number) {
 		this.skl[name].lv = level;
 		return this;
 	}
-
-	Lewd(name, int) {
+	Lewd?(name: degree, int: number) {
 		this.lewd[name] = int;
 		return this;
 	}
-
-	setInfo(info) {
+	setInfo?(info: CharaInfo) {
 		for (let i in info) {
 			this.info[i] = info[i];
 		}
 		return this;
 	}
-
-	Eyetype(type) {
-		this.info.eyes = type;
+	Eyetype?(type: number) {
+		this.info.eyes = type.clamp(1, 3);
 		return this;
 	}
-
-	Eyecolor(color) {
+	Eyecolor?(color: eyecolor) {
 		this.info.eyecolor = color;
 		return this;
 	}
-
-	Haircolor(color) {
+	Haircolor?(color: haircolor) {
 		this.info.haircolor = color;
 		return this;
 	}
-
-	HairStyle(front, back) {
+	HairStyle?(front: string, back: string) {
 		this.info.hairstyle = [front, back];
 		return this;
 	}
-
-	Hairlength(front, back) {
+	Hairlength?(front: number, back: number) {
 		this.info.hairlength = [front, back];
 		return this;
 	}
-
-	Breast(int) {
+	Breast?(int: number) {
 		this.info.breast = int.clamp(1, 5);
 		return this;
 	}
-
-	Hips(int) {
+	Hips?(int: number) {
 		this.info.hips = int.clamp(1, 5);
 		return this;
 	}
-
-	Bodysize(int) {
+	Bodysize?(int: number) {
 		this.info.bodysize = int.clamp(0, this.r.bodysize + 1);
 		return this;
 	}
-
-	SkinColor(skin) {
+	SkinColor?(skin: skincolor) {
 		this.info.skin = skin;
 		return this;
 	}
-
-	Ears(ear) {
+	Ears?(ear: eartype) {
 		this.info.ears = ear;
 		return this;
 	}
-
-	Tail(tail) {
+	Tail?(tail: string) {
 		this.info.tail = tail;
 		return this;
 	}
-
-	Horn(horn) {
+	Horn?(horn: string) {
 		this.info.horn = horn;
 		return this;
 	}
-
-	Wing(wing) {
+	Wing?(wing: string) {
 		this.info.wing = wing;
 		return this;
 	}
-
-	SubBodyColor(color) {
+	SubBodyColor?(color: skincolor) {
 		this.info.subcolor = color;
 		return this;
 	}
-
-	Preset(set, preset) {
+	Preset?(set: string, preset: preset[]) {
 		this.preset[set] = preset;
 		return this;
 	}
-	Wear(set) {
+	Wear?(set: string) {
 		const preset = this.preset[set];
 		preset.forEach((set) => {
 			Closet.getWear(this, set);
 		});
+
 		return this;
 	}
-
-	setEquip(slot, name) {
+	setEquip?(slot: equipslot, name: string) {
 		const item = Equipment.getbyName(name);
 		this.equip[slot] = clone(item);
 		return this;
 	}
-
-	setTattoos(slot, id) {
+	setTattoos?(slot: tatooslot, id: number) {
 		const item = Tattoos.get(id);
-		this.tattoos[slot] = item;
+		this.tattoos[slot] = clone(item);
 		return this;
 	}
-
-	setBody(part, state) {
+	setBody?(part: bodypart, state: existency) {
 		this.body[part] = state;
 		return this;
 	}
-
-	setSens(part, level) {
+	setSens?(part: sexpart, level: number) {
 		this.sexparts[part].sens = level;
 		return this;
 	}
-
-	setProduce(part, volum) {
+	setProduce?(part: sexpart, volum: number) {
 		this.sexparts[part].produce = [volum, volum];
 		return this;
 	}
-
-	setSize(part, size) {
+	setSize?(part: sexpart, size: [number, number]) {
 		this.sexparts[part].size = size;
 		return this;
 	}
-
-	setPshape(shape) {
+	setPshape?(shape: penishape) {
 		this.sexparts.penis.shape = shape;
 		return this;
 	}
-
-	setVshape(shape) {
+	setVshape?(shape: vaginashape) {
 		this.sexparts.vagina.shape = shape;
 		return this;
 	}
-
-	setVirginity(part, info) {
+	setVirginity?(part: sexpart, info: VirginityInfo) {
 		this.virginity[part] = info;
 		return this;
 	}
-
-	setWorkday(day) {
+	setWorkday?(day: number[]) {
 		this.schedule.workday = day;
 		return this;
 	}
-
-	setWork(workday, startTime, endTime, workplace, worktype) {
-		const work = {
+	setWork?(workday: number[], startTime: number, endTime: number, workplace: string, worktype: string) {
+		const work: WorkSchedule = {
 			workday: workday,
 			workplace: workplace,
 			worktype: worktype,
 			startTime: startTime,
 			endTime: endTime,
 		};
-		
 		if (this.schedule.works.length < 3) {
 			this.schedule.works.push(work);
 
@@ -696,18 +761,15 @@ class Character {
 
 		return this;
 	}
-
-	setSleepTime(start, end) {
+	setSleepTime?(start: number, end: number) {
 		this.schedule.sleepTime = [start, end];
 		return this;
 	}
-
-	setHome(loc) {
+	setHome?(loc: string) {
 		this.schedule.homeLocation = loc;
 		return this;
 	}
-
-	setTrack(loc, chance, stayhour, entryTime, exitTime) {
+	setTrack?(loc: string, chance: number, stayhour: number, entryTime: number, exitTime?: number) {
 		this.schedule.Tracks[loc] = {
 			chance: chance,
 			stayHours: stayhour,
@@ -716,13 +778,12 @@ class Character {
 		};
 		return this;
 	}
-
-	setStartBonus(bonus) {
+	setStartBonus?(bonus: string) {
 		this.startbonus = bonus;
 		return this;
 	}
-	End() {
-		delete this.r
+	End?() {
+		delete this.r;
 
 		if (this.cid.includes("Chara")) {
 			Character.data[this.cid] = Object.freeze(this);
@@ -731,9 +792,3 @@ class Character {
 		}
 	}
 }
-
-	Object.defineProperty(window.G, 'Chara', {
-		value: Object.freeze(Character)
-	})
-
-})();

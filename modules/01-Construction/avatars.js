@@ -1,105 +1,7 @@
-import { SelectCase } from "../Utils/selectcase";
-import { L, lan } from "../Utils";
-import {
-	CharaInfo,
-	revealDetails,
-	category,
-	Dict,
-	eyebrow,
-	eyes,
-	gender,
-	hairtype,
-	layers,
-	wearslot,
-	mouth,
-	shop,
-	shopline,
-	slots,
-	tags,
-	Wear,
-	skincolor,
-	eyecolor,
-	bodytype,
-	eartype,
-	headtype,
-} from "../construction";
+//<reference path="./Avatars.d.ts"/>
+var _$A = (()=>{
 
-export interface Hairs {
-	name: string;
-	fixcolor: boolean;
-	maxlong: number;
-}
-
-export interface Emote {
-	name: string;
-	eyebrow: eyebrow;
-	eye: eyes;
-	mouth: mouth;
-	frame?: string;
-	tear?: boolean;
-	shy?: boolean;
-	red?: boolean;
-	hurt?: boolean;
-}
-
-export interface AvItems {
-	id: string;
-	uid: 0;
-	imgname: string;
-	name: string;
-	name_en: string;
-	gender: gender;
-	des: string;
-	des_en: string;
-	tags: tags[];
-	hasImg: boolean;
-	hasBreastDif?: boolean;
-	hasPregnantDif?: boolean;
-
-	cost: number;
-	hot?: number;
-	cold?: number;
-	durable: number;
-	maxdurable: number;
-
-	beauty?: number;
-	defence?: number;
-
-	fixcolor: boolean;
-	color: string;
-
-	colorname: string;
-	colorplate: string[];
-
-	category: category;
-	layer: wearslot;
-	shop: shop;
-	lineup?: shopline[];
-	slot: slots[];
-	tuckinable?: boolean;
-	tuckin?: boolean;
-	pattern?: null | string;
-	patterns?: string[];
-	fixpattern?: boolean;
-	subcolor?: null | string;
-
-	cursed?: boolean;
-	effect?: string;
-	//能不能穿的判定
-	require?: bodytype[];
-}
-
-export interface SkinItem {
-	id: string;
-	type: string; // tattoos or brand or writing or permentpen
-	contex: string;
-	lews: number; //变态程度
-	tag?: string; // 妓女, 变态, 奴隶, 榨奶, 榨精, 被虐狂, 施虐狂, 黑道, 肉便器, 性玩具
-	isText?: boolean; //内容是不是文字
-}
-
-type slotbits<T = number, K extends string = slots> = { [key in K]?: T };
-const slotbit: slotbits = {
+const slotbit = {
 	head: 0,
 	top: 5, //长袖上衣范围
 	bottom: 4, //长裤/长裙范围
@@ -131,7 +33,7 @@ const slotbit: slotbits = {
 };
 
 const slotlist = Object.keys(slotbit);
-const Slots: slots[] = [
+const Slots= [
 	"head",
 	"mouth",
 	"shoulder",
@@ -151,7 +53,7 @@ const Slots: slots[] = [
 	"feet",
 ];
 
-const layerlist: layers[] = [
+const layerlist= [
 	"topeffect",
 	"frame",
 	"addon",
@@ -187,7 +89,7 @@ const layerlist: layers[] = [
 	"background",
 ];
 
-const shoplines: shopline[] = [
+const shoplines= [
 	"general",
 	"mens",
 	"womens",
@@ -206,9 +108,9 @@ const shoplines: shopline[] = [
 	"none",
 ];
 
-const shoptype: shop[] = ["none", "all", "online", "offline", "adluts", "unique", "special", "event", "ordermade"];
+const shoptype = ["none", "all", "online", "offline", "adluts", "unique", "special", "event", "ordermade"];
 
-const taglist: tags[] = [
+const taglist = [
 	"裸露",
 
 	"日常",
@@ -244,9 +146,7 @@ const taglist: tags[] = [
 	"特殊",
 ];
 
-type categorylayer<T = wearslot, K extends string = category> = { [key in K]?: T };
-
-const catLayer: categorylayer = {
+const catLayer = {
 	none: "any",
 	hat: "hat",
 	coat: "cover",
@@ -271,11 +171,11 @@ const catLayer: categorylayer = {
 
 const shopcategory = Object.keys(catLayer);
 
-const eyebrowlist: eyebrow[] = ["angry", "confuse", "happy", "normal", "sad"];
+const eyebrowlist = ["angry", "confuse", "happy", "normal", "sad"];
 
-const mouthlist: mouth[] = ["angry", "laugh", "oop", "open", "sad", "sigh", "smile", "unhappy"];
+const mouthlist = ["angry", "laugh", "oop", "open", "sad", "sigh", "smile", "unhappy"];
 
-const eyelist: eyes[] = [
+const eyelist = [
 	"ahe",
 	"blink1",
 	"blink2a",
@@ -333,7 +233,7 @@ const haircolor = {
 	orange: ["#FFA63D", "#FAFFCF"],
 };
 
-const skincolors: skincolor[] = [
+const skincolors = [
 	"black",
 	"dark",
 	"copper",
@@ -351,7 +251,7 @@ const skincolors: skincolor[] = [
 	"yoru",
 ];
 
-const eyecolors: eyecolor[] = [
+const eyecolors = [
 	"amber",
 	"aqua",
 	"black",
@@ -367,11 +267,11 @@ const eyecolors: eyecolor[] = [
 	"white",
 ];
 
-const bodytypes: bodytype[] = ["elf", "furry", "hoof", "human", "mermaid", "snake"];
+const bodytypes = ["elf", "furry", "hoof", "human", "mermaid", "snake"];
 
-const headtypes: headtype[] = ["round", "square", "pointy", "furry"];
+const headtypes = ["round", "square", "pointy", "furry"];
 
-const eartypes: eartype[] = [
+const eartypes = [
 	"human",
 	"cat",
 	"dog",
@@ -386,8 +286,8 @@ const eartypes: eartype[] = [
 ];
 
 //slot用于计算裸露面积和身体占用部位。
-type defaultslots<T = slots[], K extends string = category> = { [key in K]?: T };
-const defaultslot: defaultslots = {
+
+const defaultslot = {
 	none: ["none"],
 	hat: ["head"],
 	coat: ["top"],
@@ -412,19 +312,16 @@ const defaultslot: defaultslots = {
 
 //------------>> list 区域，先分别命名再整合到list下面-----------//
 
-type objects<T = string[], K extends string = layers> = { [key in K]?: T };
-type eobj<T = string[], K extends string = wearslot> = { [key in K]?: T };
-
-const emotes: Dict<Emote> = {};
-const data: Dict<AvItems> = {};
-const objects: objects = {};
-const items: eobj = {};
-const hair: Dict<Dict<Hairs>> = {
+const emotes= {};
+const data = {};
+const objects = {};
+const items = {};
+const hair = {
 	front: {},
 	back: {},
 };
 
-export const list = {
+const list = {
 	slotlist: Object.freeze(slotlist),
 	slots: Object.freeze(Slots),
 	layers: Object.freeze(layerlist),
@@ -448,16 +345,16 @@ export const list = {
 
 //---------------->> 主参数定义区 <<-------------------------------//
 
-export class Hairs {
-	static add(type: hairtype, name: string, maxlong: number) {
+class Hairs {
+	static add(type, name, maxlong) {
 		hair[type][name] = new Hairs(name, maxlong);
 		objects["hair" + type].push(name);
 		return hair[type][name];
 	}
-	static get(type: hairtype, name: string) {
+	static get(type, name) {
 		return hair[type][name];
 	}
-	static len(len: number) {
+	static len(len) {
 		const select = new SelectCase();
 		select
 			.case([0, 44], lan("超短", "very short"))
@@ -471,7 +368,7 @@ export class Hairs {
 		return select.has(len);
 	}
 
-	static print(info: CharaInfo) {
+	static print(info) {
 		const { haircolor, hairlength, hairstyle } = info;
 		const color = lan(L.color[haircolor]);
 		const frontstyle = lan(L.hairstyle[hairstyle[0]]);
@@ -485,19 +382,19 @@ export class Hairs {
 		);
 	}
 
-	isFix?() {
+	isFix() {
 		this.fixcolor = true;
 		return this;
 	}
-	constructor(name: string, maxlong: number, fixcolor: boolean = false) {
+	constructor(name, maxlong, fixcolor = false) {
 		this.name = name;
 		this.maxlong = maxlong;
 		this.fixcolor = fixcolor;
 	}
 }
 
-export class Emote {
-	static add(name: string, eyebrow: eyebrow, eyes: eyes, mouth: mouth) {
+class Emote {
+	static add(name, eyebrow, eyes, mouth) {
 		emotes[name] = new Emote(name, eyebrow, eyes, mouth);
 		list.emotes.push(name);
 		return emotes[name];
@@ -505,37 +402,37 @@ export class Emote {
 	static get(name) {
 		return emotes[name];
 	}
-	constructor(name: string, eyebrow: eyebrow, eye: eyes, mouth: mouth) {
+	constructor(name, eyebrow, eye, mouth) {
 		this.name = name;
 		this.eyebrow = eyebrow;
 		this.eye = eye;
 		this.mouth = mouth;
 		this.frame = null;
 	}
-	addTear?() {
+	addTear() {
 		this.tear = true;
 		return this;
 	}
-	addShy?() {
+	addShy() {
 		this.shy = true;
 		return this;
 	}
-	addRed?() {
+	addRed() {
 		this.red = true;
 		return this;
 	}
-	addHurt?() {
+	addHurt() {
 		this.hurt = true;
 		return this;
 	}
-	addFrame?(str: string) {
+	addFrame(str) {
 		this.frame = str;
 		return this;
 	}
 }
 
-export class AvItems {
-	static add(category: category, imgname: string, name: string, des: string, gender?: gender) {
+class AvItems {
+	static add(category, imgname, name, des, gender) {
 		items[category].push(name);
 
 		const UID = this.makeUID(category, items[category].length);
@@ -543,40 +440,40 @@ export class AvItems {
 
 		return data[UID];
 	}
-	static get(obj: AvItems) {
+	static get(obj) {
 		return data[obj.id];
 	}
-	static getbyID(id: string) {
+	static getbyID(id) {
 		return data[id];
 	}
-	static getCID(category: category) {
+	static getCID(category) {
 		const CID = shopcategory.indexOf(category);
 		return `A${CID}`;
 	}
-	static getOID(count: number) {
+	static getOID(count) {
 		return `o${count}`;
 	}
-	static getbyName(name: string) {
+	static getbyName(name) {
 		for (const [key, obj] of Object.entries(data)) {
 			if (obj.name == name) return obj;
 		}
 	}
-	static makeUID(category: category, count: number) {
+	static makeUID(category, count) {
 		const CID = shopcategory.indexOf(category);
 		return `A${CID}o${count}`;
 	}
-	static addObj(layer: layers, name: string) {
+	static addObj(layer, name) {
 		objects[layer].push(name);
 		return objects[layer];
 	}
-	static listUp(category: category) {
-		const list: AvItems[] = [];
+	static listUp(category) {
+		const list = [];
 		for (const [key, value] of Object.entries(data)) {
 			if (value.category == category) list.push(value);
 		}
 		return list;
 	}
-	constructor(id: string, category: category, imgname: string = "", name: string, des: string, gender: gender = "n") {
+	constructor(id, category, imgname = "", name, des, gender = "n") {
 		this.id = id;
 		this.imgname = imgname;
 		this.name = name;
@@ -604,16 +501,16 @@ export class AvItems {
 		}
 	}
 
-	setGender?(str: gender) {
+	setGender(str) {
 		this.gender = str;
 		return this;
 	}
-	setEnglish?(name: string, des: string) {
+	setEnglish(name, des) {
 		this.name_en = name;
 		this.des_en = des;
 		return this;
 	}
-	HasImg?(f?: string) {
+	HasImg(f) {
 		this.hasImg = true;
 
 		if (f == "f") {
@@ -621,118 +518,118 @@ export class AvItems {
 		}
 		return this;
 	}
-	hasBDif?() {
+	hasBDif() {
 		this.hasBreastDif = true;
 		return this;
 	}
-	hasPDif?() {
+	hasPDif() {
 		this.hasPregnantDif = true;
 		return this;
 	}
-	setCost?(int: number) {
+	setCost(int) {
 		this.cost = int;
 		return this;
 	}
-	setWarmth?(int: number) {
+	setWarmth(int) {
 		this.hot = int;
 		this.cold = int;
 		return this;
 	}
-	setHot?(int: number) {
+	setHot(int) {
 		this.hot = int;
 		return this;
 	}
-	setCold?(int: number) {
+	setCold(int) {
 		this.cold = int;
 		return this;
 	}
-	setDurable?(int: number) {
+	setDurable(int) {
 		this.durable = int;
 		this.maxdurable = int;
 		return this;
 	}
-	setBeauty?(int: number) {
+	setBeauty(int) {
 		this.beauty = int;
 		return this;
 	}
-	setDefence?(int: number) {
+	setDefence(int) {
 		this.defence = int;
 		return this;
 	}
-	setSlot?(str: slots[]) {
+	setSlot(str) {
 		this.slot = str;
 		return this;
 	}
-	setLayer?(str: wearslot) {
+	setLayer(str) {
 		this.layer = str;
 		this.slot = [defaultslot[str]];
 		return this;
 	}
-	fixedColor?(colorplate: string[]) {
+	fixedColor(colorplate) {
 		this.fixcolor = true;
 		this.colorplate = colorplate;
 		this.color = colorplate[0];
 		this.colorname = colorplate[0];
 		return this;
 	}
-	customColor?(color: string = "#FDFFFF", colorname: string = "白") {
+	customColor(color = "#FDFFFF", colorname = "白") {
 		this.color = color;
 		this.colorname = colorname;
 		this.fixcolor = false;
 		return this;
 	}
-	setShop?(str: shop) {
+	setShop(str) {
 		this.shop = str;
 		return this;
 	}
-	setLineup?(str: shopline[]) {
+	setLineup(str) {
 		this.lineup = str;
 		return this;
 	}
-	setTags?(tag: tags[]) {
+	setTags(tag) {
 		this.tags = tag;
 		return this;
 	}
-	isTuckinable?() {
+	isTuckinable() {
 		this.tuckinable = true;
 		this.tuckin = false;
 		return this;
 	}
-	setPatterns?(str: string[]) {
+	setPatterns(str) {
 		this.pattern = str[0];
 		this.patterns = str;
 		this.fixpattern = true;
 		return this;
 	}
-	customPatterns?(defaultcolor: string) {
+	customPatterns(defaultcolor) {
 		this.fixpattern = false;
 		this.subcolor = defaultcolor;
 		return this;
 	}
-	setEffect?(string) {
+	setEffect(string) {
 		this.effect = string;
 		return this;
 	}
-	setRequire?(str: bodytype[]) {
+	setRequire(str) {
 		this.require = str;
 		return this;
 	}
-	isShortSleeve?() {
+	isShortSleeve() {
 		this.slot = ["shoulder", "torso"];
 		return this;
 	}
-	isShortPants?() {
+	isShortPants() {
 		this.slot = ["hips", "thign"];
 		return this;
 	}
-	isCursed?() {
+	isCursed() {
 		this.cursed = true;
 		return this;
 	}
 }
 
 //----------------->> 功能区 <<---------------------------------//
-export function Init() {
+function Init() {
 	layerlist.forEach((layer) => {
 		if (D.wearslots.includes(layer) === false) objects[layer] = [];
 	});
@@ -750,17 +647,17 @@ export function Init() {
 	});
 }
 
-export function addColor(name: string, colorcode: string) {
+function addColor(name, colorcode) {
 	colorplate[name] = colorcode;
 	return colorplate;
 }
 
-export function addHaircolor(index: string, base: string, mask: string) {
+function addHaircolor(index, base, mask) {
 	haircolor[index] = [base, mask];
 	return haircolor;
 }
 
-export function getRevealDetail(wear: Wear): revealDetails {
+function getRevealDetail(wear){
 	const set = ["cover", "outfit_up", "outfit_bt", "inner_up", "inner_bt"];
 	const top = ["top", "shoulder", "chest", "waist", "arms", "back", "torso"];
 	const bottom = ["bottom", "hips", "thign", "legs", "crotch", "butts"];
@@ -786,7 +683,7 @@ export function getRevealDetail(wear: Wear): revealDetails {
 	}
 	reveals.sort((a, b) => b - a);
 
-	const details: revealDetails = {
+	const details = {
 		reveal: reveal[0] ?? 0,
 		total: reveal,
 		tops: detail[0],
@@ -797,7 +694,7 @@ export function getRevealDetail(wear: Wear): revealDetails {
 	return details;
 }
 
-function getReveal(slot: slots[] | string[]) {
+function getReveal(slot) {
 	let reveal = 0;
 	if (!slot) return 0;
 	slot.forEach((v) => {
@@ -806,7 +703,7 @@ function getReveal(slot: slots[] | string[]) {
 	return reveal;
 }
 
-function setSlots(equip: Wear) {
+function setSlots(equip) {
 	if (!equip) return [];
 	const index = [
 		"head",
@@ -827,7 +724,7 @@ function setSlots(equip: Wear) {
 		"legs",
 		"feet",
 	];
-	const arr: Array<string> = [];
+	const arr = [];
 
 	let i = 0;
 	for (const [key, obj] of Object.entries(equip)) {
@@ -875,20 +772,31 @@ Object.defineProperty(window, "Avatars", {
 	},
 });
 
-const saveCustomItem = function (item) {
-	const layer = catLayer[item.category];
-	const newItem = new AvItems("", item.category, "", item.name, item.des, item.gender);
+})();
 
-	const tags = [item.tag1];
-	if (item.tag2) tags[1] = item.tag2;
-	if (item.tag3) tags[2] = item.tag3;
+A.saveCustomItem = function (item) {
+	const layer = A.catLayer[item.category]
+	const newItem = new AvItems(
+		"",
+		item.category,
+		layer,
+		"",
+		item.name,
+		item.des,
+		item.gender
+	);
+
+	const tags = [item.tag1]
+	if(item.tag2) tags[1] = item.tag2;
+	if(item.tag3) tags[2] = item.tag3;
 
 	newItem
 		.setCost(item.cost)
 		.setBeauty(item.beauty / 100)
 		.setDefence(item.defence / 10)
 		.setWarmth(item.warmth)
-		.setDurable(item.durable);
+		.setDurable(item.durable)
+		.setTags(tags);
 
 	const data = JSON.stringify(newItem);
 	download(data, "newItem.txt", "text/plain");

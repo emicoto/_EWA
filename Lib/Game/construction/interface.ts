@@ -1,4 +1,4 @@
-import { wearslot } from "./type";
+import { wearslot } from "../type";
 import {
 	bodytype,
 	Dict,
@@ -11,7 +11,7 @@ import {
 	races,
 	slots,
 	vaginashape,
-} from "./type";
+} from "../type";
 
 //外貌信息。
 export interface CharaInfo {
@@ -133,11 +133,6 @@ export interface pirecing {
 	testA?: string;
 	testB?: string;
 	belly?: string;
-}
-
-export interface colorplate {
-	name: string;
-	code: string;
 }
 
 export interface GenitalState {

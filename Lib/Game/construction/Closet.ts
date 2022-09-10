@@ -1,6 +1,7 @@
-import { AvItems, A } from "../avatar";
+import { A } from "../avatar";
 import { Character } from "./Character";
 import { preset } from "./interface";
+const { AvItems } = A;
 
 export class Closet {
 	static getWear?(chara: Character, set: preset) {

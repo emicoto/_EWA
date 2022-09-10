@@ -13,7 +13,6 @@ import {
 	existency,
 	headtype,
 	eartype,
-	lan,
 	gender,
 	Dict,
 	powertype,
@@ -21,7 +20,7 @@ import {
 	penishape,
 	vaginashape,
 	defaultBases,
-} from "./type";
+} from "../type";
 
 interface RacesAvatar {
 	skin: skincolor;
@@ -107,34 +106,6 @@ export class Races {
 
 		return chara;
 	}
-	static print(type: races) {
-		switch (type) {
-			case "alsha":
-				return lan("阳灵", "Alsha");
-			case "catvinx":
-				return lan("狐猫", "Catvinx");
-			case "dracons":
-				return lan("晶龙", "Dracons");
-			case "havan":
-				return lan("海族", "Havans");
-			case "human":
-				return lan("纯人", "Human");
-			case "lepios":
-				return lan("鼠兔", "Lepios");
-			case "linlog":
-				return lan("灵鹿", "Linlog");
-			case "noctar":
-				return lan("夜灵", "Noctar");
-			case "pequitis":
-				return lan("角马", "Pequitis");
-			case "sckyrios":
-				return lan("狼人", "Sckyrios");
-			case "ulvs":
-				return lan("灵蛇", "Ulvs");
-			case "voeli":
-				return lan("羽族", "Voeli");
-		}
-	}
 	constructor(name: races, type: bodytype, size: number, skin: skincolor, eye: eyecolor, hair: haircolor, alter?) {
 		this.name = name;
 		this.bodytype = type;
@@ -177,6 +148,7 @@ export class Races {
 		};
 		this.base = {};
 		this.diet = "omni";
+		this.alter = {};
 	}
 	setBodyPart?(part: bodypart, state: existency) {
 		this.bodypart[part] = state;
@@ -219,7 +191,9 @@ export class Races {
 		return this;
 	}
 	setAlter?(obj: alterInfo) {
-		this.alter = obj;
+		for (let i in obj) {
+			this.alter[i] = obj[i];
+		}
 		return this;
 	}
 	setGenderOption?(gender: gender[]) {
@@ -292,9 +266,9 @@ export class Races {
 		this.init = callback;
 		return this;
 	}
-	Description?(str:[string,string]){
-		this.des = str
-		return this
+	Description?(str: [string, string]) {
+		this.des = str;
+		return this;
 	}
 	End?() {
 		racesdata[this.name] = Object.freeze(racesdata[this.name]);
@@ -314,7 +288,7 @@ Races.add("catvinx", "human", 1, "white", "amber", "platinum", true)
 	.setPenisShape("cat")
 	.setVaginaShape("suji")
 	.setWarmth([24, 16])
-	.setBase({ 智力: 2, 灵感: 1, 体质: -2, 力量: -1 })
+	.setBase({ INT: 2, PSY: 1, CON: -2, STR: -1 })
 	.setTraitOption({ OMEGA: [0, 1], 泌乳: [0, 2] })
 	.setAlter({ skin: ["health", "pale", "sunset", "gray"], mimi: ["cat", "fox"], tail: ["cat", "fox"] })
 	.setCycle({ type: "heat", cir: 56, days: 5 })
@@ -331,10 +305,11 @@ Races.add("sckyrios", "furry", 4, "fur", "black", "gray")
 	.setGenderOption(["f", "m"])
 	.setPenisShape("dog")
 	.setWarmth([20, 12])
-	.setBase({ 力量: 2, 体质: 1, 智力: -2, 意志: -1 })
+	.setBase({ STR: 2, CON: 1, INT: -2, WIL: -1 })
 	.setTraitOption({ ABO: [1, 2, 3], OMEGA: [0, 1] })
 	.setCycle({ type: "heat", cir: 56, days: 7 })
 	.setDiet("meat")
+	.setAlter({ skin: ["fur"], subcolor: ["health", "pale", "sunset", "white", "gray", "copper"] })
 	.End();
 
 Races.add("lepios", "human", 0, "health", "red", "silver", true)
@@ -343,7 +318,7 @@ Races.add("lepios", "human", 0, "health", "red", "silver", true)
 	.setPower("psychic")
 	.setVaginaShape("cute")
 	.setTraitOption({ 暴食: [0, 1] })
-	.setBase({ 敏捷: 2, 灵感: 1, 意志: -2, 力量: -1 })
+	.setBase({ DEX: 2, PSY: 1, WIL: -2, STR: -1 })
 	.setAlter({ skin: ["health", "pale", "white", "gray"], mimi: ["rabti", "mouse"] })
 	.End();
 
@@ -354,20 +329,14 @@ Races.add("dracons", "human", 2, "pale", "pink", "blond")
 	.setPower("elements")
 	.setElements(["lumen", "ark", "electron", "flame", "ions", "terra", "vitae"])
 	.setElementSize(1)
-	.setTraitOption({ 发光: [0, 1], 迟钝: [1] })
+	.setTraitOption({ 发光: [0, 1] })
 	.setPenisShape("dracon")
 	.setVaginaShape("suji")
-	.setBase({ 意志: 2, 智力: 1, 敏捷: -2, 灵感: -1 })
+	.setBase({ WIL: 2, INT: 1, DEX: -2, PSY: -1 })
 	.setWarmth([30, 16])
 	.setCycle({ type: "heat", cir: 84, days: 3 })
 	.setDiet("ore")
-	.setInit((chara: Character) => {
-		if (chara.elements[0] === "ions") {
-			chara.base.敏捷[1] += 2;
-			chara.base.力量[1] -= 2;
-			delete chara.trait["迟钝"];
-		}
-	})
+	.setAlter({ skin: ["pale", "white", "gray", "black", "aqua", "gold"], tail: ["dragon", "cystal"] })
 	.End();
 
 Races.add("voeli", "human", 2, "black", "amber", "white", true)
@@ -380,7 +349,7 @@ Races.add("voeli", "human", 2, "black", "amber", "white", true)
 	.setTraitOption({ 飞翔: [1], 生蛋: [0, 1] })
 	.setGenderOption(["f", "m"])
 	.setPenisShape("bird")
-	.setBase({ 灵感: 2, 敏捷: 1, 体质: -2, 力量: -1 })
+	.setBase({ PSY: 2, DEX: 1, CON: -2, STR: -1 })
 	.setWarmth([32, 16])
 	.setDiet("vegi")
 	.End();
@@ -394,8 +363,9 @@ Races.add("havan", "mermaid", 5, "copper", "black", "black")
 	.setPenisShape("shark")
 	.setVaginaShape("suji")
 	.setWarmth([16, 3])
-	.setBase({ 体质: 3, 智力: -3 })
+	.setBase({ CON: 3, INT: -3 })
 	.setCycle({ type: "heat", cir: 36, days: 2 })
+	.setAlter({ skin: ["copper", "pale", "gray"] })
 	.End();
 
 Races.add("linlog", "hoof", 2, "lightfur", "lightgreen", "milktea")
@@ -410,7 +380,8 @@ Races.add("linlog", "hoof", 2, "lightfur", "lightgreen", "milktea")
 	.setPenisShape("deer")
 	.setVaginaShape("pretty")
 	.setWarmth([22, 8])
-	.setBase({ 智力: 3, 力量: -3 })
+	.setBase({ INT: 3, STR: -3 })
+	.setAlter({ skin: ["lightfur"], subcolor: ["pale", "white", "health"] })
 	.End();
 
 Races.add("pequitis", "hoof", 4, "darkfur", "brown", "brown")
@@ -423,22 +394,23 @@ Races.add("pequitis", "hoof", 4, "darkfur", "brown", "brown")
 	.setTraitOption({ 愤怒: [0, 1], 色欲: [0, 1] })
 	.setPenisShape("horse")
 	.setWarmth([20, 15])
-	.setBase({ 体质: 2, 力量: 2, 敏捷: 2, 智力: -2, 意志: -2, 灵感: -2 })
+	.setBase({ CON: 2, STR: 2, DEX: 2, INT: -2, WIL: -2, PSY: -2 })
 	.setCycle({ type: "heat", cir: 56, days: 5 })
+	.setAlter({ skin: ["darkfur"], subcolor: ["dark", "copper", "sunset"] })
 	.End();
 
 Races.add("ulvs", "snake", 3, "copper", "amber", "black", true)
 	.setBodyPart("legs", "none")
 	.setGenital(["canhide"])
 	.hasTail("snake")
-	.setAlter({ skin: ["copper", "sunset", "black", "dark", "pale", "white", "gray"] })
+	.setAlter({ skin: ["copper", "sunset", "black", "dark", "pale", "white", "gray", "green"] })
 	.setPower("occult")
 	.setTraitOption({ 生蛋: [0, 1] })
 	.setGenderOption(["i"])
 	.setPenisShape("snake")
 	.setVaginaShape("suji")
 	.setWarmth([32, 24])
-	.setBase({ 智力: 2, 体质: -2 })
+	.setBase({ INT: 2, CON: -2 })
 	.setCycle({ type: "heat", cir: 56, days: 2 })
 	.End();
 
@@ -454,10 +426,11 @@ Races.add("alsha", "elf", 3, "gold", "amber", "white")
 	.setBodyPart("organ", "fake")
 	.setGenital(["fake"])
 	.setPower("occult")
-	.setBase({ 意志: 4, 灵感: -4 })
+	.setBase({ WIL: 4, PSY: -4 })
 	.setTraitOption({ 神使: [1], 造物: [2] })
 	.setWarmth([42, -10])
 	.setGenderOption(["f", "m", "n"])
+	.setAlter({ skin: ["gold", "silver"] })
 	.noCycle()
 	.End();
 
@@ -475,12 +448,13 @@ Races.add("noctar", "elf", 2, "yoru", "lightpurple", "white")
 	.setGenital(["fog"])
 	.setPower("elements")
 	.setElements(["ark", "terra"])
-	.setBase({ 灵感: 4, 意志: -4 })
+	.setBase({ PSY: 4, WIL: -4 })
 	.setTraitOption({ 神使: [0, 1], 虚体: [1] })
 	.setGenderOption(["f", "m", "n"])
 	.setWarmth([42, -10])
 	.setVaginaShape("deamon")
 	.setDiet("ore")
+	.setAlter({ skin: ["yoru"] })
 	.noCycle()
 	.End();
 
